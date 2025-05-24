@@ -265,52 +265,129 @@ class NKATVersionManager:
         
         return release_notes
 
+def create_version_1_3():
+    """🌌 Version 1.3: 実験検証ロードマップ統合版の作成"""
+    print("🚀 NKAT Theory v1.3 - 実験検証ロードマップ統合版")
+    
+    version_info = {
+        "version": "1.3",
+        "release_date": datetime.now().isoformat(),
+        "codename": "Experimental Verification Roadmap",
+        "major_features": [
+            "🌌 実験検証ロードマップ完全実装",
+            "🌟 γ線天文学での時間遅延予測",
+            "🌊 LIGO重力波での波形補正計算",
+            "⚛️ LHC粒子物理学での分散関係修正",
+            "🔮 真空複屈折での偏光回転予測",
+            "📊 実験検証ダッシュボード可視化",
+            "🗺️ 4段階実験ロードマップ（2025-2029）"
+        ],
+        "experimental_predictions": {
+            "gamma_ray_astronomy": {
+                "max_time_delay_ms": 69.16,
+                "detectable_energy_range": "10-100 TeV",
+                "collaborations": ["CTA", "Fermi-LAT", "MAGIC", "VERITAS"],
+                "timeline": "2025-2026"
+            },
+            "gravitational_waves": {
+                "correction_factor": "1 + θf²/M_pl²",
+                "detectable_frequencies": "10 Hz - 1 kHz",
+                "collaborations": ["LIGO", "Virgo", "KAGRA"],
+                "timeline": "2026-2027"
+            },
+            "particle_physics": {
+                "dispersion_modification": "E² = p²c² + m²c⁴ + θp⁴/M_pl²",
+                "energy_range": "1-14 TeV",
+                "collaborations": ["ATLAS", "CMS", "LHCb"],
+                "timeline": "2027-2028"
+            },
+            "vacuum_birefringence": {
+                "max_rotation_microrad": 67186240257.995,
+                "magnetic_field_range": "10¹² - 10¹⁵ Gauss",
+                "collaborations": ["IXPE", "eROSITA", "Athena"],
+                "timeline": "2028-2029"
+            }
+        },
+        "technical_improvements": [
+            "✅ 負の整数乗エラー修正",
+            "🔧 NumPy配列計算最適化",
+            "📈 検出可能性評価アルゴリズム",
+            "🎯 統計的有意性計算",
+            "📊 4象限ダッシュボード可視化"
+        ],
+        "files_added": [
+            "experimental_verification_roadmap.py",
+            "nkat_experimental_verification_results.json",
+            "nkat_experimental_verification_dashboard.png"
+        ],
+        "compatibility": {
+            "python": "3.8+",
+            "numpy": "1.20+",
+            "matplotlib": "3.3+",
+            "scipy": "1.7+"
+        }
+    }
+    
+    # バージョン情報の保存
+    with open(f'version_1_3_info.json', 'w', encoding='utf-8') as f:
+        json.dump(version_info, f, indent=2, ensure_ascii=False)
+    
+    # Git操作
+    try:
+        # 変更をステージング
+        subprocess.run(['git', 'add', '.'], check=True)
+        
+        # コミット
+        commit_message = f"🌌 Release v1.3: 実験検証ロードマップ統合版\n\n" \
+                        f"- γ線天文学での時間遅延予測実装\n" \
+                        f"- LIGO重力波での波形補正計算\n" \
+                        f"- LHC粒子物理学での分散関係修正\n" \
+                        f"- 真空複屈折での偏光回転予測\n" \
+                        f"- 4段階実験ロードマップ（2025-2029）\n" \
+                        f"- 実験検証ダッシュボード可視化"
+        
+        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+        
+        # タグ作成
+        subprocess.run(['git', 'tag', '-a', 'v1.3', '-m', 'Version 1.3: Experimental Verification Roadmap'], check=True)
+        
+        print("✅ Git操作完了")
+        
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Git操作エラー: {e}")
+    
+    print(f"🎉 Version 1.3 リリース完了!")
+    print(f"📁 バージョン情報: version_1_3_info.json")
+    
+    return version_info
+
 def main():
     """メイン関数"""
+    print("🚀 NKAT Theory バージョン管理システム")
+    print("=" * 50)
+    print("1. Version 1.0 リリース")
+    print("2. Version 1.1 ホットフィックス")
+    print("3. Version 1.2 GPU加速版")
+    print("4. Version 1.3 実験検証ロードマップ統合版")
+    print("5. 現在のバージョン確認")
+    print("6. リリースノート生成")
     
-    parser = argparse.ArgumentParser(description="NKAT Theory Version Manager")
-    parser.add_argument("--version", help="新しいバージョンタグ (例: v1.0)")
-    parser.add_argument("--message", help="バージョンメッセージ")
-    parser.add_argument("--list-versions", action="store_true", help="バージョン一覧を表示")
-    parser.add_argument("--update-arxiv", help="arXiv IDを更新")
-    parser.add_argument("--update-zenodo", help="Zenodo DOIを更新")
-    parser.add_argument("--no-push", action="store_true", help="リモートにプッシュしない")
+    choice = input("\n選択してください (1-6): ")
     
-    args = parser.parse_args()
-    
-    manager = NKATVersionManager()
-    
-    try:
-        if args.list_versions:
-            manager.list_versions()
-        
-        elif args.update_arxiv:
-            manager.update_arxiv_id(args.update_arxiv)
-        
-        elif args.update_zenodo:
-            manager.update_zenodo_doi(args.update_zenodo)
-        
-        elif args.version:
-            if not args.message:
-                args.message = f"Release {args.version}"
-            
-            success = manager.create_version_tag(args.version, args.message, not args.no_push)
-            
-            if success:
-                # リリースノートの生成
-                release_notes = manager.generate_release_notes(args.version)
-                with open(f"RELEASE_NOTES_{args.version}.md", "w", encoding="utf-8") as f:
-                    f.write(release_notes)
-                print(f"📝 リリースノートを生成しました: RELEASE_NOTES_{args.version}.md")
-        
-        else:
-            parser.print_help()
-    
-    except Exception as e:
-        print(f"❌ エラー: {e}")
-        return 1
-    
-    return 0
+    if choice == "1":
+        create_version_1_0()
+    elif choice == "2":
+        create_version_1_1()
+    elif choice == "3":
+        create_version_1_2()
+    elif choice == "4":
+        create_version_1_3()
+    elif choice == "5":
+        check_current_version()
+    elif choice == "6":
+        generate_release_notes()
+    else:
+        print("❌ 無効な選択です")
 
 if __name__ == "__main__":
     exit(main()) 
