@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-05-24 17:42:44",
+  "device": "cuda",
+  "parameters": {
+    "max_n": 500,
+    "theta": 1e-30,
+    "kappa": 1e-20
+  },
+  "critical_line_results": {
+    "gamma_values": [
+      14.134725,
+      21.02204,
+      25.010858,
+      30.424876,
+      32.935062
+    ],
+    "success_count": 0,
+    "success_rate": 0.0
+  },
+  "off_critical_results": {
+    "sigma_values": [
+      0.3,
+      0.4,
+      0.6,
+      0.7
+    ],
+    "divergence_count": 4,
+    "divergence_rate": 1.0
+  },
+  "superconvergence_results": {
+    "n_values": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "superconvergence_factors": [
+      1.0,
+      1.0,
+      1.0,
+      1.0080143636036083,
+      1.0264793388178082,
+      1.0502354050035327
+    ],
+    "convergence_rates": [
+      0.2,
+      0.1,
+      0.06666666666666667,
+      0.049602467787514586,
+      0.038968149174895064,
+      0.03173891603208826
+    ],
+    "acceleration_ratios": [
+      1.0,
+      1.0,
+      1.0,
+      1.0080143636036085,
+      1.0264793388178082,
+      1.0502354050035327
+    ]
+  },
+  "proof_status": "PARTIAL"
+}
