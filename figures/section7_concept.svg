@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- ノード定義 -->
+    <g id="nodes">
+        <!-- 情報場 -->
+        <circle cx="400" cy="100" r="60" fill="#4a90e2" opacity="0.8"/>
+        <text x="400" y="105" text-anchor="middle" fill="white" font-size="14">情報場</text>
+        
+        <!-- 観測者 -->
+        <circle cx="200" cy="300" r="50" fill="#e2844a" opacity="0.8"/>
+        <text x="200" y="305" text-anchor="middle" fill="white" font-size="14">観測者</text>
+        
+        <!-- 測定 -->
+        <circle cx="400" cy="300" r="50" fill="#4ae284" opacity="0.8"/>
+        <text x="400" y="305" text-anchor="middle" fill="white" font-size="14">測定</text>
+        
+        <!-- 意識 -->
+        <circle cx="600" cy="300" r="50" fill="#e24a4a" opacity="0.8"/>
+        <text x="600" y="305" text-anchor="middle" fill="white" font-size="14">意識</text>
+        
+        <!-- 物理的現実 -->
+        <circle cx="400" cy="500" r="60" fill="#4a4ae2" opacity="0.8"/>
+        <text x="400" y="505" text-anchor="middle" fill="white" font-size="14">物理的現実</text>
+    </g>
+    
+    <!-- 矢印定義 -->
+    <g id="arrows" stroke="#333" stroke-width="2" fill="none">
+        <!-- 情報場 → 観測者 -->
+        <path d="M 400 160 L 200 300" marker-end="url(#arrowhead)"/>
+        
+        <!-- 観測者 → 測定 -->
+        <path d="M 250 300 L 350 300" marker-end="url(#arrowhead)"/>
+        
+        <!-- 測定 → 物理的現実 -->
+        <path d="M 400 350 L 400 440" marker-end="url(#arrowhead)"/>
+        
+        <!-- 観測者 → 意識 -->
+        <path d="M 250 300 L 550 300" marker-end="url(#arrowhead)"/>
+        
+        <!-- 意識 → 情報場（フィードバック） -->
+        <path d="M 600 300 Q 500 200 400 160" marker-end="url(#arrowhead)"/>
+    </g>
+    
+    <!-- 矢印マーカー定義 -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+    
+    <!-- 相互作用の説明 -->
+    <g id="labels" font-size="12" fill="#666">
+        <text x="300" y="230" text-anchor="middle">情報の流れ</text>
+        <text x="300" y="320" text-anchor="middle">測定過程</text>
+        <text x="400" y="400" text-anchor="middle">物理的影響</text>
+        <text x="425" y="320" text-anchor="middle">意識的影響</text>
+        <text x="500" y="250" text-anchor="middle">フィードバック</text>
+    </g>
+</svg> 
