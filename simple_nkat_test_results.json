@@ -1,0 +1,6 @@
+{
+  "kappa_bspline": {
+    "kappa": 0.1,
+    "theta": 0.05,
+    "completeness_error": 0.1996687564470104,
+    "test_passed": 
