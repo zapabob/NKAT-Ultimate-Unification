@@ -319,7 +319,9 @@ class DiracLaplacianAnalyzer:
         try:
             if operator.shape[0] > 1000:
                 # 大きな行列の場合は部分固有値のみ計算
-                eigenvalues, _ = eigsh(operator.H @ operator, k=min(n_eigenvalues, operator.shape[0]-2), 
+                # .H属性の代わりに.conj().T（共役転置）を使用
+                operator_hermitian = operator.conj().T @ operator
+                eigenvalues, _ = eigsh(operator_hermitian, k=min(n_eigenvalues, operator.shape[0]-2), 
                                      which='SM', return_eigenvectors=False)
             else:
                 # 小さな行列の場合は全固有値を計算
