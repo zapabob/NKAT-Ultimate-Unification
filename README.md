@@ -1,5 +1,23 @@
 # NKAT Theory Package
 
+**🚀 Version 1.1 - Critical Hotfix Released!**
+
+## 🛡️ v1.1 Hotfix (2025-01-23)
+
+**Critical Fix**: Resolved scipy sparse matrix compatibility issue in Dirac/Laplacian operator analysis
+- **Problem**: `'csr_matrix' object has no attribute 'H'` error causing NaN results
+- **Solution**: Replaced `.H` with `.conj().T` (conjugate transpose) for proper sparse matrix handling
+- **Impact**: Complete elimination of NaN errors in spectral dimension calculations
+- **Status**: ✅ All tests passing, numerical stability restored
+
+### 🔧 Technical Details
+- **File**: `dirac_laplacian_analysis.py` line 315
+- **Change**: `operator.H @ operator` → `operator.conj().T @ operator`
+- **Benefit**: Full compatibility with scipy sparse matrices
+- **Testing**: Verified with 4D spacetime, lattice size 8-16
+
+---
+
 This package contains the complete documentation for the Noncommutative Kolmogorov-Arnold Theory (NKAT), including the main paper, appendices, and supplementary materials.
 
 ## Directory Structure
