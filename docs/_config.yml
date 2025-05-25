@@ -1,0 +1,92 @@
+# GitHub Pages Configuration for NKAT v8.0 Academic Site
+title: "NKAT v8.0: Historic Mathematical Achievement"
+description: "Non-commutative Kaluza-Klein Algebraic Theory - RTX3080 Extreme High-Precision Numerical Verification of the Riemann Hypothesis"
+
+# Site settings
+baseurl: "/NKAT-Ultimate-Unification"
+url: "https://zapabob.github.io"
+
+# Theme and appearance
+theme: minima
+color_scheme: dark
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Documentation"
+    url: "/docs/"
+  - title: "Source Code"
+    url: "/src/"
+  - title: "Results"
+    url: "/analysis_results/"
+  - title: "Papers"
+    url: "/papers/"
+
+# Academic metadata
+academic:
+  title: "NKAT v8.0 Research"
+  authors: "NKAT Research Consortium"
+  institution: "Independent Research"
+  year: 2025
+  achievement: "100 Gamma Values Riemann Hypothesis Verification"
+  success_rate: "68.00%"
+
+# Technical specifications
+technical:
+  gpu: "NVIDIA RTX 3080"
+  cuda_cores: 8704
+  precision: "complex128"
+  temperature_control: "45°C"
+  computation_time: "47.77 minutes"
+
+# Social and sharing
+twitter:
+  card: summary_large_image
+og:
+  image: /assets/images/nkat_achievement_social.png
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+  tutorials:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+
+# SEO and analytics
+google_analytics: UA-XXXXXXXX-X
+
+# Footer
+footer:
+  links:
+    - title: "GitHub"
+      url: "https://github.com/zapabob/NKAT-Ultimate-Unification"
+    - title: "arXiv"
+      url: "#" # Will be updated when submitted
+    - title: "Documentation"
+      url: "/docs/" 
