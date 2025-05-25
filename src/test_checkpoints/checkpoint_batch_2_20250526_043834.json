@@ -1,0 +1,302 @@
+{
+  "batch_id": 2,
+  "gamma_start_idx": 20,
+  "gamma_end_idx": 30,
+  "completed_gammas": [
+    79.337375,
+    82.910381,
+    84.735493,
+    87.425275,
+    88.809111,
+    89.28255126185488,
+    91.65546425251009,
+    92.491899,
+    94.11292463478911,
+    94.651344
+  ],
+  "results": [
+    {
+      "gamma": 14.134725,
+      "spectral_dimension": 1.1833464890470926,
+      "real_part": 0.5916732445235463,
+      "convergence_to_half": 0.0916732445235463,
+      "timestamp": "2025-05-26T04:38:32.248514",
+      "batch_id": 0,
+      "batch_index": 0
+    },
+    {
+      "gamma": 21.02204,
+      "spectral_dimension": 1.1558674476255621,
+      "real_part": 0.5779337238127811,
+      "convergence_to_half": 0.07793372381278107,
+      "timestamp": "2025-05-26T04:38:32.266098",
+      "batch_id": 0,
+      "batch_index": 1
+    },
+    {
+      "gamma": 25.010858,
+      "spectral_dimension": 1.0468179019652812,
+      "real_part": 0.5234089509826406,
+      "convergence_to_half": 0.02340895098264062,
+      "timestamp": "2025-05-26T04:38:32.281740",
+      "batch_id": 0,
+      "batch_index": 2
+    },
+    {
+      "gamma": 30.424876,
+      "spectral_dimension": 1.0861895501931327,
+      "real_part": 0.5430947750965663,
+      "convergence_to_half": 0.04309477509656634,
+      "timestamp": "2025-05-26T04:38:32.298294",
+      "batch_id": 0,
+      "batch_index": 3
+    },
+    {
+      "gamma": 32.935062,
+      "spectral_dimension": 1.0483903197473994,
+      "real_part": 0.5241951598736997,
+      "convergence_to_half": 0.02419515987369969,
+      "timestamp": "2025-05-26T04:38:32.313870",
+      "batch_id": 0,
+      "batch_index": 4
+    },
+    {
+      "gamma": 37.586178,
+      "spectral_dimension": 1.099199294075836,
+      "real_part": 0.549599647037918,
+      "convergence_to_half": 0.04959964703791797,
+      "timestamp": "2025-05-26T04:38:32.329537",
+      "batch_id": 0,
+      "batch_index": 5
+    },
+    {
+      "gamma": 40.918719,
+      "spectral_dimension": 1.1308500877749403,
+      "real_part": 0.5654250438874702,
+      "convergence_to_half": 0.06542504388747017,
+      "timestamp": "2025-05-26T04:38:32.345290",
+      "batch_id": 0,
+      "batch_index": 6
+    },
+    {
+      "gamma": 43.327073,
+      "spectral_dimension": 1.0653837086050137,
+      "real_part": 0.5326918543025069,
+      "convergence_to_half": 0.03269185430250687,
+      "timestamp": "2025-05-26T04:38:32.360861",
+      "batch_id": 0,
+      "batch_index": 7
+    },
+    {
+      "gamma": 48.005151,
+      "spectral_dimension": 1.0671295241977796,
+      "real_part": 0.5335647620988898,
+      "convergence_to_half": 0.03356476209888981,
+      "timestamp": "2025-05-26T04:38:32.377947",
+      "batch_id": 0,
+      "batch_index": 8
+    },
+    {
+      "gamma": 49.773832,
+      "spectral_dimension": 1.139213758283153,
+      "real_part": 0.5696068791415765,
+      "convergence_to_half": 0.06960687914157648,
+      "timestamp": "2025-05-26T04:38:32.394022",
+      "batch_id": 0,
+      "batch_index": 9
+    },
+    {
+      "gamma": 52.970321,
+      "spectral_dimension": 1.1160661627116282,
+      "real_part": 0.5580330813558141,
+      "convergence_to_half": 0.05803308135581409,
+      "timestamp": "2025-05-26T04:38:33.419817",
+      "batch_id": 1,
+      "batch_index": 0
+    },
+    {
+      "gamma": 56.446247,
+      "spectral_dimension": 1.142695167728666,
+      "real_part": 0.571347583864333,
+      "convergence_to_half": 0.07134758386433304,
+      "timestamp": "2025-05-26T04:38:33.434877",
+      "batch_id": 1,
+      "batch_index": 1
+    },
+    {
+      "gamma": 59.347044,
+      "spectral_dimension": 1.0971569222526276,
+      "real_part": 0.5485784611263138,
+      "convergence_to_half": 0.04857846112631381,
+      "timestamp": "2025-05-26T04:38:33.449923",
+      "batch_id": 1,
+      "batch_index": 2
+    },
+    {
+      "gamma": 60.831778,
+      "spectral_dimension": 1.0412142518140437,
+      "real_part": 0.5206071259070219,
+      "convergence_to_half": 0.02060712590702185,
+      "timestamp": "2025-05-26T04:38:33.464975",
+      "batch_id": 1,
+      "batch_index": 3
+    },
+    {
+      "gamma": 65.112544,
+      "spectral_dimension": 1.0552169125417763,
+      "real_part": 0.5276084562708881,
+      "convergence_to_half": 0.02760845627088815,
+      "timestamp": "2025-05-26T04:38:33.480057",
+      "batch_id": 1,
+      "batch_index": 4
+    },
+    {
+      "gamma": 67.07981,
+      "spectral_dimension": 1.014767760408359,
+      "real_part": 0.5073838802041795,
+      "convergence_to_half": 0.0073838802041794604,
+      "timestamp": "2025-05-26T04:38:33.495623",
+      "batch_id": 1,
+      "batch_index": 5
+    },
+    {
+      "gamma": 69.546401,
+      "spectral_dimension": 1.10659604467015,
+      "real_part": 0.553298022335075,
+      "convergence_to_half": 0.05329802233507497,
+      "timestamp": "2025-05-26T04:38:33.511698",
+      "batch_id": 1,
+      "batch_index": 6
+    },
+    {
+      "gamma": 72.067158,
+      "spectral_dimension": 1.201849929863321,
+      "real_part": 0.6009249649316605,
+      "convergence_to_half": 0.10092496493166048,
+      "timestamp": "2025-05-26T04:38:33.527235",
+      "batch_id": 1,
+      "batch_index": 7
+    },
+    {
+      "gamma": 75.70469,
+      "spectral_dimension": 1.0424294727187746,
+      "real_part": 0.5212147363593873,
+      "convergence_to_half": 0.02121473635938731,
+      "timestamp": "2025-05-26T04:38:33.540772",
+      "batch_id": 1,
+      "batch_index": 8
+    },
+    {
+      "gamma": 77.14484,
+      "spectral_dimension": 1.2759139898910972,
+      "real_part": 0.6379569949455486,
+      "convergence_to_half": 0.13795699494554858,
+      "timestamp": "2025-05-26T04:38:33.554828",
+      "batch_id": 1,
+      "batch_index": 9
+    },
+    {
+      "gamma": 79.337375,
+      "spectral_dimension": 1.0542631413771484,
+      "real_part": 0.5271315706885742,
+      "convergence_to_half": 0.02713157068857419,
+      "timestamp": "2025-05-26T04:38:34.578174",
+      "batch_id": 2,
+      "batch_index": 0
+    },
+    {
+      "gamma": 82.910381,
+      "spectral_dimension": 1.0619490313443547,
+      "real_part": 0.5309745156721773,
+      "convergence_to_half": 0.03097451567217735,
+      "timestamp": "2025-05-26T04:38:34.593215",
+      "batch_id": 2,
+      "batch_index": 1
+    },
+    {
+      "gamma": 84.735493,
+      "spectral_dimension": 1.117907380992224,
+      "real_part": 0.558953690496112,
+      "convergence_to_half": 0.05895369049611199,
+      "timestamp": "2025-05-26T04:38:34.607754",
+      "batch_id": 2,
+      "batch_index": 2
+    },
+    {
+      "gamma": 87.425275,
+      "spectral_dimension": 1.1872404079580172,
+      "real_part": 0.5936202039790086,
+      "convergence_to_half": 0.09362020397900861,
+      "timestamp": "2025-05-26T04:38:34.622291",
+      "batch_id": 2,
+      "batch_index": 3
+    },
+    {
+      "gamma": 88.809111,
+      "spectral_dimension": 1.0586735902133844,
+      "real_part": 0.5293367951066922,
+      "convergence_to_half": 0.02933679510669218,
+      "timestamp": "2025-05-26T04:38:34.636840",
+      "batch_id": 2,
+      "batch_index": 4
+    },
+    {
+      "gamma": 89.28255126185488,
+      "spectral_dimension": 1.099699127043224,
+      "real_part": 0.549849563521612,
+      "convergence_to_half": 0.04984956352161196,
+      "timestamp": "2025-05-26T04:38:34.652398",
+      "batch_id": 2,
+      "batch_index": 5
+    },
+    {
+      "gamma": 91.65546425251009,
+      "spectral_dimension": 1.2922666949709565,
+      "real_part": 0.6461333474854782,
+      "convergence_to_half": 0.14613334748547824,
+      "timestamp": "2025-05-26T04:38:34.667931",
+      "batch_id": 2,
+      "batch_index": 6
+    },
+    {
+      "gamma": 92.491899,
+      "spectral_dimension": 1.0074493023978937,
+      "real_part": 0.5037246511989468,
+      "convergence_to_half": 0.0037246511989468267,
+      "timestamp": "2025-05-26T04:38:34.684473",
+      "batch_id": 2,
+      "batch_index": 7
+    },
+    {
+      "gamma": 94.11292463478911,
+      "spectral_dimension": 1.1449570214043632,
+      "real_part": 0.5724785107021816,
+      "convergence_to_half": 0.07247851070218159,
+      "timestamp": "2025-05-26T04:38:34.701044",
+      "batch_id": 2,
+      "batch_index": 8
+    },
+    {
+      "gamma": 94.651344,
+      "spectral_dimension": 1.159924666786778,
+      "real_part": 0.579962333393389,
+      "convergence_to_half": 0.07996233339338898,
+      "timestamp": "2025-05-26T04:38:34.717581",
+      "batch_id": 2,
+      "batch_index": 9
+    }
+  ],
+  "timestamp": "2025-05-26T04:38:34.717581",
+  "system_state": {
+    "cpu_percent": 13.7,
+    "memory_percent": 52.0,
+    "gpu_memory_used": 0.00851968,
+    "gpu_memory_total": 10.73676288,
+    "temperature": null,
+    "power_draw": null,
+    "timestamp": "2025-05-26T04:38:34.563620"
+  },
+  "memory_usage": 52.0,
+  "gpu_memory": 0.00851968,
+  "total_progress": 60.0
+}

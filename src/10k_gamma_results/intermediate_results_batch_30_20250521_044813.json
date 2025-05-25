@@ -1,0 +1,1017 @@
+{
+  "timestamp": "2025-05-21T04:48:13.219396",
+  "batches_completed": 30,
+  "total_results": 4297,
+  "results": [
+    {
+      "gamma": 14.134725,
+      "spectral_dimension": 0.8514913644259733,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.234725,
+      "spectral_dimension": 1.0912209963310149,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.334724999999999,
+      "spectral_dimension": 1.024348613244795,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.434725,
+      "spectral_dimension": 0.8987289875388059,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.534725,
+      "spectral_dimension": 1.0666730490115783,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.634725,
+      "spectral_dimension": 0.9975967937858858,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.734725,
+      "spectral_dimension": 0.9248469448217531,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.834724999999999,
+      "spectral_dimension": 1.2887855209902697,
+      "batch_id": 0
+    },
+    {
+      "gamma": 14.934725,
+      "spectral_dimension": 0.980043259429251,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.034725,
+      "spectral_dimension": 0.7037998375363086,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.134725,
+      "spectral_dimension": 1.0111505136149708,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.234725,
+      "spectral_dimension": 1.1710988571880097,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.334724999999999,
+      "spectral_dimension": 1.2839454053468764,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.434725,
+      "spectral_dimension": 0.805417325829306,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.534725,
+      "spectral_dimension": 1.2930346399243855,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.634725,
+      "spectral_dimension": 0.7860817277126178,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.734725,
+      "spectral_dimension": 1.067574740225397,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.834724999999999,
+      "spectral_dimension": 1.1638779975838447,
+      "batch_id": 0
+    },
+    {
+      "gamma": 15.934725,
+      "spectral_dimension": 1.088873767584206,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.034724999999998,
+      "spectral_dimension": 1.0744148893322305,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.134725,
+      "spectral_dimension": 1.1243163395214992,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.234725,
+      "spectral_dimension": 1.2092355322963824,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.334725,
+      "spectral_dimension": 1.1020517359048547,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.434725,
+      "spectral_dimension": 0.9392938180707303,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.534725,
+      "spectral_dimension": 1.2003084682998437,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.634725,
+      "spectral_dimension": 0.7559561623310436,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.734725,
+      "spectral_dimension": 0.7905502380689426,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.834725,
+      "spectral_dimension": 1.0448218453061333,
+      "batch_id": 0
+    },
+    {
+      "gamma": 16.934725,
+      "spectral_dimension": 1.0521588980031367,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.034725,
+      "spectral_dimension": 0.8107809947848342,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.134725,
+      "spectral_dimension": 0.8423615766188126,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.234725,
+      "spectral_dimension": 1.2764896564323882,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.334725,
+      "spectral_dimension": 1.0907487665828388,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.434725,
+      "spectral_dimension": 1.2065083600280584,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.534725,
+      "spectral_dimension": 0.9698568400993179,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.634725,
+      "spectral_dimension": 1.1256989667579513,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.734725,
+      "spectral_dimension": 1.1324515150471228,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.834725,
+      "spectral_dimension": 0.8953288992860832,
+      "batch_id": 0
+    },
+    {
+      "gamma": 17.934725,
+      "spectral_dimension": 0.9221561733493798,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.034725,
+      "spectral_dimension": 1.0676907915343743,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.134725,
+      "spectral_dimension": 0.8007282340854296,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.234725,
+      "spectral_dimension": 1.1805322788685275,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.334725,
+      "spectral_dimension": 0.8868587869407372,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.434725,
+      "spectral_dimension": 1.2465114242592723,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.534725,
+      "spectral_dimension": 0.7526909446524528,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.634725,
+      "spectral_dimension": 0.7541756653706253,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.734725,
+      "spectral_dimension": 0.9451474842972749,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.834725,
+      "spectral_dimension": 1.1069167406601776,
+      "batch_id": 0
+    },
+    {
+      "gamma": 18.934725,
+      "spectral_dimension": 1.0739993596045552,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.034725,
+      "spectral_dimension": 0.7105949362542958,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.134725,
+      "spectral_dimension": 1.2304846553823614,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.234725,
+      "spectral_dimension": 1.0848148891520177,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.334725,
+      "spectral_dimension": 0.876355897370504,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.434725,
+      "spectral_dimension": 1.2507842846892732,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.534725,
+      "spectral_dimension": 1.0463192537027417,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.634725,
+      "spectral_dimension": 1.183366475608992,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.734725,
+      "spectral_dimension": 1.0730023947871206,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.834725,
+      "spectral_dimension": 0.8376503346370798,
+      "batch_id": 0
+    },
+    {
+      "gamma": 19.934725,
+      "spectral_dimension": 0.7362733759705009,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.034725,
+      "spectral_dimension": 0.8137937554007216,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.134725,
+      "spectral_dimension": 1.1402733337009874,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.234725,
+      "spectral_dimension": 0.9073084057729391,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.334725,
+      "spectral_dimension": 0.8457136112760226,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.434725,
+      "spectral_dimension": 1.0356564778542396,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.534725,
+      "spectral_dimension": 0.9429532600351425,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.634725,
+      "spectral_dimension": 1.1333782602590563,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.734725,
+      "spectral_dimension": 1.2988180809285201,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.834725,
+      "spectral_dimension": 1.0515228268145318,
+      "batch_id": 0
+    },
+    {
+      "gamma": 20.934725,
+      "spectral_dimension": 1.260896585532843,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.034725,
+      "spectral_dimension": 0.7245716859497955,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.134725,
+      "spectral_dimension": 0.9966653752909861,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.234725,
+      "spectral_dimension": 0.7647379717643409,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.334725,
+      "spectral_dimension": 1.095504401328797,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.434725,
+      "spectral_dimension": 0.9194131949540296,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.534725,
+      "spectral_dimension": 1.0302116634931089,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.634725,
+      "spectral_dimension": 1.1146623147144707,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.734725,
+      "spectral_dimension": 1.1792314614331971,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.834725,
+      "spectral_dimension": 0.7143320510144353,
+      "batch_id": 0
+    },
+    {
+      "gamma": 21.934725,
+      "spectral_dimension": 1.2861674191540913,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.034725,
+      "spectral_dimension": 1.0074321644475204,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.134725,
+      "spectral_dimension": 0.905097779170237,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.234724999999997,
+      "spectral_dimension": 1.2851926069022663,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.334725,
+      "spectral_dimension": 1.0573947400413064,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.434725,
+      "spectral_dimension": 0.7119663132208256,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.534725,
+      "spectral_dimension": 1.2081924870420995,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.634725,
+      "spectral_dimension": 0.8310978301272425,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.734724999999997,
+      "spectral_dimension": 1.1966327031815942,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.834725,
+      "spectral_dimension": 0.8943515654654455,
+      "batch_id": 0
+    },
+    {
+      "gamma": 22.934725,
+      "spectral_dimension": 1.0326132774333447,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.034725,
+      "spectral_dimension": 1.2471506383400102,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.134725,
+      "spectral_dimension": 1.2316542188616606,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.234724999999997,
+      "spectral_dimension": 1.1765390941732574,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.334725,
+      "spectral_dimension": 0.7813974847740601,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.434725,
+      "spectral_dimension": 1.1817589051231643,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.534725,
+      "spectral_dimension": 0.8219478169568954,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.634725,
+      "spectral_dimension": 0.9271038026117173,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.734725,
+      "spectral_dimension": 1.2010880109123843,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.834725,
+      "spectral_dimension": 1.085104587561371,
+      "batch_id": 0
+    },
+    {
+      "gamma": 23.934725,
+      "spectral_dimension": 0.7794706198575508,
+      "batch_id": 0
+    },
+    {
+      "gamma": 24.034725,
+      "spectral_dimension": 1.0887445693183162,
+      "batch_id": 0
+    },
+    {
+      "gamma": 24.134725,
+      "spectral_dimension": 1.2840438450817018,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.234725,
+      "spectral_dimension": 1.2765812764600297,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.334725,
+      "spectral_dimension": 1.072850928698138,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.434725,
+      "spectral_dimension": 1.0738808211156115,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.534725,
+      "spectral_dimension": 0.801822967490432,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.634725,
+      "spectral_dimension": 0.9866527738996558,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.734725,
+      "spectral_dimension": 0.8495661384063983,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.834725,
+      "spectral_dimension": 0.8278711510855971,
+      "batch_id": 1
+    },
+    {
+      "gamma": 24.934725,
+      "spectral_dimension": 1.283931409021998,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.034725,
+      "spectral_dimension": 0.7207835694221321,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.134725,
+      "spectral_dimension": 0.995256707661248,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.234725,
+      "spectral_dimension": 1.2104106114887074,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.334725,
+      "spectral_dimension": 0.9720570028078697,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.434725,
+      "spectral_dimension": 0.8671541069603703,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.534725,
+      "spectral_dimension": 0.8808135343435355,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.634725,
+      "spectral_dimension": 1.227260411535557,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.734725,
+      "spectral_dimension": 0.7907106788250133,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.834725,
+      "spectral_dimension": 0.7106907738924539,
+      "batch_id": 1
+    },
+    {
+      "gamma": 25.934725,
+      "spectral_dimension": 1.118273459609089,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.034725,
+      "spectral_dimension": 0.8467372409964438,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.134725,
+      "spectral_dimension": 1.0815621501726593,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.234725,
+      "spectral_dimension": 0.9127248274683889,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.334725,
+      "spectral_dimension": 1.2087074682611665,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.434725,
+      "spectral_dimension": 1.2090819010866056,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.534725,
+      "spectral_dimension": 0.9251562975733665,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.634725,
+      "spectral_dimension": 0.7776776432320945,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.734725,
+      "spectral_dimension": 0.7698076416831156,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.834725,
+      "spectral_dimension": 1.2148368361665336,
+      "batch_id": 1
+    },
+    {
+      "gamma": 26.934725,
+      "spectral_dimension": 0.8206342710864971,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.034725,
+      "spectral_dimension": 1.192753134037868,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.134725,
+      "spectral_dimension": 0.8872084848077455,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.234725,
+      "spectral_dimension": 1.2850926510526615,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.334725,
+      "spectral_dimension": 0.9426477905007171,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.434725,
+      "spectral_dimension": 1.2200248252226005,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.534725,
+      "spectral_dimension": 1.1441122427605515,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.634725,
+      "spectral_dimension": 0.720772244710741,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.734725,
+      "spectral_dimension": 0.9428767741475866,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.834725,
+      "spectral_dimension": 1.1489016658235234,
+      "batch_id": 1
+    },
+    {
+      "gamma": 27.934725,
+      "spectral_dimension": 0.7270077395372667,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.034725,
+      "spectral_dimension": 1.1375166688199154,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.134725,
+      "spectral_dimension": 1.2367826090451195,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.234725,
+      "spectral_dimension": 1.027631948959559,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.334725,
+      "spectral_dimension": 1.0320887858881407,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.434725,
+      "spectral_dimension": 0.9384495201698895,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.534725,
+      "spectral_dimension": 1.269845454882699,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.634725,
+      "spectral_dimension": 0.9737213762125954,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.734725,
+      "spectral_dimension": 0.9439968018968986,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.834725,
+      "spectral_dimension": 1.2427853657433199,
+      "batch_id": 1
+    },
+    {
+      "gamma": 28.934725,
+      "spectral_dimension": 0.8564293704525652,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.034725,
+      "spectral_dimension": 1.2265364739296925,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.134725,
+      "spectral_dimension": 0.8976538683751816,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.234725,
+      "spectral_dimension": 0.7389640746978929,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.334725,
+      "spectral_dimension": 0.9304106458090162,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.434725,
+      "spectral_dimension": 1.19430885007016,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.534725,
+      "spectral_dimension": 1.1089190326504172,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.634725,
+      "spectral_dimension": 0.8230427912512723,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.734725,
+      "spectral_dimension": 1.0273373249714366,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.834725,
+      "spectral_dimension": 0.8241409886585777,
+      "batch_id": 1
+    },
+    {
+      "gamma": 29.934725,
+      "spectral_dimension": 0.9008501292246462,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.034725,
+      "spectral_dimension": 0.8668652570685449,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.134725,
+      "spectral_dimension": 1.2904255663897426,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.234725,
+      "spectral_dimension": 0.7505924327057564,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.334725,
+      "spectral_dimension": 1.2913295844450878,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.434725,
+      "spectral_dimension": 1.1742842213134104,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.534725,
+      "spectral_dimension": 0.9326672737206287,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.634725,
+      "spectral_dimension": 0.8140370698437807,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.734725,
+      "spectral_dimension": 0.8919885166343937,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.834725,
+      "spectral_dimension": 0.959357474928004,
+      "batch_id": 1
+    },
+    {
+      "gamma": 30.934725,
+      "spectral_dimension": 1.2950651930458226,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.034725,
+      "spectral_dimension": 0.8572006649143191,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.134725,
+      "spectral_dimension": 1.080785106432187,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.234725,
+      "spectral_dimension": 1.1199150102413649,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.334725,
+      "spectral_dimension": 0.7370488008202822,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.434725,
+      "spectral_dimension": 1.183217758588999,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.534725,
+      "spectral_dimension": 1.0021659350187395,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.634725,
+      "spectral_dimension": 1.1068832563136202,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.734725,
+      "spectral_dimension": 1.0503385998783403,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.834725,
+      "spectral_dimension": 0.9190048111239709,
+      "batch_id": 1
+    },
+    {
+      "gamma": 31.934725,
+      "spectral_dimension": 0.8927086536760946,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.034725,
+      "spectral_dimension": 0.9715293900095003,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.134725,
+      "spectral_dimension": 0.9538393889148926,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.234725,
+      "spectral_dimension": 0.9685248070151123,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.334725,
+      "spectral_dimension": 0.8608825315536947,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.434725,
+      "spectral_dimension": 0.9753066687261263,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.534725,
+      "spectral_dimension": 0.8624207914284833,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.634725,
+      "spectral_dimension": 0.7187390596532115,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.734725,
+      "spectral_dimension": 1.0713978563980542,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.834725,
+      "spectral_dimension": 0.9203956219687963,
+      "batch_id": 1
+    },
+    {
+      "gamma": 32.934725,
+      "spectral_dimension": 1.197010291805458,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.034725,
+      "spectral_dimension": 0.7467413564103864,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.134725,
+      "spectral_dimension": 1.1604441728148107,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.234725,
+      "spectral_dimension": 1.2162940599739867,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.334725000000006,
+      "spectral_dimension": 1.1706047433200049,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.434725,
+      "spectral_dimension": 0.920814279723228,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.534725,
+      "spectral_dimension": 0.7714692897441471,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.634725,
+      "spectral_dimension": 0.8309943852504256,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.734725,
+      "spectral_dimension": 0.94422039329246,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.834725000000006,
+      "spectral_dimension": 0.788479587507986,
+      "batch_id": 1
+    },
+    {
+      "gamma": 33.934725,
+      "spectral_dimension": 0.7438320019604432,
+      "batch_id": 1
+    },
+    {
+      "gamma": 34.034725,
+      "spectral_dimension": 1.1225278382937502,
+      "batch_id": 1
+    },
+    {
+      "gamma": 34.134725,
+      "spectral_dimension": 0.7707795476726691,
+      "batch_id": 2
+    },
+    {
+      "gamma": 34.234725,
+      "spectral_dimension": 1.04011621603949,
+      "batch_id": 2
+    }
+  ]
+}

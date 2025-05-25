@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-05-26T06:39:18.656701",
+  "launched_systems": [
+    {
+      "name": "recovery",
+      "description": "自動リカバリーシステム",
+      "pid": 29668,
+      "script": "nkat_v11_auto_recovery_system.py"
+    },
+    {
+      "name": "dashboard",
+      "description": "包括的リカバリーダッシュボード",
+      "pid": 4984,
+      "script": "nkat_v11_comprehensive_recovery_dashboard.py"
+    },
+    {
+      "name": "verification",
+      "description": "厳密数学検証システム",
+      "pid": 18176,
+      "script": "nkat_v11_rigorous_mathematical_verification.py"
+    },
+    {
+      "name": "large_scale",
+      "description": "大規模検証システム",
+      "pid": 30748,
+      "script": "nkat_v11_enhanced_large_scale_verification.py"
+    }
+  ],
+  "failed_systems": [
+    {
+      "name": "analysis",
+      "description": "詳細収束分析システム",
+      "script": "nkat_v11_detailed_convergence_analyzer.py"
+    }
+  ],
+  "configuration": {
+    "auto_recovery": true,
+    "streamlit_dashboard": true,
+    "detailed_analysis": true,
+    "verification_systems": true,
+    "browser_auto_open": true,
+    "streamlit_port": 8501
+  }
+}

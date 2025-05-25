@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-05-26T04:48:13.076297",
+  "gamma_values": [
+    14.134725,
+    21.02204,
+    25.010858,
+    30.424876,
+    32.935062
+  ],
+  "entanglement_metrics": [
+    {
+      "gamma": 14.134725,
+      "concurrence": 0.08430957909629744,
+      "entanglement_entropy": 0.004573407377222495,
+      "negativity": 0.025837479868395033,
+      "quantum_discord": 0.007398287479766008,
+      "bell_violation": 0.0009063715919639049,
+      "timestamp": "2025-05-26T04:48:13.076297"
+    },
+    {
+      "gamma": 21.02204,
+      "concurrence": 0.03285159723063319,
+      "entanglement_entropy": 0.0017583420055572074,
+      "negativity": 0.04025241811828006,
+      "quantum_discord": 0.005234912185435092,
+      "bell_violation": 0.0033168439930988634,
+      "timestamp": "2025-05-26T04:48:13.076297"
+    },
+    {
+      "gamma": 25.010858,
+      "concurrence": 0.09410488632463572,
+      "entanglement_entropy": 0.007468757871528158,
+      "negativity": 0.02397495141572456,
+      "quantum_discord": 0.0009067439120537647,
+      "bell_violation": 0.009872220817128057,
+      "timestamp": "2025-05-26T04:48:13.076297"
+    },
+    {
+      "gamma": 30.424876,
+      "concurrence": 0.0011114048697216995,
+      "entanglement_entropy": 0.00041389219368315747,
+      "negativity": 0.003303102735304192,
+      "quantum_discord": 0.015074705231559838,
+      "bell_violation": 0.006426598674531972,
+      "timestamp": "2025-05-26T04:48:13.076297"
+    },
+    {
+      "gamma": 32.935062,
+      "concurrence": 0.015911647076329482,
+      "entanglement_entropy": 0.0030523107298447896,
+      "negativity": 0.019778903448709657,
+      "quantum_discord": 0.01683442377775895,
+      "bell_violation": 0.0019343956421869436,
+      "timestamp": "2025-05-26T04:48:13.076297"
+    }
+  ],
+  "statistics": {
+    "mean_concurrence": 0.0456578229195235,
+    "max_concurrence": 0.09410488632463572,
+    "mean_entropy": 0.003453342035567161,
+    "entanglement_detection_rate": 0.2
+  }
+}
