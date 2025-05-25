@@ -34,6 +34,7 @@ import psutil
 import gc
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import traceback
+import glob
 
 # 日本語フォント設定
 plt.rcParams['font.family'] = ['MS Gothic', 'DejaVu Sans']
@@ -268,9 +269,94 @@ class NKAT10KGammaChallenge:
         
         logger.info(f"🎯 10,000γチャレンジシステム初期化完了")
     
-    def generate_gamma_values(self, count: int = 10000) -> List[float]:
-        """10,000個のγ値生成"""
+    def load_latest_gamma_data(self) -> Optional[Dict]:
+        """最新のγ値データを自動検出・読み込み"""
+        try:
+            # 検索パターン（最新ファイル優先）
+            search_patterns = [
+                # 最新の10k_gamma_results
+                "../../10k_gamma_results/10k_gamma_final_results_*.json",
+                "../10k_gamma_results/10k_gamma_final_results_*.json", 
+                "10k_gamma_results/10k_gamma_final_results_*.json",
+                # 中間結果ファイル
+                "../../10k_gamma_results/intermediate_results_batch_*.json",
+                "../10k_gamma_results/intermediate_results_batch_*.json",
+                "10k_gamma_results/intermediate_results_batch_*.json",
+                # その他のリーマン結果
+                "../../rtx3080_extreme_riemann_results_*.json",
+                "../rtx3080_extreme_riemann_results_*.json",
+                "rtx3080_extreme_riemann_results_*.json",
+                "../../ultimate_mastery_riemann_results.json",
+                "../ultimate_mastery_riemann_results.json",
+                "ultimate_mastery_riemann_results.json"
+            ]
+            
+            found_files = []
+            
+            # 各パターンでファイルを検索
+            for pattern in search_patterns:
+                matches = glob.glob(pattern)
+                for match in matches:
+                    file_path = Path(match)
+                    if file_path.exists() and file_path.stat().st_size > 1000:  # 1KB以上
+                        found_files.append((file_path, file_path.stat().st_mtime))
+            
+            if not found_files:
+                logger.warning("⚠️ 既存のγ値データが見つかりません")
+                return None
+            
+            # 最新ファイルを選択
+            latest_file = max(found_files, key=lambda x: x[1])[0]
+            
+            with open(latest_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+            logger.info(f"📊 最新γ値データ読み込み成功: {latest_file}")
+            logger.info(f"📈 ファイルサイズ: {latest_file.stat().st_size / 1024:.1f} KB")
+            
+            # データ構造の検証
+            if 'results' in data:
+                results_count = len(data['results'])
+                logger.info(f"📊 読み込み結果数: {results_count:,}")
+                
+                # 有効な結果の統計
+                valid_results = [r for r in data['results'] if 'gamma' in r and not np.isnan(r.get('spectral_dimension', np.nan))]
+                logger.info(f"✅ 有効結果数: {len(valid_results):,}")
+                
+                return data
+            else:
+                logger.warning(f"⚠️ 不明なデータ形式: {latest_file}")
+                return data
+                
+        except Exception as e:
+            logger.error(f"❌ γ値データ読み込みエラー: {e}")
+            return None
+    
+    def extract_completed_gammas(self, existing_data: Dict) -> List[float]:
+        """既存データから完了済みγ値を抽出"""
+        completed_gammas = []
+        
+        if 'results' in existing_data:
+            for result in existing_data['results']:
+                if 'gamma' in result and 'spectral_dimension' in result:
+                    # 有効な結果のみを完了済みとして扱う
+                    if not np.isnan(result.get('spectral_dimension', np.nan)):
+                        completed_gammas.append(result['gamma'])
+        
+        logger.info(f"📊 完了済みγ値: {len(completed_gammas):,}個")
+        return sorted(completed_gammas)
+    
+    def generate_gamma_values(self, count: int = 10000, exclude_completed: bool = True) -> List[float]:
+        """10,000個のγ値生成（完了済み除外オプション付き）"""
         gamma_values = []
+        
+        # 既存データの確認
+        completed_gammas = set()
+        if exclude_completed:
+            existing_data = self.load_latest_gamma_data()
+            if existing_data:
+                completed_gammas = set(self.extract_completed_gammas(existing_data))
+                logger.info(f"📊 除外対象の完了済みγ値: {len(completed_gammas):,}個")
         
         # 既知の高精度ゼロ点（最初の100個）
         known_zeros = [
@@ -282,37 +368,50 @@ class NKAT10KGammaChallenge:
             92.491899, 94.651344, 95.870634, 98.831194, 101.317851
         ]
         
-        # 既知のゼロ点を拡張
+        # 既知のゼロ点を拡張（完了済みを除外）
         for i in range(100):
             if i < len(known_zeros):
-                gamma_values.append(known_zeros[i])
+                gamma = known_zeros[i]
+                if gamma not in completed_gammas:
+                    gamma_values.append(gamma)
             else:
                 # 数学的補間
-                gamma_values.append(14.134725 + i * 2.5 + np.random.normal(0, 0.1))
+                gamma = 14.134725 + i * 2.5 + np.random.normal(0, 0.1)
+                if gamma not in completed_gammas:
+                    gamma_values.append(gamma)
         
         # 中間範囲の値（100-1000）
         for i in range(900):
             base_gamma = 100 + i * 0.5
-            gamma_values.append(base_gamma + np.random.normal(0, 0.05))
+            gamma = base_gamma + np.random.normal(0, 0.05)
+            if gamma not in completed_gammas:
+                gamma_values.append(gamma)
         
         # 高範囲の値（1000-10000）
         for i in range(9000):
             base_gamma = 500 + i * 0.1
-            gamma_values.append(base_gamma + np.random.normal(0, 0.02))
+            gamma = base_gamma + np.random.normal(0, 0.02)
+            if gamma not in completed_gammas:
+                gamma_values.append(gamma)
         
         # ソートして重複除去
         gamma_values = sorted(list(set(gamma_values)))
         
-        # 正確に10,000個に調整
+        # 正確に指定数に調整
         if len(gamma_values) > count:
             gamma_values = gamma_values[:count]
         elif len(gamma_values) < count:
-            # 不足分を補完
+            # 不足分を補完（完了済みを避けて）
             while len(gamma_values) < count:
-                last_gamma = gamma_values[-1]
-                gamma_values.append(last_gamma + 0.1 + np.random.normal(0, 0.01))
+                last_gamma = gamma_values[-1] if gamma_values else 1000.0
+                new_gamma = last_gamma + 0.1 + np.random.normal(0, 0.01)
+                if new_gamma not in completed_gammas:
+                    gamma_values.append(new_gamma)
         
-        logger.info(f"📊 10,000γ値生成完了: 範囲 [{min(gamma_values):.3f}, {max(gamma_values):.3f}]")
+        logger.info(f"📊 {count:,}γ値生成完了: 範囲 [{min(gamma_values):.3f}, {max(gamma_values):.3f}]")
+        if exclude_completed and completed_gammas:
+            logger.info(f"🔄 完了済み除外: {len(completed_gammas):,}個のγ値をスキップ")
+        
         return gamma_values
     
     def construct_hamiltonian(self, s: complex) -> torch.Tensor:
@@ -428,8 +527,8 @@ class NKAT10KGammaChallenge:
         
         return results
     
-    def execute_10k_challenge(self, resume: bool = True) -> Dict:
-        """10,000γチャレンジの実行"""
+    def execute_10k_challenge(self, resume: bool = True, use_existing_data: bool = True) -> Dict:
+        """10,000γチャレンジの実行（既存データ活用対応）"""
         print("=" * 80)
         print("🚀 NKAT v9.1 - 10,000γ Challenge 開始")
         print("=" * 80)
@@ -437,39 +536,74 @@ class NKAT10KGammaChallenge:
         print(f"🎯 目標: 10,000γ値の検証")
         print(f"📦 バッチサイズ: {self.batch_size}")
         print(f"🛡️ リカバリー機能: 有効")
+        print(f"🔄 既存データ活用: {'有効' if use_existing_data else '無効'}")
         print("=" * 80)
         
         start_time = time.time()
         
-        # γ値生成
-        all_gamma_values = self.generate_gamma_values(self.total_gammas)
+        # 既存データの確認と統合
+        all_results = []
+        existing_data = None
+        
+        if use_existing_data:
+            existing_data = self.load_latest_gamma_data()
+            if existing_data and 'results' in existing_data:
+                all_results = existing_data['results'].copy()
+                logger.info(f"📊 既存結果を統合: {len(all_results):,}個")
+        
+        # γ値生成（完了済みを除外）
+        all_gamma_values = self.generate_gamma_values(
+            self.total_gammas, 
+            exclude_completed=use_existing_data
+        )
         
         # 復旧チェック
         checkpoint_data = None
         start_batch = 0
-        all_results = []
         
         if resume:
             checkpoint_data = self.recovery_manager.load_latest_checkpoint()
             if checkpoint_data:
                 start_batch = checkpoint_data.batch_id + 1
-                all_results = checkpoint_data.results
+                # チェックポイントの結果を統合
+                if checkpoint_data.results:
+                    # 重複除去のため、γ値でマージ
+                    existing_gammas = {r['gamma'] for r in all_results}
+                    for result in checkpoint_data.results:
+                        if result['gamma'] not in existing_gammas:
+                            all_results.append(result)
                 logger.info(f"🔄 チェックポイントから復旧: Batch {start_batch} から再開")
         
-        # バッチ処理
-        total_batches = (self.total_gammas + self.batch_size - 1) // self.batch_size
+        # 処理済みγ値の確認
+        processed_gammas = {r['gamma'] for r in all_results}
+        remaining_gammas = [g for g in all_gamma_values if g not in processed_gammas]
         
-        for batch_id in range(start_batch, total_batches):
+        logger.info(f"📊 処理済みγ値: {len(processed_gammas):,}個")
+        logger.info(f"📊 残りγ値: {len(remaining_gammas):,}個")
+        
+        if not remaining_gammas:
+            logger.info("✅ 全てのγ値が既に処理済みです")
+            # 既存結果の統計を計算して返す
+            return self._calculate_final_results(all_results, time.time() - start_time)
+        
+        # バッチ処理
+        total_batches = (len(remaining_gammas) + self.batch_size - 1) // self.batch_size
+        
+        for batch_id in range(start_batch, start_batch + total_batches):
             if self.recovery_manager.emergency_stop:
                 logger.warning("⚠️ 緊急停止により処理を中断")
                 break
             
-            # バッチ範囲計算
-            start_idx = batch_id * self.batch_size
-            end_idx = min(start_idx + self.batch_size, self.total_gammas)
-            gamma_batch = all_gamma_values[start_idx:end_idx]
+            # バッチ範囲計算（残りγ値から）
+            batch_start_idx = (batch_id - start_batch) * self.batch_size
+            batch_end_idx = min(batch_start_idx + self.batch_size, len(remaining_gammas))
             
-            logger.info(f"🔄 Batch {batch_id + 1}/{total_batches} 開始: γ[{start_idx}:{end_idx}]")
+            if batch_start_idx >= len(remaining_gammas):
+                break
+                
+            gamma_batch = remaining_gammas[batch_start_idx:batch_end_idx]
+            
+            logger.info(f"🔄 Batch {batch_id + 1}/{start_batch + total_batches} 開始: {len(gamma_batch)}個のγ値")
             
             # システム監視
             monitor = self.recovery_manager.monitor_system()
@@ -490,15 +624,15 @@ class NKAT10KGammaChallenge:
                 # チェックポイント保存
                 checkpoint = CheckpointData(
                     batch_id=batch_id,
-                    gamma_start_idx=start_idx,
-                    gamma_end_idx=end_idx,
+                    gamma_start_idx=batch_start_idx,
+                    gamma_end_idx=batch_end_idx,
                     completed_gammas=gamma_batch,
                     results=all_results,
                     timestamp=datetime.now().isoformat(),
                     system_state=asdict(monitor),
                     memory_usage=monitor.memory_percent,
                     gpu_memory=monitor.gpu_memory_used,
-                    total_progress=(batch_id + 1) / total_batches * 100
+                    total_progress=(batch_id + 1) / (start_batch + total_batches) * 100
                 )
                 
                 self.recovery_manager.save_checkpoint(checkpoint)
@@ -518,7 +652,10 @@ class NKAT10KGammaChallenge:
         
         # 最終結果の計算
         execution_time = time.time() - start_time
-        
+        return self._calculate_final_results(all_results, execution_time)
+    
+    def _calculate_final_results(self, all_results: List[Dict], execution_time: float) -> Dict:
+        """最終結果の計算"""
         # 統計計算
         valid_results = [r for r in all_results if not np.isnan(r.get('spectral_dimension', np.nan))]
         
@@ -587,6 +724,15 @@ class NKAT10KGammaChallenge:
         except Exception as e:
             logger.warning(f"⚠️ 中間結果保存エラー: {e}")
 
+    def load_existing_results(self, results_dir: Path) -> List[Dict]:
+        """既存の結果ファイルから結果を読み込む"""
+        existing_results = []
+        for file in results_dir.glob("*.json"):
+            with open(file, 'r', encoding='utf-8') as f:
+                results = json.load(f)
+                existing_results.extend(results['results'])
+        return existing_results
+
 def main():
     """メイン実行関数"""
     try:
@@ -596,10 +742,33 @@ def main():
         # 10Kチャレンジシステム初期化
         challenge_system = NKAT10KGammaChallenge(recovery_manager)
         
+        # 既存データの確認
+        existing_data = challenge_system.load_latest_gamma_data()
+        if existing_data:
+            print(f"📊 既存データ検出: {len(existing_data.get('results', []))}個の結果")
+            
+            # ユーザーに選択肢を提示
+            use_existing = True  # デフォルトで既存データを活用
+            print("🔄 既存データを活用して継続実行します")
+        else:
+            print("📊 既存データが見つかりません。新規実行します")
+            use_existing = False
+        
         # チャレンジ実行
-        results = challenge_system.execute_10k_challenge(resume=True)
+        results = challenge_system.execute_10k_challenge(
+            resume=True, 
+            use_existing_data=use_existing
+        )
         
         print("🎉 NKAT v9.1 - 10,000γ Challenge 成功！")
+        
+        # 結果サマリー表示
+        if 'statistics' in results:
+            stats = results['statistics']
+            print(f"\n📊 最終統計:")
+            print(f"  平均スペクトル次元: {stats.get('mean_spectral_dimension', 'N/A'):.6f}")
+            print(f"  平均収束性: {stats.get('mean_convergence', 'N/A'):.6f}")
+            print(f"  最良収束性: {stats.get('best_convergence', 'N/A'):.6f}")
         
     except KeyboardInterrupt:
         print("\n⚠️ ユーザーによる中断")

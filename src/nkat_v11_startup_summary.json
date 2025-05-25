@@ -1,28 +1,28 @@
 {
-  "timestamp": "2025-05-26T06:39:18.656701",
+  "timestamp": "2025-05-26T06:47:36.400530",
   "launched_systems": [
     {
       "name": "recovery",
       "description": "自動リカバリーシステム",
-      "pid": 29668,
+      "pid": 12428,
       "script": "nkat_v11_auto_recovery_system.py"
     },
     {
       "name": "dashboard",
       "description": "包括的リカバリーダッシュボード",
-      "pid": 4984,
+      "pid": 8688,
       "script": "nkat_v11_comprehensive_recovery_dashboard.py"
     },
     {
       "name": "verification",
       "description": "厳密数学検証システム",
-      "pid": 18176,
+      "pid": 31320,
       "script": "nkat_v11_rigorous_mathematical_verification.py"
     },
     {
       "name": "large_scale",
       "description": "大規模検証システム",
-      "pid": 30748,
+      "pid": 29824,
       "script": "nkat_v11_enhanced_large_scale_verification.py"
     }
   ],

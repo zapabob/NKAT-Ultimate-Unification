@@ -103,5 +103,35 @@
       "gpu_memory_used": 0.0,
       "gpu_memory_total": 10.73676288
     }
+  },
+  "startup_20250526_064723": {
+    "timestamp": "20250526_064723",
+    "type": "startup",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 8.5,
+      "memory_percent": 62.8,
+      "memory_available": 12.718231552,
+      "disk_percent": 86.5,
+      "disk_free": 135.126847488,
+      "timestamp": 1748209644.2843215,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_065339": {
+    "timestamp": "20250526_065339",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 84.2,
+      "memory_percent": 48.4,
+      "memory_available": 17.673650176,
+      "disk_percent": 86.5,
+      "disk_free": 135.163838464,
+      "timestamp": 1748210020.478323,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
   }
 }

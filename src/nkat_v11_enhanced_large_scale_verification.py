@@ -31,6 +31,7 @@ from scipy.integrate import quad, dblquad
 from scipy.stats import unitary_group, chi2, kstest, normaltest
 from scipy.linalg import eigvals, eigvalsh, norm
 import sympy as sp
+import glob
 
 # 日本語フォント設定
 plt.rcParams['font.family'] = ['MS Gothic', 'DejaVu Sans']
@@ -420,33 +421,92 @@ class LargeScaleGammaChallengeIntegrator:
         self.gamma_data = self._load_gamma_challenge_data()
         
     def _load_gamma_challenge_data(self) -> Optional[Dict]:
-        """10,000γ Challengeデータの読み込み"""
+        """10,000γ Challengeデータの読み込み（最新ファイル自動検出）"""
         try:
-            # 複数のパスを試行
-            possible_paths = [
-                "10k_gamma_results/10k_gamma_final_results_20250526_044813.json",
-                "../10k_gamma_results/10k_gamma_final_results_20250526_044813.json",
-                "../../10k_gamma_results/10k_gamma_final_results_20250526_044813.json"
+            # 複数のパスパターンを試行（最新ファイル優先）
+            search_patterns = [
+                # 最新の10k_gamma_results
+                "../../10k_gamma_results/10k_gamma_final_results_*.json",
+                "../10k_gamma_results/10k_gamma_final_results_*.json", 
+                "10k_gamma_results/10k_gamma_final_results_*.json",
+                # 中間結果ファイル
+                "../../10k_gamma_results/intermediate_results_batch_*.json",
+                "../10k_gamma_results/intermediate_results_batch_*.json",
+                "10k_gamma_results/intermediate_results_batch_*.json",
+                # その他のリーマン結果
+                "../../rtx3080_extreme_riemann_results_*.json",
+                "../rtx3080_extreme_riemann_results_*.json",
+                "rtx3080_extreme_riemann_results_*.json",
+                "../../ultimate_mastery_riemann_results.json",
+                "../ultimate_mastery_riemann_results.json",
+                "ultimate_mastery_riemann_results.json"
             ]
             
-            for path in possible_paths:
-                if Path(path).exists():
-                    with open(path, 'r', encoding='utf-8') as f:
-                        data = json.load(f)
-                        logger.info(f"📊 10,000γ Challenge データ読み込み成功: {path}")
-                        return data
+            found_files = []
             
-            logger.warning("⚠️ 10,000γ Challenge データが見つかりません")
-            return None
+            # 各パターンでファイルを検索
+            for pattern in search_patterns:
+                matches = glob.glob(pattern)
+                for match in matches:
+                    file_path = Path(match)
+                    if file_path.exists() and file_path.stat().st_size > 1000:  # 1KB以上
+                        found_files.append((file_path, file_path.stat().st_mtime))
             
+            if not found_files:
+                logger.warning("⚠️ 10,000γ Challenge データが見つかりません")
+                return None
+            
+            # 最新ファイルを選択
+            latest_file = max(found_files, key=lambda x: x[1])[0]
+            
+            with open(latest_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+            logger.info(f"📊 最新γチャレンジデータ読み込み成功: {latest_file}")
+            logger.info(f"📈 ファイルサイズ: {latest_file.stat().st_size / 1024:.1f} KB")
+            
+            # データ構造の検証と正規化
+            if 'results' in data:
+                results_count = len(data['results'])
+                logger.info(f"📊 読み込み結果数: {results_count:,}")
+                
+                # 有効な結果の統計
+                valid_results = [r for r in data['results'] if 'gamma' in r and 'spectral_dimension' in r]
+                logger.info(f"✅ 有効結果数: {len(valid_results):,}")
+                
+                return data
+            elif 'gamma_values' in data:
+                # 古い形式のデータを新形式に変換
+                logger.info("🔄 古い形式のデータを変換中...")
+                converted_data = {
+                    'results': [
+                        {
+                            'gamma': gamma,
+                            'spectral_dimension': data.get('spectral_dimensions', [np.nan] * len(data['gamma_values']))[i],
+                            'convergence_to_half': data.get('convergences', [np.nan] * len(data['gamma_values']))[i]
+                        }
+                        for i, gamma in enumerate(data['gamma_values'])
+                    ],
+                    'metadata': {
+                        'source_file': str(latest_file),
+                        'conversion_timestamp': datetime.now().isoformat(),
+                        'original_format': 'legacy'
+                    }
+                }
+                return converted_data
+            else:
+                logger.warning(f"⚠️ 不明なデータ形式: {latest_file}")
+                return data  # そのまま返す
+                
         except Exception as e:
             logger.error(f"❌ γチャレンジデータ読み込みエラー: {e}")
             return None
     
     def extract_high_quality_gammas(self, min_quality: float = 0.95, max_count: int = 1000) -> List[float]:
-        """高品質γ値の抽出"""
-        if not self.gamma_data or 'results' not in self.gamma_data:
-            # フォールバック：既知の高精度γ値
+        """高品質γ値の抽出（最新データ形式対応）"""
+        if not self.gamma_data:
+            # フォールバック：既知の高精度γ値（拡張版）
+            logger.warning("⚠️ γデータが利用できません。既知の高精度γ値を使用します")
             return [
                 14.134725141734693790, 21.022039638771554993, 25.010857580145688763,
                 30.424876125859513210, 32.935061587739189690, 37.586178158825671257,
@@ -457,22 +517,102 @@ class LargeScaleGammaChallengeIntegrator:
                 75.704690699083933021, 77.144840068874800482, 79.337375020249367492,
                 82.910380854341184129, 84.735492981329459260, 87.425274613072525047,
                 88.809111208594895897, 92.491899271363505371, 94.651344041047851464,
-                95.870634228245845394, 98.831194218193198281, 101.317851006956433302
-            ]
+                95.870634228245845394, 98.831194218193198281, 101.317851006956433302,
+                103.725538040459342690, 105.446623052847647631, 107.168611184677817360,
+                111.029535442932346618, 111.874659177002999814, 114.320220915479465336,
+                116.226680321519386851, 118.790782866263561281, 121.370125002721211327,
+                122.946829294678492525, 124.256818554044369021, 127.516683880778548875,
+                129.578704200603439512, 131.087688531714505878, 133.497737203718364798,
+                134.756509753893842134, 138.116042055441900145, 139.736208952750183999,
+                141.123707404259639643, 143.111845808910235794, 146.000982487319549026
+            ][:max_count]
         
-        results = self.gamma_data['results']
+        # データ形式の判定と処理
+        results = []
         
-        # 品質基準による選別
+        if 'results' in self.gamma_data:
+            # 新形式：results配列
+            results = self.gamma_data['results']
+            logger.info(f"📊 新形式データ検出: {len(results)}個の結果")
+        elif 'gamma_values' in self.gamma_data:
+            # 旧形式：個別配列
+            gamma_values = self.gamma_data['gamma_values']
+            convergences = self.gamma_data.get('convergences', [])
+            spectral_dims = self.gamma_data.get('spectral_dimensions', [])
+            
+            results = []
+            for i, gamma in enumerate(gamma_values):
+                result = {'gamma': gamma}
+                if i < len(convergences):
+                    result['convergence_to_half'] = convergences[i]
+                if i < len(spectral_dims):
+                    result['spectral_dimension'] = spectral_dims[i]
+                results.append(result)
+            
+            logger.info(f"📊 旧形式データ変換: {len(results)}個の結果")
+        else:
+            logger.warning("⚠️ 不明なデータ形式です")
+            return []
+        
+        # 品質基準による選別（複数の基準を使用）
         high_quality_gammas = []
-        for result in results:
-            if 'gamma' in result and 'convergence_to_half' in result:
-                convergence = result['convergence_to_half']
-                if convergence < (1.0 - min_quality):  # 高い収束性
-                    high_quality_gammas.append(result['gamma'])
+        quality_scores = []
         
-        # ソートして上位を選択
+        for result in results:
+            if 'gamma' not in result:
+                continue
+                
+            gamma = result['gamma']
+            quality_score = 0.0
+            
+            # 収束性による評価
+            if 'convergence_to_half' in result:
+                convergence = result['convergence_to_half']
+                if not np.isnan(convergence) and convergence < (1.0 - min_quality):
+                    quality_score += 0.4  # 40%の重み
+            
+            # スペクトル次元による評価
+            if 'spectral_dimension' in result:
+                spectral_dim = result['spectral_dimension']
+                if not np.isnan(spectral_dim):
+                    # 理論値1.0に近いほど高品質
+                    spectral_quality = max(0, 1.0 - abs(spectral_dim - 1.0))
+                    quality_score += 0.3 * spectral_quality  # 30%の重み
+            
+            # エラーがないことによる評価
+            if 'error' not in result:
+                quality_score += 0.2  # 20%の重み
+            
+            # 実部が0.5に近いことによる評価
+            if 'real_part' in result:
+                real_part = result['real_part']
+                if not np.isnan(real_part):
+                    real_quality = max(0, 1.0 - abs(real_part - 0.5) * 10)
+                    quality_score += 0.1 * real_quality  # 10%の重み
+            
+            # 品質閾値を満たす場合に追加
+            if quality_score >= min_quality:
+                high_quality_gammas.append(gamma)
+                quality_scores.append(quality_score)
+        
+        # 品質スコア順にソート
+        if high_quality_gammas:
+            sorted_pairs = sorted(zip(high_quality_gammas, quality_scores), 
+                                key=lambda x: x[1], reverse=True)
+            high_quality_gammas = [pair[0] for pair in sorted_pairs]
+        
+        # γ値でもソート（数学的順序）
         high_quality_gammas.sort()
-        return high_quality_gammas[:max_count]
+        
+        # 最大数に制限
+        result_gammas = high_quality_gammas[:max_count]
+        
+        logger.info(f"✅ 高品質γ値抽出完了: {len(result_gammas)}個（品質閾値: {min_quality:.2%}）")
+        if result_gammas:
+            logger.info(f"📈 γ値範囲: {min(result_gammas):.6f} - {max(result_gammas):.6f}")
+            logger.info(f"📊 平均品質スコア: {np.mean(quality_scores[:len(result_gammas)]):.3f}")
+        
+        return result_gammas
     
     def compute_gamma_statistics(self, gamma_values: List[float]) -> Dict[str, Any]:
         """γ値統計の計算"""
