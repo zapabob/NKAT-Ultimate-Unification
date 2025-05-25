@@ -1,0 +1,147 @@
+{
+  "timestamp": "20250523_195236",
+  "stability_results": {
+    "Normal": {
+      "mean": -0.0581655316054821,
+      "std": 0.9997193813323975,
+      "min": -3.2840042114257812,
+      "max": 2.9749248027801514,
+      "nan_count": 0,
+      "inf_count": 0,
+      "log_nan_count": 0,
+      "range_ratio": 0.9058833701944778
+    },
+    "Large": {
+      "mean": -51409.98828125,
+      "std": 985697.25,
+      "min": -3060248.25,
+      "max": 2636392.75,
+      "nan_count": 0,
+      "inf_count": 0,
+      "log_nan_count": 0,
+      "range_ratio": 0.8614963671656376
+    },
+    "Small": {
+      "mean": 6.587591627749134e-08,
+      "std": 9.72772681961942e-07,
+      "min": -2.529139464968466e-06,
+      "max": 2.7882874746865127e-06,
+      "nan_count": 0,
+      "inf_count": 0,
+      "log_nan_count": 0,
+      "range_ratio": 1.1024644590949115
+    },
+    "Mixed": {
+      "mean": 27834.72265625,
+      "std": 724186.625,
+      "min": -2600209.0,
+      "max": 3412032.25,
+      "nan_count": 0,
+      "inf_count": 0,
+      "log_nan_count": 0,
+      "range_ratio": 1.3122146142867745
+    }
+  },
+  "spectral_results": {
+    "Normal": {
+      "field_norm_range": [
+        0.37651363015174866,
+        3.7499611377716064
+      ],
+      "log_field_range": [
+        -0.9768010377883911,
+        1.32174551486969
+      ],
+      "spectral_dim": 4.049485206604004,
+      "nan_in_norm": 0,
+      "nan_in_log": 0,
+      "nan_in_spectral": false
+    },
+    "Small": {
+      "field_norm_range": [
+        0.000449690327513963,
+        0.004149346612393856
+      ],
+      "log_field_range": [
+        -7.70695161819458,
+        -5.484804630279541
+      ],
+      "spectral_dim": 3.364433526992798,
+      "nan_in_norm": 0,
+      "nan_in_log": 0,
+      "nan_in_spectral": false
+    },
+    "Large": {
+      "field_norm_range": [
+        536.1618041992188,
+        3938.834716796875
+      ],
+      "log_field_range": [
+        6.284436225891113,
+        8.278639793395996
+      ],
+      "spectral_dim": 4.747260093688965,
+      "nan_in_norm": 0,
+      "nan_in_log": 0,
+      "nan_in_spectral": false
+    }
+  },
+  "theta_results": {
+    "Normal": {
+      "theta_range": [
+        0.0,
+        0.0
+      ],
+      "theta_log_range": [
+        -Infinity,
+        -Infinity
+      ],
+      "running_target_range": [
+        -1.8000001907348633,
+        -1.0
+      ],
+      "mse_loss": Infinity,
+      "nan_in_theta_log": 0,
+      "nan_in_mse": false
+    },
+    "Extreme": {
+      "theta_range": [
+        0.0,
+        0.0
+      ],
+      "theta_log_range": [
+        -Infinity,
+        -Infinity
+      ],
+      "running_target_range": [
+        -1.8000001907348633,
+        -1.0
+      ],
+      "mse_loss": Infinity,
+      "nan_in_theta_log": 0,
+      "nan_in_mse": false
+    },
+    "Mixed": {
+      "theta_range": [
+        0.0,
+        1.000000013351432e-10
+      ],
+      "theta_log_range": [
+        -Infinity,
+        -10.0
+      ],
+      "running_target_range": [
+        -1.8000001907348633,
+        -1.0
+      ],
+      "mse_loss": Infinity,
+      "nan_in_theta_log": 0,
+      "nan_in_mse": false
+    }
+  },
+  "recommendations": [
+    "✅ 数値安定性に大きな問題は検出されませんでした"
+  ],
+  "device": "cuda",
+  "torch_version": "2.5.1+cu121"
+}

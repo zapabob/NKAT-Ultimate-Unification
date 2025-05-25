@@ -1,0 +1,8 @@
+{
+  "latest_checkpoint": "./nkat_colab_checkpoints\\colab_checkpoint_epoch_0_20250523_193230.pth",
+  "epoch": 0,
+  "timestamp": "20250523_193230",
+  "spectral_dim": 0.0008121985602383574,
+  "total_loss": NaN,
+  "colab_session": true
+}

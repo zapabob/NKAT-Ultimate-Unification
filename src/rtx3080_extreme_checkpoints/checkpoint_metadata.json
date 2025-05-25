@@ -1,0 +1,7 @@
+{
+  "latest_checkpoint": "rtx3080_extreme_checkpoint_gamma_99_20250526_034135",
+  "checkpoint_file": "rtx3080_extreme_checkpoints\\rtx3080_extreme_checkpoint_gamma_99_20250526_034135.pkl",
+  "gamma_index": 99,
+  "timestamp": "20250526_034135",
+  "total_checkpoints": 10
+}
