@@ -1,0 +1,40 @@
+# NKAT理論 - 非可換コルモゴロフ・アーノルド表現理論
+# Non-Commutative Kolmogorov-Arnold Theory Dependencies
+
+# 基本的な科学計算ライブラリ
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+
+# 機械学習・深層学習
+torch>=2.1.0
+torchvision>=0.16.0
+
+# GPU計算（オプション - CUDA環境がある場合）
+# cupy-cuda12x>=12.0.0
+
+# データ処理・可視化
+pandas>=2.0.0
+plotly>=5.17.0
+seaborn>=0.12.0
+
+# 進捗表示・ログ
+tqdm>=4.66.0
+
+# ファイル処理
+h5py>=3.9.0
+
+# Streamlit関連（ダッシュボード用）
+streamlit>=1.29.0
+streamlit-plotly>=0.0.1
+
+# システム監視
+psutil>=5.9.0
+GPUtil>=1.4.0
+
+# その他のユーティリティ
+python-dateutil>=2.8.2
+
+# 開発・テスト用（オプション）
+# pytest>=7.4.0
+# jupyter>=1.0.0 
