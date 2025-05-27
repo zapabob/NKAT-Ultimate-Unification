@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- 中心円：実験的検証 -->
+    <circle cx="400" cy="300" r="100" fill="#e9ecef" stroke="#212529" stroke-width="2"/>
+    <text x="400" y="300" text-anchor="middle" fill="#212529" font-size="16">実験的検証</text>
+    
+    <!-- 量子共鳴検出 -->
+    <circle cx="200" cy="200" r="80" fill="#dee2e6" stroke="#495057" stroke-width="2"/>
+    <text x="200" y="200" text-anchor="middle" fill="#495057" font-size="14">量子共鳴検出</text>
+    
+    <!-- 意識状態分析 -->
+    <circle cx="600" cy="200" r="80" fill="#dee2e6" stroke="#495057" stroke-width="2"/>
+    <text x="600" y="200" text-anchor="middle" fill="#495057" font-size="14">意識状態分析</text>
+    
+    <!-- 技術的応用 -->
+    <circle cx="200" cy="400" r="80" fill="#dee2e6" stroke="#495057" stroke-width="2"/>
+    <text x="200" y="400" text-anchor="middle" fill="#495057" font-size="14">技術的応用</text>
+    
+    <!-- 再現性基準 -->
+    <circle cx="600" cy="400" r="80" fill="#dee2e6" stroke="#495057" stroke-width="2"/>
+    <text x="600" y="400" text-anchor="middle" fill="#495057" font-size="14">再現性基準</text>
+    
+    <!-- 接続線 -->
+    <line x1="300" y1="280" x2="400" y2="300" stroke="#6c757d" stroke-width="2"/>
+    <line x1="500" y1="280" x2="400" y2="300" stroke="#6c757d" stroke-width="2"/>
+    <line x1="300" y1="320" x2="400" y2="300" stroke="#6c757d" stroke-width="2"/>
+    <line x1="500" y1="320" x2="400" y2="300" stroke="#6c757d" stroke-width="2"/>
+    
+    <!-- 詳細説明 -->
+    <g font-size="12" fill="#6c757d">
+        <!-- 量子共鳴検出の詳細 -->
+        <text x="200" y="180">高精度位相検出</text>
+        <text x="200" y="200">量子コヒーレンス</text>
+        <text x="200" y="220">場の強度測定</text>
+        
+        <!-- 意識状態分析の詳細 -->
+        <text x="600" y="180">量子脳イメージング</text>
+        <text x="600" y="200">場の共鳴マッピング</text>
+        <text x="600" y="220">集団状態モニタリング</text>
+        
+        <!-- 技術的応用の詳細 -->
+        <text x="200" y="380">量子コンピューティング</text>
+        <text x="200" y="400">意識研究</text>
+        <text x="200" y="420">エネルギー技術</text>
+        
+        <!-- 再現性基準の詳細 -->
+        <text x="600" y="380">環境条件</text>
+        <text x="600" y="400">観測者要件</text>
+        <text x="600" y="420">測定精度</text>
+    </g>
+</svg> 

@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>nkat_core_theory API documentation</title>
+<meta name="description" content="NKAT (Non-Commutative Kolmogorov-Arnold Theory) 核心理論
+κ-変形B-スプライン、スペクトル次元、θ-λ関係の統合実装 …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>nkat_core_theory</code></h1>
+</header>
+<section id="section-intro">
+<p>NKAT (Non-Commutative Kolmogorov-Arnold Theory) 核心理論
+κ-変形B-スプライン、スペクトル次元、θ-λ関係の統合実装</p>
+<p>Author: NKAT Research Team
+Date: 2025-01-23
+Version: 1.0 - 統合理論版</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="nkat_core_theory.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    &#34;&#34;&#34;メイン実行関数&#34;&#34;&#34;
+    
+    # パラメータ設定
+    params = NKATParameters(
+        kappa=0.1,
+        theta=0.05,
+        lambda_param=1e-6,
+        dimension=4,
+        lattice_size=16,
+        energy_scale=1e12,
+        planck_scale=1.22e19
+    )
+    
+    # NKAT理論解析の実行
+    nkat = NKATCoreTheory(params)
+    results = nkat.run_comprehensive_analysis()
+    
+    # 結果の可視化
+    fig = nkat.visualize_results(results)
+    
+    # 結果の保存
+    with open(&#39;nkat_core_analysis_results.json&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as f:
+        # numpy配列をリストに変換
+        def convert_numpy(obj):
+            if isinstance(obj, np.ndarray):
+                return obj.tolist()
+            elif isinstance(obj, np.integer):
+                return int(obj)
+            elif isinstance(obj, np.floating):
+                return float(obj)
+            else:
+                return obj
+        
+        json.dump(results, f, indent=2, ensure_ascii=False, default=convert_numpy)
+    
+    print(f&#34;\n詳細結果が &#39;nkat_core_analysis_results.json&#39; に保存されました&#34;)
+    
+    return nkat, results</code></pre>
+</details>
+<div class="desc"><p>メイン実行関数</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="nkat_core_theory.NKATCoreTheory"><code class="flex name class">
+<span>class <span class="ident">NKATCoreTheory</span></span>
+<span>(</span><span>params: <a title="nkat_core_theory.NKATParameters" href="#nkat_core_theory.NKATParameters">NKATParameters</a>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NKATCoreTheory:
+    &#34;&#34;&#34;NKAT核心理論の統合クラス&#34;&#34;&#34;
+    
+    def __init__(self, params: NKATParameters):
+        self.params = params
+        self.results = {}
+        
+    def kappa_deformed_bspline(self, x: np.ndarray, center: float = 0, width: float = 1) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        κ-変形B-スプライン関数
+        
+        B_i^κ(x) = B_i(x) * exp(-κx²/2) * cos(θx)
+        
+        Args:
+            x: 評価点
+            center: 中心位置
+            width: 幅パラメータ
+            
+        Returns:
+            κ-変形B-スプライン値
+        &#34;&#34;&#34;
+        # 古典的B-スプライン（ガウシアン近似）
+        classical = np.exp(-(x - center)**2 / (2 * width**2))
+        
+        # κ-変形補正
+        kappa_correction = np.exp(-self.params.kappa * x**2 / 2)
+        
+        # θ-変形補正（非可換性）
+        theta_correction = np.cos(self.params.theta * x)
+        
+        return classical * kappa_correction * theta_correction
+    
+    def compute_spectral_dimension(self, eigenvalues: np.ndarray) -&gt; Tuple[float, Dict]:
+        &#34;&#34;&#34;
+        スペクトル次元の計算
+        
+        d_s = -2 * d(log Z(t))/d(log t)
+        
+        Args:
+            eigenvalues: 作用素の固有値
+            
+        Returns:
+            スペクトル次元と詳細情報
+        &#34;&#34;&#34;
+        # 正の固有値のみ使用
+        eigenvalues = eigenvalues[eigenvalues &gt; 1e-12]
+        
+        if len(eigenvalues) &lt; 10:
+            return float(&#39;nan&#39;), {&#39;error&#39;: &#39;有効な固有値が不足&#39;}
+        
+        # スペクトルゼータ関数の計算
+        t_values = np.logspace(-3, 0, 50)
+        zeta_values = []
+        
+        for t in t_values:
+            zeta_t = np.sum(np.exp(-t * eigenvalues))
+            zeta_values.append(zeta_t)
+        
+        zeta_values = np.array(zeta_values)
+        
+        # 対数微分の計算
+        log_t = np.log(t_values)
+        log_zeta = np.log(zeta_values + 1e-12)
+        
+        # 線形回帰で傾きを求める
+        valid_indices = np.isfinite(log_zeta) &amp; np.isfinite(log_t)
+        if np.sum(valid_indices) &lt; 5:
+            return float(&#39;nan&#39;), {&#39;error&#39;: &#39;有効なデータ点が不足&#39;}
+        
+        slope = np.polyfit(log_t[valid_indices], log_zeta[valid_indices], 1)[0]
+        spectral_dimension = -2 * slope
+        
+        # R²の計算
+        y_mean = np.mean(log_zeta[valid_indices])
+        y_pred = slope * log_t[valid_indices] + (y_mean - slope * np.mean(log_t[valid_indices]))
+        ss_res = np.sum((log_zeta[valid_indices] - y_pred) ** 2)
+        ss_tot = np.sum((log_zeta[valid_indices] - y_mean) ** 2)
+        r_squared = 1 - (ss_res / ss_tot) if ss_tot &gt; 0 else 0
+        
+        info = {
+            &#39;eigenvalues&#39;: eigenvalues,
+            &#39;n_eigenvalues&#39;: len(eigenvalues),
+            &#39;slope&#39;: slope,
+            &#39;r_squared&#39;: r_squared,
+            &#39;t_values&#39;: t_values,
+            &#39;zeta_values&#39;: zeta_values
+        }
+        
+        return spectral_dimension, info
+    
+    def theta_lambda_relationship(self, energy: float) -&gt; Dict:
+        &#34;&#34;&#34;
+        θ-λ関係の計算
+        
+        θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)
+        
+        Args:
+            energy: エネルギースケール
+            
+        Returns:
+            θ-λ関係の詳細
+        &#34;&#34;&#34;
+        lambda_kappa = self.params.lambda_param
+        planck_scale = self.params.planck_scale
+        
+        # 無次元エネルギー
+        x = energy / planck_scale
+        
+        # 現象論的関数 f(x)
+        if x &lt; 0.1:
+            f_x = 1 - x**2 / 2 + x**4 / 24  # 低エネルギー展開
+        else:
+            f_x = np.power(x, -0.5) * np.exp(-x/2)  # 高エネルギー
+        
+        # 理論的θ
+        theta_theoretical = (lambda_kappa / planck_scale**2) * energy**2 * f_x
+        
+        # 現象論的制約
+        gamma_ray_energy = 100e9  # 100 GeV
+        time_delay_limit = 1e-6
+        theta_gamma_limit = time_delay_limit * planck_scale**2 / gamma_ray_energy
+        
+        # LHC制約
+        lhc_energy = 13e3  # 13 TeV
+        cross_section_limit = 1e-3
+        lambda_lhc_limit = cross_section_limit * planck_scale**4 / lhc_energy**2
+        
+        return {
+            &#39;energy&#39;: energy,
+            &#39;theta_theoretical&#39;: theta_theoretical,
+            &#39;theta_current&#39;: self.params.theta,
+            &#39;theta_ratio&#39;: theta_theoretical / self.params.theta if self.params.theta != 0 else float(&#39;inf&#39;),
+            &#39;gamma_ray_constraint&#39;: theta_gamma_limit,
+            &#39;lhc_constraint&#39;: lambda_lhc_limit,
+            &#39;constraint_satisfied&#39;: abs(self.params.theta) &lt; theta_gamma_limit,
+            &#39;f_function_value&#39;: f_x
+        }
+    
+    def generate_mock_eigenvalues(self, n_eigenvalues: int = 100) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        模擬固有値の生成（理論的分布に基づく）
+        
+        Args:
+            n_eigenvalues: 固有値の数
+            
+        Returns:
+            模擬固有値配列
+        &#34;&#34;&#34;
+        dimension = self.params.dimension
+        
+        # 理論的固有値分布
+        eigenvalues = np.array([i**(2/dimension) for i in range(1, n_eigenvalues + 1)])
+        
+        # ノイズの追加
+        noise_level = 0.1
+        eigenvalues += noise_level * np.random.randn(n_eigenvalues)
+        
+        # κ-変形による補正
+        kappa_correction = 1 + self.params.kappa * np.arange(n_eigenvalues) / n_eigenvalues
+        eigenvalues *= kappa_correction
+        
+        # θ-変形による補正
+        theta_correction = 1 + self.params.theta * np.sin(np.arange(n_eigenvalues) * np.pi / n_eigenvalues)
+        eigenvalues *= theta_correction
+        
+        # 正の値のみ保持
+        eigenvalues = eigenvalues[eigenvalues &gt; 0]
+        
+        return eigenvalues
+    
+    def test_completeness(self, x_range: Tuple[float, float] = (-3, 3), n_points: int = 1000) -&gt; Dict:
+        &#34;&#34;&#34;
+        κ-変形B-スプライン基底の完全性テスト
+        
+        Args:
+            x_range: x軸の範囲
+            n_points: 評価点数
+            
+        Returns:
+            完全性テスト結果
+        &#34;&#34;&#34;
+        x = np.linspace(x_range[0], x_range[1], n_points)
+        
+        # 複数の基底関数
+        centers = [-2, -1, 0, 1, 2]
+        classical_sum = np.zeros_like(x)
+        kappa_sum = np.zeros_like(x)
+        
+        for center in centers:
+            # 古典的B-スプライン
+            classical = np.exp(-(x - center)**2 / 2)
+            classical_sum += classical
+            
+            # κ-変形B-スプライン
+            kappa_deformed = self.kappa_deformed_bspline(x, center)
+            kappa_sum += kappa_deformed
+        
+        # 完全性誤差
+        completeness_error = np.mean(np.abs(kappa_sum - classical_sum))
+        max_error = np.max(np.abs(kappa_sum - classical_sum))
+        
+        return {
+            &#39;x_values&#39;: x,
+            &#39;classical_sum&#39;: classical_sum,
+            &#39;kappa_sum&#39;: kappa_sum,
+            &#39;completeness_error&#39;: completeness_error,
+            &#39;max_error&#39;: max_error,
+            &#39;test_passed&#39;: completeness_error &lt; 0.1
+        }
+    
+    def run_comprehensive_analysis(self) -&gt; Dict:
+        &#34;&#34;&#34;包括的NKAT解析の実行&#34;&#34;&#34;
+        
+        print(&#34;=&#34; * 70)
+        print(&#34;NKAT (Non-Commutative Kolmogorov-Arnold Theory) 包括的解析&#34;)
+        print(&#34;=&#34; * 70)
+        
+        print(f&#34;\n解析パラメータ:&#34;)
+        print(f&#34;κ = {self.params.kappa}&#34;)
+        print(f&#34;θ = {self.params.theta}&#34;)
+        print(f&#34;λ = {self.params.lambda_param:.2e}&#34;)
+        print(f&#34;次元 = {self.params.dimension}&#34;)
+        print(f&#34;エネルギースケール = {self.params.energy_scale:.2e} GeV&#34;)
+        
+        results = {}
+        
+        # 1. κ-変形B-スプライン完全性テスト
+        print(&#34;\n1. κ-変形B-スプライン完全性テスト...&#34;)
+        completeness_results = self.test_completeness()
+        results[&#39;completeness&#39;] = completeness_results
+        
+        print(f&#34;   完全性誤差: {completeness_results[&#39;completeness_error&#39;]:.6f}&#34;)
+        print(f&#34;   最大誤差: {completeness_results[&#39;max_error&#39;]:.6f}&#34;)
+        print(f&#34;   テスト結果: {&#39;PASS&#39; if completeness_results[&#39;test_passed&#39;] else &#39;FAIL&#39;}&#34;)
+        
+        # 2. スペクトル次元計算
+        print(&#34;\n2. スペクトル次元計算...&#34;)
+        eigenvalues = self.generate_mock_eigenvalues()
+        spectral_dim, spectral_info = self.compute_spectral_dimension(eigenvalues)
+        results[&#39;spectral_dimension&#39;] = {
+            &#39;dimension&#39;: spectral_dim,
+            &#39;theoretical&#39;: self.params.dimension,
+            &#39;error&#39;: abs(spectral_dim - self.params.dimension),
+            &#39;info&#39;: spectral_info
+        }
+        
+        print(f&#34;   理論次元: {self.params.dimension}&#34;)
+        print(f&#34;   計算されたスペクトル次元: {spectral_dim:.6f}&#34;)
+        print(f&#34;   誤差: {abs(spectral_dim - self.params.dimension):.6f}&#34;)
+        print(f&#34;   R²: {spectral_info.get(&#39;r_squared&#39;, &#39;N/A&#39;):.6f}&#34;)
+        
+        # 3. θ-λ関係解析
+        print(&#34;\n3. θ-λ関係解析...&#34;)
+        theta_lambda_results = self.theta_lambda_relationship(self.params.energy_scale)
+        results[&#39;theta_lambda&#39;] = theta_lambda_results
+        
+        print(f&#34;   現在のθ: {theta_lambda_results[&#39;theta_current&#39;]:.2e}&#34;)
+        print(f&#34;   理論的θ: {theta_lambda_results[&#39;theta_theoretical&#39;]:.2e}&#34;)
+        print(f&#34;   θ比率: {theta_lambda_results[&#39;theta_ratio&#39;]:.2f}&#34;)
+        print(f&#34;   制約満足: {theta_lambda_results[&#39;constraint_satisfied&#39;]}&#34;)
+        
+        # 4. 総合評価
+        print(&#34;\n4. 総合評価...&#34;)
+        all_tests_passed = (
+            completeness_results[&#39;test_passed&#39;] and
+            abs(spectral_dim - self.params.dimension) &lt; 0.5 and
+            theta_lambda_results[&#39;constraint_satisfied&#39;]
+        )
+        
+        results[&#39;summary&#39;] = {
+            &#39;all_tests_passed&#39;: all_tests_passed,
+            &#39;completeness_error&#39;: completeness_results[&#39;completeness_error&#39;],
+            &#39;spectral_dimension_error&#39;: abs(spectral_dim - self.params.dimension),
+            &#39;constraint_satisfied&#39;: theta_lambda_results[&#39;constraint_satisfied&#39;],
+            &#39;overall_quality&#39;: &#39;PASS&#39; if all_tests_passed else &#39;FAIL&#39;
+        }
+        
+        print(f&#34;   総合テスト結果: {&#39;PASS&#39; if all_tests_passed else &#39;FAIL&#39;}&#34;)
+        
+        return results
+    
+    def visualize_results(self, results: Dict, save_path: str = &#39;nkat_core_analysis.png&#39;):
+        &#34;&#34;&#34;結果の可視化&#34;&#34;&#34;
+        
+        fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+        
+        # 1. κ-変形B-スプライン
+        if &#39;completeness&#39; in results:
+            data = results[&#39;completeness&#39;]
+            x = data[&#39;x_values&#39;]
+            
+            axes[0, 0].plot(x, data[&#39;classical_sum&#39;], &#39;--&#39;, label=&#39;古典的&#39;, linewidth=2)
+            axes[0, 0].plot(x, data[&#39;kappa_sum&#39;], &#39;-&#39;, label=&#39;κ-変形&#39;, linewidth=2)
+            axes[0, 0].set_title(&#39;κ-変形B-スプライン基底&#39;)
+            axes[0, 0].set_xlabel(&#39;x&#39;)
+            axes[0, 0].set_ylabel(&#39;B(x)&#39;)
+            axes[0, 0].legend()
+            axes[0, 0].grid(True)
+        
+        # 2. スペクトル次元
+        if &#39;spectral_dimension&#39; in results:
+            data = results[&#39;spectral_dimension&#39;]
+            if &#39;info&#39; in data and &#39;eigenvalues&#39; in data[&#39;info&#39;]:
+                eigenvals = data[&#39;info&#39;][&#39;eigenvalues&#39;][:50]
+                axes[0, 1].semilogy(eigenvals, &#39;o-&#39;, markersize=4)
+                axes[0, 1].set_title(f&#39;固有値分布 (d_s = {data[&#34;dimension&#34;]:.3f})&#39;)
+                axes[0, 1].set_xlabel(&#39;インデックス&#39;)
+                axes[0, 1].set_ylabel(&#39;固有値&#39;)
+                axes[0, 1].grid(True)
+        
+        # 3. θ-λ関係
+        if &#39;theta_lambda&#39; in results:
+            data = results[&#39;theta_lambda&#39;]
+            
+            # エネルギー依存性
+            energy_range = np.logspace(9, 15, 50)
+            theta_theory = []
+            
+            for E in energy_range:
+                theta_rel = self.theta_lambda_relationship(E)
+                theta_theory.append(theta_rel[&#39;theta_theoretical&#39;])
+            
+            axes[1, 0].loglog(energy_range, np.abs(theta_theory), &#39;b-&#39;, linewidth=2)
+            axes[1, 0].axhline(abs(data[&#39;theta_current&#39;]), color=&#39;red&#39;, 
+                              linestyle=&#39;--&#39;, label=&#39;現在のθ&#39;)
+            axes[1, 0].set_title(&#39;θ-λ関係&#39;)
+            axes[1, 0].set_xlabel(&#39;エネルギー (GeV)&#39;)
+            axes[1, 0].set_ylabel(&#39;|θ|&#39;)
+            axes[1, 0].legend()
+            axes[1, 0].grid(True)
+        
+        # 4. 統計サマリー
+        if &#39;summary&#39; in results:
+            summary = results[&#39;summary&#39;]
+            
+            summary_text = f&#34;&#34;&#34;
+NKAT解析結果サマリー
+
+完全性誤差: {summary[&#39;completeness_error&#39;]:.6f}
+スペクトル次元誤差: {summary[&#39;spectral_dimension_error&#39;]:.6f}
+制約満足: {summary[&#39;constraint_satisfied&#39;]}
+総合品質: {summary[&#39;overall_quality&#39;]}
+
+パラメータ:
+κ = {self.params.kappa}
+θ = {self.params.theta}
+λ = {self.params.lambda_param:.2e}
+次元 = {self.params.dimension}
+            &#34;&#34;&#34;
+            
+            axes[1, 1].text(0.1, 0.5, summary_text, transform=axes[1, 1].transAxes,
+                           fontsize=10, verticalalignment=&#39;center&#39;,
+                           bbox=dict(boxstyle=&#39;round&#39;, facecolor=&#39;lightblue&#39;, alpha=0.8))
+            axes[1, 1].set_title(&#39;解析サマリー&#39;)
+            axes[1, 1].axis(&#39;off&#39;)
+        
+        plt.tight_layout()
+        plt.savefig(save_path, dpi=300, bbox_inches=&#39;tight&#39;)
+        plt.show()
+        
+        print(f&#34;\n可視化結果を {save_path} に保存しました&#34;)
+        
+        return fig</code></pre>
+</details>
+<div class="desc"><p>NKAT核心理論の統合クラス</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="nkat_core_theory.NKATCoreTheory.compute_spectral_dimension"><code class="name flex">
+<span>def <span class="ident">compute_spectral_dimension</span></span>(<span>self, eigenvalues: numpy.ndarray) ‑> Tuple[float, Dict]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compute_spectral_dimension(self, eigenvalues: np.ndarray) -&gt; Tuple[float, Dict]:
+    &#34;&#34;&#34;
+    スペクトル次元の計算
+    
+    d_s = -2 * d(log Z(t))/d(log t)
+    
+    Args:
+        eigenvalues: 作用素の固有値
+        
+    Returns:
+        スペクトル次元と詳細情報
+    &#34;&#34;&#34;
+    # 正の固有値のみ使用
+    eigenvalues = eigenvalues[eigenvalues &gt; 1e-12]
+    
+    if len(eigenvalues) &lt; 10:
+        return float(&#39;nan&#39;), {&#39;error&#39;: &#39;有効な固有値が不足&#39;}
+    
+    # スペクトルゼータ関数の計算
+    t_values = np.logspace(-3, 0, 50)
+    zeta_values = []
+    
+    for t in t_values:
+        zeta_t = np.sum(np.exp(-t * eigenvalues))
+        zeta_values.append(zeta_t)
+    
+    zeta_values = np.array(zeta_values)
+    
+    # 対数微分の計算
+    log_t = np.log(t_values)
+    log_zeta = np.log(zeta_values + 1e-12)
+    
+    # 線形回帰で傾きを求める
+    valid_indices = np.isfinite(log_zeta) &amp; np.isfinite(log_t)
+    if np.sum(valid_indices) &lt; 5:
+        return float(&#39;nan&#39;), {&#39;error&#39;: &#39;有効なデータ点が不足&#39;}
+    
+    slope = np.polyfit(log_t[valid_indices], log_zeta[valid_indices], 1)[0]
+    spectral_dimension = -2 * slope
+    
+    # R²の計算
+    y_mean = np.mean(log_zeta[valid_indices])
+    y_pred = slope * log_t[valid_indices] + (y_mean - slope * np.mean(log_t[valid_indices]))
+    ss_res = np.sum((log_zeta[valid_indices] - y_pred) ** 2)
+    ss_tot = np.sum((log_zeta[valid_indices] - y_mean) ** 2)
+    r_squared = 1 - (ss_res / ss_tot) if ss_tot &gt; 0 else 0
+    
+    info = {
+        &#39;eigenvalues&#39;: eigenvalues,
+        &#39;n_eigenvalues&#39;: len(eigenvalues),
+        &#39;slope&#39;: slope,
+        &#39;r_squared&#39;: r_squared,
+        &#39;t_values&#39;: t_values,
+        &#39;zeta_values&#39;: zeta_values
+    }
+    
+    return spectral_dimension, info</code></pre>
+</details>
+<div class="desc"><p>スペクトル次元の計算</p>
+<p>d_s = -2 * d(log Z(t))/d(log t)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>eigenvalues</code></strong></dt>
+<dd>作用素の固有値</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>スペクトル次元と詳細情報</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.generate_mock_eigenvalues"><code class="name flex">
+<span>def <span class="ident">generate_mock_eigenvalues</span></span>(<span>self, n_eigenvalues: int = 100) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_mock_eigenvalues(self, n_eigenvalues: int = 100) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    模擬固有値の生成（理論的分布に基づく）
+    
+    Args:
+        n_eigenvalues: 固有値の数
+        
+    Returns:
+        模擬固有値配列
+    &#34;&#34;&#34;
+    dimension = self.params.dimension
+    
+    # 理論的固有値分布
+    eigenvalues = np.array([i**(2/dimension) for i in range(1, n_eigenvalues + 1)])
+    
+    # ノイズの追加
+    noise_level = 0.1
+    eigenvalues += noise_level * np.random.randn(n_eigenvalues)
+    
+    # κ-変形による補正
+    kappa_correction = 1 + self.params.kappa * np.arange(n_eigenvalues) / n_eigenvalues
+    eigenvalues *= kappa_correction
+    
+    # θ-変形による補正
+    theta_correction = 1 + self.params.theta * np.sin(np.arange(n_eigenvalues) * np.pi / n_eigenvalues)
+    eigenvalues *= theta_correction
+    
+    # 正の値のみ保持
+    eigenvalues = eigenvalues[eigenvalues &gt; 0]
+    
+    return eigenvalues</code></pre>
+</details>
+<div class="desc"><p>模擬固有値の生成（理論的分布に基づく）</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n_eigenvalues</code></strong></dt>
+<dd>固有値の数</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>模擬固有値配列</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.kappa_deformed_bspline"><code class="name flex">
+<span>def <span class="ident">kappa_deformed_bspline</span></span>(<span>self, x: numpy.ndarray, center: float = 0, width: float = 1) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def kappa_deformed_bspline(self, x: np.ndarray, center: float = 0, width: float = 1) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    κ-変形B-スプライン関数
+    
+    B_i^κ(x) = B_i(x) * exp(-κx²/2) * cos(θx)
+    
+    Args:
+        x: 評価点
+        center: 中心位置
+        width: 幅パラメータ
+        
+    Returns:
+        κ-変形B-スプライン値
+    &#34;&#34;&#34;
+    # 古典的B-スプライン（ガウシアン近似）
+    classical = np.exp(-(x - center)**2 / (2 * width**2))
+    
+    # κ-変形補正
+    kappa_correction = np.exp(-self.params.kappa * x**2 / 2)
+    
+    # θ-変形補正（非可換性）
+    theta_correction = np.cos(self.params.theta * x)
+    
+    return classical * kappa_correction * theta_correction</code></pre>
+</details>
+<div class="desc"><p>κ-変形B-スプライン関数</p>
+<p>B_i^κ(x) = B_i(x) * exp(-κx²/2) * cos(θx)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong></dt>
+<dd>評価点</dd>
+<dt><strong><code>center</code></strong></dt>
+<dd>中心位置</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>幅パラメータ</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>κ-変形B-スプライン値</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.run_comprehensive_analysis"><code class="name flex">
+<span>def <span class="ident">run_comprehensive_analysis</span></span>(<span>self) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run_comprehensive_analysis(self) -&gt; Dict:
+    &#34;&#34;&#34;包括的NKAT解析の実行&#34;&#34;&#34;
+    
+    print(&#34;=&#34; * 70)
+    print(&#34;NKAT (Non-Commutative Kolmogorov-Arnold Theory) 包括的解析&#34;)
+    print(&#34;=&#34; * 70)
+    
+    print(f&#34;\n解析パラメータ:&#34;)
+    print(f&#34;κ = {self.params.kappa}&#34;)
+    print(f&#34;θ = {self.params.theta}&#34;)
+    print(f&#34;λ = {self.params.lambda_param:.2e}&#34;)
+    print(f&#34;次元 = {self.params.dimension}&#34;)
+    print(f&#34;エネルギースケール = {self.params.energy_scale:.2e} GeV&#34;)
+    
+    results = {}
+    
+    # 1. κ-変形B-スプライン完全性テスト
+    print(&#34;\n1. κ-変形B-スプライン完全性テスト...&#34;)
+    completeness_results = self.test_completeness()
+    results[&#39;completeness&#39;] = completeness_results
+    
+    print(f&#34;   完全性誤差: {completeness_results[&#39;completeness_error&#39;]:.6f}&#34;)
+    print(f&#34;   最大誤差: {completeness_results[&#39;max_error&#39;]:.6f}&#34;)
+    print(f&#34;   テスト結果: {&#39;PASS&#39; if completeness_results[&#39;test_passed&#39;] else &#39;FAIL&#39;}&#34;)
+    
+    # 2. スペクトル次元計算
+    print(&#34;\n2. スペクトル次元計算...&#34;)
+    eigenvalues = self.generate_mock_eigenvalues()
+    spectral_dim, spectral_info = self.compute_spectral_dimension(eigenvalues)
+    results[&#39;spectral_dimension&#39;] = {
+        &#39;dimension&#39;: spectral_dim,
+        &#39;theoretical&#39;: self.params.dimension,
+        &#39;error&#39;: abs(spectral_dim - self.params.dimension),
+        &#39;info&#39;: spectral_info
+    }
+    
+    print(f&#34;   理論次元: {self.params.dimension}&#34;)
+    print(f&#34;   計算されたスペクトル次元: {spectral_dim:.6f}&#34;)
+    print(f&#34;   誤差: {abs(spectral_dim - self.params.dimension):.6f}&#34;)
+    print(f&#34;   R²: {spectral_info.get(&#39;r_squared&#39;, &#39;N/A&#39;):.6f}&#34;)
+    
+    # 3. θ-λ関係解析
+    print(&#34;\n3. θ-λ関係解析...&#34;)
+    theta_lambda_results = self.theta_lambda_relationship(self.params.energy_scale)
+    results[&#39;theta_lambda&#39;] = theta_lambda_results
+    
+    print(f&#34;   現在のθ: {theta_lambda_results[&#39;theta_current&#39;]:.2e}&#34;)
+    print(f&#34;   理論的θ: {theta_lambda_results[&#39;theta_theoretical&#39;]:.2e}&#34;)
+    print(f&#34;   θ比率: {theta_lambda_results[&#39;theta_ratio&#39;]:.2f}&#34;)
+    print(f&#34;   制約満足: {theta_lambda_results[&#39;constraint_satisfied&#39;]}&#34;)
+    
+    # 4. 総合評価
+    print(&#34;\n4. 総合評価...&#34;)
+    all_tests_passed = (
+        completeness_results[&#39;test_passed&#39;] and
+        abs(spectral_dim - self.params.dimension) &lt; 0.5 and
+        theta_lambda_results[&#39;constraint_satisfied&#39;]
+    )
+    
+    results[&#39;summary&#39;] = {
+        &#39;all_tests_passed&#39;: all_tests_passed,
+        &#39;completeness_error&#39;: completeness_results[&#39;completeness_error&#39;],
+        &#39;spectral_dimension_error&#39;: abs(spectral_dim - self.params.dimension),
+        &#39;constraint_satisfied&#39;: theta_lambda_results[&#39;constraint_satisfied&#39;],
+        &#39;overall_quality&#39;: &#39;PASS&#39; if all_tests_passed else &#39;FAIL&#39;
+    }
+    
+    print(f&#34;   総合テスト結果: {&#39;PASS&#39; if all_tests_passed else &#39;FAIL&#39;}&#34;)
+    
+    return results</code></pre>
+</details>
+<div class="desc"><p>包括的NKAT解析の実行</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.test_completeness"><code class="name flex">
+<span>def <span class="ident">test_completeness</span></span>(<span>self, x_range: Tuple[float, float] = (-3, 3), n_points: int = 1000) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_completeness(self, x_range: Tuple[float, float] = (-3, 3), n_points: int = 1000) -&gt; Dict:
+    &#34;&#34;&#34;
+    κ-変形B-スプライン基底の完全性テスト
+    
+    Args:
+        x_range: x軸の範囲
+        n_points: 評価点数
+        
+    Returns:
+        完全性テスト結果
+    &#34;&#34;&#34;
+    x = np.linspace(x_range[0], x_range[1], n_points)
+    
+    # 複数の基底関数
+    centers = [-2, -1, 0, 1, 2]
+    classical_sum = np.zeros_like(x)
+    kappa_sum = np.zeros_like(x)
+    
+    for center in centers:
+        # 古典的B-スプライン
+        classical = np.exp(-(x - center)**2 / 2)
+        classical_sum += classical
+        
+        # κ-変形B-スプライン
+        kappa_deformed = self.kappa_deformed_bspline(x, center)
+        kappa_sum += kappa_deformed
+    
+    # 完全性誤差
+    completeness_error = np.mean(np.abs(kappa_sum - classical_sum))
+    max_error = np.max(np.abs(kappa_sum - classical_sum))
+    
+    return {
+        &#39;x_values&#39;: x,
+        &#39;classical_sum&#39;: classical_sum,
+        &#39;kappa_sum&#39;: kappa_sum,
+        &#39;completeness_error&#39;: completeness_error,
+        &#39;max_error&#39;: max_error,
+        &#39;test_passed&#39;: completeness_error &lt; 0.1
+    }</code></pre>
+</details>
+<div class="desc"><p>κ-変形B-スプライン基底の完全性テスト</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x_range</code></strong></dt>
+<dd>x軸の範囲</dd>
+<dt><strong><code>n_points</code></strong></dt>
+<dd>評価点数</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>完全性テスト結果</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.theta_lambda_relationship"><code class="name flex">
+<span>def <span class="ident">theta_lambda_relationship</span></span>(<span>self, energy: float) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def theta_lambda_relationship(self, energy: float) -&gt; Dict:
+    &#34;&#34;&#34;
+    θ-λ関係の計算
+    
+    θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)
+    
+    Args:
+        energy: エネルギースケール
+        
+    Returns:
+        θ-λ関係の詳細
+    &#34;&#34;&#34;
+    lambda_kappa = self.params.lambda_param
+    planck_scale = self.params.planck_scale
+    
+    # 無次元エネルギー
+    x = energy / planck_scale
+    
+    # 現象論的関数 f(x)
+    if x &lt; 0.1:
+        f_x = 1 - x**2 / 2 + x**4 / 24  # 低エネルギー展開
+    else:
+        f_x = np.power(x, -0.5) * np.exp(-x/2)  # 高エネルギー
+    
+    # 理論的θ
+    theta_theoretical = (lambda_kappa / planck_scale**2) * energy**2 * f_x
+    
+    # 現象論的制約
+    gamma_ray_energy = 100e9  # 100 GeV
+    time_delay_limit = 1e-6
+    theta_gamma_limit = time_delay_limit * planck_scale**2 / gamma_ray_energy
+    
+    # LHC制約
+    lhc_energy = 13e3  # 13 TeV
+    cross_section_limit = 1e-3
+    lambda_lhc_limit = cross_section_limit * planck_scale**4 / lhc_energy**2
+    
+    return {
+        &#39;energy&#39;: energy,
+        &#39;theta_theoretical&#39;: theta_theoretical,
+        &#39;theta_current&#39;: self.params.theta,
+        &#39;theta_ratio&#39;: theta_theoretical / self.params.theta if self.params.theta != 0 else float(&#39;inf&#39;),
+        &#39;gamma_ray_constraint&#39;: theta_gamma_limit,
+        &#39;lhc_constraint&#39;: lambda_lhc_limit,
+        &#39;constraint_satisfied&#39;: abs(self.params.theta) &lt; theta_gamma_limit,
+        &#39;f_function_value&#39;: f_x
+    }</code></pre>
+</details>
+<div class="desc"><p>θ-λ関係の計算</p>
+<p>θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>energy</code></strong></dt>
+<dd>エネルギースケール</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>θ-λ関係の詳細</p></div>
+</dd>
+<dt id="nkat_core_theory.NKATCoreTheory.visualize_results"><code class="name flex">
+<span>def <span class="ident">visualize_results</span></span>(<span>self, results: Dict, save_path: str = 'nkat_core_analysis.png')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">    def visualize_results(self, results: Dict, save_path: str = &#39;nkat_core_analysis.png&#39;):
+        &#34;&#34;&#34;結果の可視化&#34;&#34;&#34;
+        
+        fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+        
+        # 1. κ-変形B-スプライン
+        if &#39;completeness&#39; in results:
+            data = results[&#39;completeness&#39;]
+            x = data[&#39;x_values&#39;]
+            
+            axes[0, 0].plot(x, data[&#39;classical_sum&#39;], &#39;--&#39;, label=&#39;古典的&#39;, linewidth=2)
+            axes[0, 0].plot(x, data[&#39;kappa_sum&#39;], &#39;-&#39;, label=&#39;κ-変形&#39;, linewidth=2)
+            axes[0, 0].set_title(&#39;κ-変形B-スプライン基底&#39;)
+            axes[0, 0].set_xlabel(&#39;x&#39;)
+            axes[0, 0].set_ylabel(&#39;B(x)&#39;)
+            axes[0, 0].legend()
+            axes[0, 0].grid(True)
+        
+        # 2. スペクトル次元
+        if &#39;spectral_dimension&#39; in results:
+            data = results[&#39;spectral_dimension&#39;]
+            if &#39;info&#39; in data and &#39;eigenvalues&#39; in data[&#39;info&#39;]:
+                eigenvals = data[&#39;info&#39;][&#39;eigenvalues&#39;][:50]
+                axes[0, 1].semilogy(eigenvals, &#39;o-&#39;, markersize=4)
+                axes[0, 1].set_title(f&#39;固有値分布 (d_s = {data[&#34;dimension&#34;]:.3f})&#39;)
+                axes[0, 1].set_xlabel(&#39;インデックス&#39;)
+                axes[0, 1].set_ylabel(&#39;固有値&#39;)
+                axes[0, 1].grid(True)
+        
+        # 3. θ-λ関係
+        if &#39;theta_lambda&#39; in results:
+            data = results[&#39;theta_lambda&#39;]
+            
+            # エネルギー依存性
+            energy_range = np.logspace(9, 15, 50)
+            theta_theory = []
+            
+            for E in energy_range:
+                theta_rel = self.theta_lambda_relationship(E)
+                theta_theory.append(theta_rel[&#39;theta_theoretical&#39;])
+            
+            axes[1, 0].loglog(energy_range, np.abs(theta_theory), &#39;b-&#39;, linewidth=2)
+            axes[1, 0].axhline(abs(data[&#39;theta_current&#39;]), color=&#39;red&#39;, 
+                              linestyle=&#39;--&#39;, label=&#39;現在のθ&#39;)
+            axes[1, 0].set_title(&#39;θ-λ関係&#39;)
+            axes[1, 0].set_xlabel(&#39;エネルギー (GeV)&#39;)
+            axes[1, 0].set_ylabel(&#39;|θ|&#39;)
+            axes[1, 0].legend()
+            axes[1, 0].grid(True)
+        
+        # 4. 統計サマリー
+        if &#39;summary&#39; in results:
+            summary = results[&#39;summary&#39;]
+            
+            summary_text = f&#34;&#34;&#34;
+NKAT解析結果サマリー
+
+完全性誤差: {summary[&#39;completeness_error&#39;]:.6f}
+スペクトル次元誤差: {summary[&#39;spectral_dimension_error&#39;]:.6f}
+制約満足: {summary[&#39;constraint_satisfied&#39;]}
+総合品質: {summary[&#39;overall_quality&#39;]}
+
+パラメータ:
+κ = {self.params.kappa}
+θ = {self.params.theta}
+λ = {self.params.lambda_param:.2e}
+次元 = {self.params.dimension}
+            &#34;&#34;&#34;
+            
+            axes[1, 1].text(0.1, 0.5, summary_text, transform=axes[1, 1].transAxes,
+                           fontsize=10, verticalalignment=&#39;center&#39;,
+                           bbox=dict(boxstyle=&#39;round&#39;, facecolor=&#39;lightblue&#39;, alpha=0.8))
+            axes[1, 1].set_title(&#39;解析サマリー&#39;)
+            axes[1, 1].axis(&#39;off&#39;)
+        
+        plt.tight_layout()
+        plt.savefig(save_path, dpi=300, bbox_inches=&#39;tight&#39;)
+        plt.show()
+        
+        print(f&#34;\n可視化結果を {save_path} に保存しました&#34;)
+        
+        return fig</code></pre>
+</details>
+<div class="desc"><p>結果の可視化</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="nkat_core_theory.NKATParameters"><code class="flex name class">
+<span>class <span class="ident">NKATParameters</span></span>
+<span>(</span><span>kappa: float = 0.1,<br>theta: float = 0.05,<br>lambda_param: float = 1e-06,<br>dimension: int = 4,<br>lattice_size: int = 16,<br>energy_scale: float = 1000000000000.0,<br>planck_scale: float = 1.22e+19)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class NKATParameters:
+    &#34;&#34;&#34;NKAT統合パラメータ&#34;&#34;&#34;
+    kappa: float = 0.1          # κ-変形パラメータ
+    theta: float = 0.05         # 非可換パラメータ
+    lambda_param: float = 1e-6  # κ-ミンコフスキーパラメータ
+    dimension: int = 4          # 空間次元
+    lattice_size: int = 16      # 格子サイズ
+    energy_scale: float = 1e12  # エネルギースケール (GeV)
+    planck_scale: float = 1.22e19  # プランクスケール (GeV)</code></pre>
+</details>
+<div class="desc"><p>NKAT統合パラメータ</p></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="nkat_core_theory.NKATParameters.dimension"><code class="name">var <span class="ident">dimension</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.energy_scale"><code class="name">var <span class="ident">energy_scale</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.kappa"><code class="name">var <span class="ident">kappa</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.lambda_param"><code class="name">var <span class="ident">lambda_param</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.lattice_size"><code class="name">var <span class="ident">lattice_size</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.planck_scale"><code class="name">var <span class="ident">planck_scale</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="nkat_core_theory.NKATParameters.theta"><code class="name">var <span class="ident">theta</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="nkat_core_theory.main" href="#nkat_core_theory.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="nkat_core_theory.NKATCoreTheory" href="#nkat_core_theory.NKATCoreTheory">NKATCoreTheory</a></code></h4>
+<ul class="">
+<li><code><a title="nkat_core_theory.NKATCoreTheory.compute_spectral_dimension" href="#nkat_core_theory.NKATCoreTheory.compute_spectral_dimension">compute_spectral_dimension</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.generate_mock_eigenvalues" href="#nkat_core_theory.NKATCoreTheory.generate_mock_eigenvalues">generate_mock_eigenvalues</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.kappa_deformed_bspline" href="#nkat_core_theory.NKATCoreTheory.kappa_deformed_bspline">kappa_deformed_bspline</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.run_comprehensive_analysis" href="#nkat_core_theory.NKATCoreTheory.run_comprehensive_analysis">run_comprehensive_analysis</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.test_completeness" href="#nkat_core_theory.NKATCoreTheory.test_completeness">test_completeness</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.theta_lambda_relationship" href="#nkat_core_theory.NKATCoreTheory.theta_lambda_relationship">theta_lambda_relationship</a></code></li>
+<li><code><a title="nkat_core_theory.NKATCoreTheory.visualize_results" href="#nkat_core_theory.NKATCoreTheory.visualize_results">visualize_results</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="nkat_core_theory.NKATParameters" href="#nkat_core_theory.NKATParameters">NKATParameters</a></code></h4>
+<ul class="two-column">
+<li><code><a title="nkat_core_theory.NKATParameters.dimension" href="#nkat_core_theory.NKATParameters.dimension">dimension</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.energy_scale" href="#nkat_core_theory.NKATParameters.energy_scale">energy_scale</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.kappa" href="#nkat_core_theory.NKATParameters.kappa">kappa</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.lambda_param" href="#nkat_core_theory.NKATParameters.lambda_param">lambda_param</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.lattice_size" href="#nkat_core_theory.NKATParameters.lattice_size">lattice_size</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.planck_scale" href="#nkat_core_theory.NKATParameters.planck_scale">planck_scale</a></code></li>
+<li><code><a title="nkat_core_theory.NKATParameters.theta" href="#nkat_core_theory.NKATParameters.theta">theta</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>
