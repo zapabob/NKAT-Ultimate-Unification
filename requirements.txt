@@ -1,172 +1,40 @@
-# NKAT理論 - 弦理論・ホログラフィック統合フレームワーク
-# Requirements for NKAT Theory String-Holographic Integrated Framework
-# Version: 2025-05-24
+# NKAT理論 - 非可換コルモゴロフ・アーノルド表現理論
+# Non-Commutative Kolmogorov-Arnold Theory Dependencies
 
-# 基本数値計算ライブラリ
+# 基本的な科学計算ライブラリ
 numpy>=1.24.0
 scipy>=1.10.0
-matplotlib>=3.6.0
+matplotlib>=3.7.0
 
-# 進捗表示
-tqdm>=4.64.0
+# 機械学習・深層学習
+torch>=2.1.0
+torchvision>=0.16.0
 
-# データ処理・保存
-pandas>=1.5.0
-h5py>=3.7.0
+# GPU計算（オプション - CUDA環境がある場合）
+# cupy-cuda12x>=12.0.0
 
-# 科学計算拡張
-sympy>=1.11.0
-mpmath>=1.3.0
-
-# GPU計算 (オプション - CUDA環境がある場合)
-# torch>=2.0.0+cu118
-# cupy-cuda11x>=12.0.0
-
-# 可視化拡張
+# データ処理・可視化
+pandas>=2.0.0
+plotly>=5.17.0
 seaborn>=0.12.0
-plotly>=5.15.0
 
-# 並列計算
-joblib>=1.2.0
-multiprocessing-logging>=0.3.4
-
-# 高精度計算
-decimal>=1.70
-fractions>=1.0
-
-# 統計・機械学習 (分析用)
-scikit-learn>=1.2.0
-statsmodels>=0.14.0
+# 進捗表示・ログ
+tqdm>=4.66.0
 
 # ファイル処理
-pathlib>=1.0.1
-json5>=0.9.0
+h5py>=3.9.0
 
-# 数学的特殊関数
-special>=2021.1.1
+# Streamlit関連（ダッシュボード用）
+streamlit>=1.29.0
+streamlit-plotly>=0.0.1
 
-# プロファイリング・デバッグ
-memory-profiler>=0.60.0
-line-profiler>=4.0.0
+# システム監視
+psutil>=5.9.0
+GPUtil>=1.4.0
 
-# 論文・レポート生成
-jinja2>=3.1.0
-markdown>=3.4.0
+# その他のユーティリティ
+python-dateutil>=2.8.2
 
-# バージョン管理・再現性
-pip-tools>=6.12.0
-pipreqs>=0.4.13
-
-# 開発・テスト
-pytest>=7.2.0
-pytest-cov>=4.0.0
-black>=23.0.0
-flake8>=6.0.0
-
-# 日本語フォント対応
-japanize-matplotlib>=1.1.3
-
-# 高性能数値計算 (オプション)
-# numba>=0.57.0
-# cython>=0.29.0
-
-# 分散計算 (大規模計算用)
-# dask>=2023.1.0
-# ray>=2.2.0
-
-# クラウド連携 (オプション)
-# boto3>=1.26.0
-# google-cloud-storage>=2.7.0
-
-# 論文品質図表
-# pgf>=0.1.0
-# tikzplotlib>=0.10.0
-
-# GPU加速NKAT理論フレームワーク v2.0対応
-
-# 高精度計算
-sympy>=1.12
-
-# 可視化拡張
-seaborn>=0.12.0
-plotly>=5.15.0
-bokeh>=3.0.0
-
-# 並列計算
-joblib>=1.3.0
-multiprocessing-logging>=0.3.4
-
-# 統計・機械学習
-scikit-learn>=1.3.0
-statsmodels>=0.14.0
-
-# 論文生成・文書化
-jupyter>=1.0.0
-notebook>=6.5.0
-nbconvert>=7.0.0
-
-# データ処理
-h5py>=3.8.0
-netcdf4>=1.6.0
-
-# プログレスバー・ユーティリティ
-tqdm>=4.65.0
-click>=8.1.0
-
-# 品質管理
-pytest>=7.4.0
-black>=23.0.0
-flake8>=6.0.0
-
-# CI/CD用追加依存関係 (Phase ② ci-enable)
-
-# GPU加速バックエンド (CUDA環境用)
-# cupy-cuda12x>=12.0.0      # CUDA 12.x環境
-# cupy-cuda11x>=12.0.0      # CUDA 11.x環境
-
-# システム監視・プロファイリング
-psutil>=5.9.0               # メモリ・CPU使用量監視
-tqdm>=4.65.0                # プログレスバー（重複削除）
-
-# テスト・品質管理
-pytest>=7.4.0              # 単体テスト
-pytest-cov>=4.0.0          # カバレッジ測定
-pytest-xdist>=3.3.0        # 並列テスト実行
-
-# CI/CD統合
-click>=8.1.0                # CLI作成
-argparse>=1.4.0             # コマンドライン引数解析
-
-# 結果分析・可視化
-pandas>=2.0.0               # データ分析
-seaborn>=0.12.0             # 統計可視化
-matplotlib>=3.7.0           # 基本可視化
-
-# JSON・データ処理
-json5>=0.9.0                # 拡張JSON
-pyyaml>=6.0                 # YAML設定ファイル
-
-# GPU環境確認用
-# nvidia-ml-py3>=7.352.0     # NVIDIA GPU監視（オプション）
-
-# GPU加速インストール手順（コメント）
-# 
-# CUDA 11.x環境の場合:
-# pip install cupy-cuda11x
-# 
-# CUDA 12.x環境の場合:
-# pip install cupy-cuda12x
-# 
-# CPU版のみの場合:
-# 上記のcupyインストールは不要
-# 
-# GPU環境確認:
-# nvidia-smi
-# nvcc --version
-# 
-# CuPy動作確認:
-# python -c "import cupy; print(cupy.cuda.get_device_name())"
-
-# CI/CD実行確認コマンド:
-# python src/bench_gpu.py --maxN 10 --verbose
-# python src/riemann_gpu_accelerated_stable.py --lattice 8 --eig 64 --no-gpu
+# 開発・テスト用（オプション）
+# pytest>=7.4.0
+# jupyter>=1.0.0 

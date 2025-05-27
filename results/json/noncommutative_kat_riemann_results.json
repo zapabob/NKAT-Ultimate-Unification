@@ -1,0 +1,20 @@
+{
+  "parameters": {
+    "dimension": 30,
+    "theta_nc": 1e-35,
+    "n_critical": 15,
+    "gamma": 0.2,
+    "delta": 0.03,
+    "max_q": 64
+  },
+  "summary_statistics": {
+    "superconvergence_improvement_factor": 1.1008673203439698,
+    "max_real_part_deviation_from_half": 0.5461480845114565,
+    "mean_gue_correlation": -0.4259792201836459,
+    "dimensions_tested": [
+      25,
+      30,
+      40,
+      50
+    ],
+    "riemann_hypothesis_support": 
