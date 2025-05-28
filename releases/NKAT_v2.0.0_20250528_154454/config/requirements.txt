@@ -1,0 +1,8 @@
+torch>=2.1.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+cupy-cuda12x>=12.2.0  # CUDA 12.xに対応
+h5py>=3.8.0  # HDF5ファイル処理用
+scipy>=1.10.0  # 科学計算・スパース行列処理用 

@@ -1,0 +1,20 @@
+{
+  "kaq_settings": {
+    "ka_dimension": 8,
+    "qft_qubits": 8,
+    "theta": 1e-20,
+    "use_gpu": true,
+    "mixed_precision": true,
+    "memory_efficient": true
+  },
+  "visualization": {
+    "enable_plotly": true,
+    "enable_matplotlib": true,
+    "japanese_fonts": true
+  },
+  "experiment": {
+    "default_experiments": 3,
+    "save_results": true,
+    "interactive_mode": true
+  }
+}
