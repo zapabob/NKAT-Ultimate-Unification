@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-05-26T06:39:14.772279",
+  "convergence_analysis": {
+    "basic_statistics": {
+      "mean": 0.4977623394690454,
+      "std": 2.980177916401758e-05,
+      "min": 0.49768176372163,
+      "max": 0.49780272296629846,
+      "median": 0.49776984960772097,
+      "q25": 0.49774472787976265,
+      "q75": 0.4977865746477619
+    },
+    "theoretical_deviation": {
+      "mean_deviation_from_half": 0.0022376605309545996,
+      "max_deviation_from_half": 0.0023182362783700228,
+      "relative_error": 0.44753210619091993
+    },
+    "stability_metrics": {
+      "coefficient_of_variation": 5.987150252429026e-05,
+      "range": 0.00012095924466848373,
+      "iqr": 4.1846767999231815e-05
+    },
+    "quality_assessment": {
+      "overall_quality": "優秀",
+      "convergence_score": 0.9977623394690454,
+      "consistency_score": 0.9999701991089556
+    }
+  },
+  "statistical_analysis": {},
+  "theoretical_comparison": {
+    "deviation_statistics": {
+      "mean_absolute_deviation": 0.0022376605309545996,
+      "max_absolute_deviation": 0.0023182362783700228,
+      "min_absolute_deviation": 0.002197277033701539,
+      "std_deviation": 2.9801779164017575e-05
+    },
+    "statistical_tests": {
+      "t_test": {
+        "statistic": -280.94158434834975,
+        "p_value": 1.1558293527547401e-27,
+        "significant_difference": true
+      },
+      "normality_test": {
+        "shapiro_statistic": 0.9115916206084919,
+        "shapiro_p_value": 0.14323709386147582,
+        "is_normal": true
+      }
+    },
+    "confidence_interval": {
+      "lower_bound": 0.4977452565422512,
+      "upper_bound": 0.4977794223958396,
+      "contains_theoretical": false
+    },
+    "precision_metrics": {
+      "relative_precision": 0.005987150252429027,
+      "accuracy": 0.9977623394690454,
+      "precision_score": 0.9999701991089556
+    }
+  },
+  "improvement_suggestions": [
+    "🔧 ハミルトニアン次元を増加させて精度向上を図る",
+    "⚙️ 非可換パラメータθの最適化を実施",
+    "📊 系統的バイアスの調査と補正",
+    "🔬 理論モデルの再検討"
+  ],
+  "gamma_dependency": {
+    "correlation": {
+      "pearson_correlation": 0.360284596989692,
+      "correlation_strength": "中程度"
+    },
+    "linear_regression": {
+      "slope": 7.17946497477653e-07,
+      "intercept": 0.49773181016074913,
+      "r_squared": 0.1298049908280248,
+      "p_value": 0.1871182561130215,
+      "standard_error": 5.155644975712439e-07
+    },
+    "polynomial_fit": {
+      "coefficients": [
+        -5.8059400808841885e-08,
+        5.410743296801703e-06,
+        0.49765022737970444
+      ],
+      "linear_rmse": 2.7800364252841944e-05,
+      "polynomial_rmse": 2.4884171166345116e-05
+    },
+    "trend_analysis": {
+      "overall_trend": "増加",
+      "trend_significance": "非有意"
+    }
+  },
+  "visualization_file": "convergence_analysis_results\\nkat_v11_comprehensive_convergence_analysis_20250526_063914.png"
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp": "20250526_035816",
+  "status": "ready_for_submission",
+  "package_path": "arxiv_submission\\nkat_v8_submission_20250526_035816.zip",
+  "achievement": {
+    "version": "8.0",
+    "gamma_values": 100,
+    "success_rate": 68.0,
+    "computation_time": 2866.4,
+    "gpu_temp": 45.0,
+    "gpu_util": 100.0
+  },
+  "submission_categories": [
+    "math.NT",
+    "hep-th",
+    "math-ph"
+  ]
+}

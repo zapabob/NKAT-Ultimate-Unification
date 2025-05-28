@@ -1,0 +1,61 @@
+{
+  "test_timestamp": "20250528_102052",
+  "test_results": {
+    "imports": {
+      "torch": true,
+      "numpy": true,
+      "matplotlib": true,
+      "plotly": true,
+      "streamlit": true,
+      "pandas": true,
+      "scipy": true,
+      "psutil": true,
+      "GPUtil": true,
+      "h5py": true,
+      "tqdm": true
+    },
+    "gpu_environment": {
+      "cuda_available": true,
+      "gpu_count": 1,
+      "gpu_0_name": "NVIDIA GeForce RTX 3080",
+      "gpu_0_memory_gb": 10.73676288,
+      "rtx3080_detected": true,
+      "cuda_version": "12.1",
+      "memory_test": true
+    },
+    "nkat_components": {
+      "parameters": true,
+      "ka_representation": true,
+      "riemann_analyzer": true,
+      "checkpoint_manager": true
+    },
+    "system_monitoring": {
+      "gpu_monitoring": true,
+      "cpu_monitoring": true
+    },
+    "checkpoint_system": {
+      "id_generation": true,
+      "save_checkpoint": true,
+      "load_checkpoint": true,
+      "data_integrity": true
+    },
+    "riemann_analyzer": {
+      "analyzer_init": true,
+      "zeta_computation": true,
+      "zero_finding": true,
+      "zeros_found": 0
+    },
+    "performance": {
+      "cpu_time": 0.26833510398864746,
+      "gpu_time": 0.9573369026184082,
+      "speedup": 0.28029328364416456,
+      "memory_usage_mb": 872.15234375
+    }
+  },
+  "summary": {
+    "total_tests": 27,
+    "passed_tests": 27,
+    "failed_tests": 0,
+    "success_rate": 1.0
+  }
+}
