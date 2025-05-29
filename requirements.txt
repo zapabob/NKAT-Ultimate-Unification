@@ -1,6 +1,6 @@
 # NKAT理論 - 非可換コルモゴロフ・アーノルド表現理論
 # Non-Commutative Kolmogorov-Arnold Theory Dependencies
-# NKAT リーマン予想解析システム対応版
+# NKAT リーマン予想解析システム対応版 - CUDA強化版
 
 # 基本的な科学計算ライブラリ
 numpy>=1.24.0
@@ -14,8 +14,14 @@ torchaudio>=2.1.0
 # CUDA対応PyTorchインストール用
 --extra-index-url https://download.pytorch.org/whl/cu121
 
-# GPU計算（オプション - CUDA環境がある場合）
-# cupy-cuda12x>=12.0.0
+# GPU計算（CUDA環境）- 超高速化対応
+cupy-cuda12x>=12.0.0
+# Windows環境でのCUDA 12.x対応
+# pip install cupy-cuda12x でインストール
+
+# GPU監視・管理
+nvidia-ml-py3>=7.352.0
+GPUtil>=1.4.0
 
 # データ処理・可視化
 pandas>=2.0.0
@@ -34,8 +40,6 @@ streamlit-plotly-events>=0.0.6
 
 # システム監視
 psutil>=5.9.0
-GPUtil>=1.4.0
-nvidia-ml-py3>=7.352.0
 
 # その他のユーティリティ
 python-dateutil>=2.8.2
@@ -90,4 +94,10 @@ memory-profiler>=0.61.0
 joblib>=1.3.0
 
 # 数学関数拡張
-special-functions>=1.0.0 
+special-functions>=1.0.0
+
+# CUDA環境確認用
+pynvml>=11.5.0
+
+# 高精度数値計算強化
+cython>=3.0.0 
