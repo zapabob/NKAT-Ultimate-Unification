@@ -1,0 +1,8 @@
+{
+  "power_monitoring_enabled": true,
+  "battery_threshold_percent": 20,
+  "ups_monitoring_enabled": false,
+  "safe_shutdown_delay_seconds": 60,
+  "checkpoint_save_interval_seconds": 300,
+  "system_health_check_interval": 30
+}

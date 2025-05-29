@@ -1,0 +1,12 @@
+{
+  "auto_recovery_enabled": true,
+  "startup_delay_seconds": 30,
+  "max_recovery_attempts": 3,
+  "dashboard_auto_start": true,
+  "gpu_temperature_threshold": 80,
+  "vram_usage_threshold": 90,
+  "monitoring_interval_seconds": 30,
+  "emergency_shutdown_timeout": 10,
+  "created": "2025-05-29T04:10:19.585152",
+  "version": "1.0.0"
+}
