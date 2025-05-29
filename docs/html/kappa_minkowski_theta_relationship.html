@@ -1,0 +1,1317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>kappa_minkowski_theta_relationship API documentation</title>
+<meta name="description" content="κ-ミンコフスキーのλパラメータと創発的なθパラメータとの関係の詳細解析
+Non-Commutative Kolmogorov-Arnold Theory (NKAT) における変形パラメータ理論 …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>kappa_minkowski_theta_relationship</code></h1>
+</header>
+<section id="section-intro">
+<p>κ-ミンコフスキーのλパラメータと創発的なθパラメータとの関係の詳細解析
+Non-Commutative Kolmogorov-Arnold Theory (NKAT) における変形パラメータ理論</p>
+<p>Author: NKAT Research Team
+Date: 2025-01-23
+Version: 1.0 - 変形パラメータ関係論</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="kappa_minkowski_theta_relationship.demonstrate_kappa_minkowski_theta"><code class="name flex">
+<span>def <span class="ident">demonstrate_kappa_minkowski_theta</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def demonstrate_kappa_minkowski_theta():
+    &#34;&#34;&#34;κ-ミンコフスキー-θ関係のデモンストレーション&#34;&#34;&#34;
+    
+    print(&#34;=&#34; * 80)
+    print(&#34;κ-ミンコフスキーのλパラメータと創発的なθパラメータとの関係解析&#34;)
+    print(&#34;=&#34; * 80)
+    
+    # パラメータ設定
+    params = DeformationParameters(
+        lambda_kappa=1e-6,  # κ-ミンコフスキーパラメータ
+        theta_nc=1e-8,      # 非可換パラメータ
+        energy_scale=1e12,  # 1 TeV
+        planck_scale=1.22e19
+    )
+    
+    analyzer = KappaMinkowskiTheta(params)
+    
+    print(f&#34;\n解析パラメータ:&#34;)
+    print(f&#34;λ_κ パラメータ: {params.lambda_kappa:.2e}&#34;)
+    print(f&#34;θ_NC パラメータ: {params.theta_nc:.2e}&#34;)
+    print(f&#34;エネルギースケール: {params.energy_scale:.2e} GeV&#34;)
+    print(f&#34;プランクスケール: {params.planck_scale:.2e} GeV&#34;)
+    
+    # 1. 理論的θ-λ関係
+    print(&#34;\n1. 理論的θ-λ関係の計算...&#34;)
+    energy_scales = [1e9, 1e12, 1e15, 1e18]  # GeV
+    
+    for E in energy_scales:
+        theta_theory = analyzer.theoretical_theta_lambda_relation(params.lambda_kappa, E)
+        print(f&#34;E = {E:.0e} GeV: θ = {theta_theory:.2e}&#34;)
+    
+    # 2. 創発的θパラメータ
+    print(&#34;\n2. κ-ミンコフスキー代数からの創発的θ...&#34;)
+    momentum_scales = [1e3, 1e6, 1e9, 1e12]  # GeV
+    
+    for p in momentum_scales:
+        emergent_results = analyzer.emergent_theta_from_kappa_minkowski(
+            params.lambda_kappa, p
+        )
+        print(f&#34;p = {p:.0e} GeV:&#34;)
+        print(f&#34;  1次: θ = {emergent_results[&#39;theta_1st_order&#39;]:.2e}&#34;)
+        print(f&#34;  2次: θ = {emergent_results[&#39;theta_2nd_order&#39;]:.2e}&#34;)
+        print(f&#34;  量子: θ = {emergent_results[&#39;theta_quantum&#39;]:.2e}&#34;)
+        print(f&#34;  非摂動: θ = {emergent_results[&#39;theta_nonperturbative&#39;]:.2e}&#34;)
+    
+    # 3. 繰り込み群流れ
+    print(&#34;\n3. 繰り込み群流れの解析...&#34;)
+    energy_range = np.logspace(3, 18, 100)
+    rg_results = analyzer.renormalization_group_flow(
+        params.lambda_kappa, params.theta_nc, energy_range
+    )
+    
+    print(f&#34;初期値: λ = {params.lambda_kappa:.2e}, θ = {params.theta_nc:.2e}&#34;)
+    print(f&#34;最終値: λ = {rg_results[&#39;lambda_running&#39;][-1]:.2e}, θ = {rg_results[&#39;theta_running&#39;][-1]:.2e}&#34;)
+    print(f&#34;λの変化率: {(rg_results[&#39;lambda_running&#39;][-1] / params.lambda_kappa - 1) * 100:.1f}%&#34;)
+    print(f&#34;θの変化率: {(rg_results[&#39;theta_running&#39;][-1] / params.theta_nc - 1) * 100:.1f}%&#34;)
+    
+    # 4. 現象論的制約
+    print(&#34;\n4. 現象論的制約の評価...&#34;)
+    constraints = analyzer.phenomenological_constraints()
+    
+    print(f&#34;γ線天文学制約: |θ| &lt; {constraints[&#39;theta_gamma_ray&#39;]:.2e}&#34;)
+    print(f&#34;重力波制約: |θ| &lt; {constraints[&#39;theta_gravitational_wave&#39;]:.2e}&#34;)
+    print(f&#34;LHC制約: λ &lt; {constraints[&#39;lambda_lhc&#39;]:.2e}&#34;)
+    print(f&#34;宇宙論的制約: λ ~ {constraints[&#39;lambda_cosmological&#39;]:.2e}&#34;)
+    
+    # 制約の整合性チェック
+    if params.theta_nc &lt; constraints[&#39;theta_gamma_ray&#39;]:
+        print(&#34;✓ θパラメータはγ線制約を満たしています&#34;)
+    else:
+        print(&#34;✗ θパラメータがγ線制約に違反しています&#34;)
+    
+    if params.lambda_kappa &lt; constraints[&#39;lambda_lhc&#39;]:
+        print(&#34;✓ λパラメータはLHC制約を満たしています&#34;)
+    else:
+        print(&#34;✗ λパラメータがLHC制約に違反しています&#34;)
+    
+    # 5. 実験的予測
+    print(&#34;\n5. 実験的予測の計算...&#34;)
+    predictions = analyzer.experimental_predictions()
+    
+    # 代表的な値での予測
+    test_energy = 1e12  # 1 TeV
+    idx = np.argmin(np.abs(predictions[&#39;photon_energies&#39;] - test_energy))
+    dispersion_correction = predictions[&#39;dispersion_corrections&#39;][idx]
+    print(f&#34;1 TeV光子の分散補正: δE/E = {dispersion_correction:.2e}&#34;)
+    
+    test_field = 1e14  # 10¹⁴ Gauss
+    idx = np.argmin(np.abs(predictions[&#39;magnetic_fields&#39;] - test_field))
+    birefringence = predictions[&#39;birefringence_angles&#39;][idx]
+    print(f&#34;10¹⁴ Gauss磁場での偏光回転: φ = {birefringence:.2e} rad&#34;)
+    
+    # 粒子生成閾値
+    for i, name in enumerate(predictions[&#39;particle_names&#39;]):
+        correction = predictions[&#39;threshold_corrections&#39;][i]
+        print(f&#34;{name}生成閾値補正: δE/E = {correction:.2e}&#34;)
+    
+    # 6. データフィッティング
+    print(&#34;\n6. 模擬データフィッティング...&#34;)
+    mock_data = analyzer._generate_mock_data()
+    fit_results = analyzer.fit_experimental_data(mock_data)
+    
+    if &#39;lambda_fitted&#39; in fit_results:
+        print(f&#34;フィッティング結果:&#34;)
+        print(f&#34;  λ_fitted = {fit_results[&#39;lambda_fitted&#39;]:.2e} ± {fit_results[&#39;parameter_errors&#39;][0]:.2e}&#34;)
+        print(f&#34;  α_fitted = {fit_results[&#39;alpha_fitted&#39;]:.3f} ± {fit_results[&#39;parameter_errors&#39;][1]:.3f}&#34;)
+        print(f&#34;  β_fitted = {fit_results[&#39;beta_fitted&#39;]:.3f} ± {fit_results[&#39;parameter_errors&#39;][2]:.3f}&#34;)
+        print(f&#34;  χ²/dof = {fit_results[&#39;reduced_chi_squared&#39;]:.2f}&#34;)
+        print(f&#34;  フィッティング品質: {fit_results[&#39;fit_quality&#39;]}&#34;)
+    else:
+        print(f&#34;フィッティングエラー: {fit_results.get(&#39;error&#39;, &#39;Unknown error&#39;)}&#34;)
+    
+    # 7. 結果の可視化
+    print(&#34;\n7. 結果の可視化...&#34;)
+    fig = analyzer.visualize_theta_lambda_relationship(
+        save_path=&#39;kappa_minkowski_theta_relationship.png&#39;
+    )
+    
+    # 8. 結果の保存
+    results_summary = {
+        &#39;parameters&#39;: params.__dict__,
+        &#39;theoretical_relations&#39;: {
+            &#39;energy_scales&#39;: energy_scales,
+            &#39;theta_values&#39;: [analyzer.theoretical_theta_lambda_relation(params.lambda_kappa, E) 
+                           for E in energy_scales]
+        },
+        &#39;rg_flow_summary&#39;: {
+            &#39;initial_lambda&#39;: params.lambda_kappa,
+            &#39;final_lambda&#39;: rg_results[&#39;lambda_running&#39;][-1],
+            &#39;initial_theta&#39;: params.theta_nc,
+            &#39;final_theta&#39;: rg_results[&#39;theta_running&#39;][-1]
+        },
+        &#39;constraints&#39;: {k: v for k, v in constraints.items() 
+                       if not isinstance(v, np.ndarray)},
+        &#39;fit_results&#39;: fit_results,
+        &#39;analysis_timestamp&#39;: str(np.datetime64(&#39;now&#39;))
+    }
+    
+    with open(&#39;kappa_minkowski_theta_analysis.json&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as f:
+        json.dump(results_summary, f, indent=2, ensure_ascii=False, default=str)
+    
+    print(&#34;\n解析結果が &#39;kappa_minkowski_theta_analysis.json&#39; に保存されました。&#34;)
+    
+    return analyzer, results_summary</code></pre>
+</details>
+<div class="desc"><p>κ-ミンコフスキー-θ関係のデモンストレーション</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="kappa_minkowski_theta_relationship.DeformationParameters"><code class="flex name class">
+<span>class <span class="ident">DeformationParameters</span></span>
+<span>(</span><span>lambda_kappa: float,<br>theta_nc: float,<br>energy_scale: float,<br>planck_scale: float = 1.22e+19)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class DeformationParameters:
+    &#34;&#34;&#34;変形パラメータの定義&#34;&#34;&#34;
+    lambda_kappa: float  # κ-ミンコフスキー変形パラメータ
+    theta_nc: float  # 非可換パラメータ
+    energy_scale: float  # エネルギースケール (GeV)
+    planck_scale: float = 1.22e19  # プランクスケール (GeV)
+    
+    def __post_init__(self):
+        &#34;&#34;&#34;パラメータの妥当性検証&#34;&#34;&#34;
+        if self.lambda_kappa &lt;= 0:
+            raise ValueError(&#34;λ_κパラメータは正の値である必要があります&#34;)
+        if abs(self.theta_nc) &gt; 1.0:
+            warnings.warn(&#34;θパラメータが大きすぎる可能性があります&#34;)
+        if self.energy_scale &lt;= 0:
+            raise ValueError(&#34;エネルギースケールは正の値である必要があります&#34;)</code></pre>
+</details>
+<div class="desc"><p>変形パラメータの定義</p></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="kappa_minkowski_theta_relationship.DeformationParameters.energy_scale"><code class="name">var <span class="ident">energy_scale</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.DeformationParameters.lambda_kappa"><code class="name">var <span class="ident">lambda_kappa</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.DeformationParameters.planck_scale"><code class="name">var <span class="ident">planck_scale</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.DeformationParameters.theta_nc"><code class="name">var <span class="ident">theta_nc</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta"><code class="flex name class">
+<span>class <span class="ident">KappaMinkowskiTheta</span></span>
+<span>(</span><span>params: <a title="kappa_minkowski_theta_relationship.DeformationParameters" href="#kappa_minkowski_theta_relationship.DeformationParameters">DeformationParameters</a>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class KappaMinkowskiTheta:
+    &#34;&#34;&#34;
+    κ-ミンコフスキー変形とθ-変形の関係解析クラス
+    
+    主要な理論的関係：
+    1. λ_κ と θ の現象論的関係
+    2. エネルギースケール依存性
+    3. 量子重力効果の創発
+    4. 実験的観測可能性
+    &#34;&#34;&#34;
+    
+    def __init__(self, params: DeformationParameters):
+        self.params = params
+        self.lambda_kappa = params.lambda_kappa
+        self.theta_nc = params.theta_nc
+        self.E_scale = params.energy_scale
+        self.M_planck = params.planck_scale
+        
+        # シンボリック変数の定義
+        self.x, self.p, self.E, self.t = symbols(&#39;x p E t&#39;, real=True)
+        self.lambda_sym = symbols(&#39;lambda&#39;, positive=True)
+        self.theta_sym = symbols(&#39;theta&#39;, real=True)
+        self.kappa_sym = symbols(&#39;kappa&#39;, positive=True)
+        
+        # 物理定数（自然単位系）
+        self.hbar = 1.0  # ℏ = 1
+        self.c = 1.0     # c = 1
+        
+    def theoretical_theta_lambda_relation(self, lambda_kappa: float, 
+                                        energy_scale: float) -&gt; float:
+        &#34;&#34;&#34;
+        理論的なθ-λ関係の計算
+        
+        基本関係式：
+        θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)
+        
+        ここで、f(x)は無次元関数で、以下の性質を持つ：
+        - f(0) = 1 (低エネルギー極限)
+        - f(x) ~ x^α (高エネルギー極限、α &lt; 0)
+        &#34;&#34;&#34;
+        # 無次元エネルギー
+        x = energy_scale / self.M_planck
+        
+        # 現象論的関数 f(x) の定義
+        # 低エネルギー: f(x) ≈ 1 - x²/2
+        # 高エネルギー: f(x) ≈ x^(-1/2)
+        if x &lt; 0.1:
+            f_x = 1 - x**2 / 2 + x**4 / 24  # テイラー展開
+        else:
+            f_x = np.power(x, -0.5) * np.exp(-x/2)  # 指数的カットオフ
+        
+        # θパラメータの計算
+        theta_theoretical = (lambda_kappa / self.M_planck**2) * energy_scale**2 * f_x
+        
+        return theta_theoretical
+    
+    def emergent_theta_from_kappa_minkowski(self, lambda_kappa: float,
+                                          momentum_scale: float) -&gt; Dict:
+        &#34;&#34;&#34;
+        κ-ミンコフスキー代数からの創発的θパラメータ
+        
+        κ-ミンコフスキー代数：
+        [x^μ, x^ν] = iλ_κ (η^μν x² - x^μ x^ν)
+        [x^μ, p^ν] = iℏ η^μν (1 + λ_κ p²)
+        [p^μ, p^ν] = 0
+        
+        から導出される有効的な非可換性
+        &#34;&#34;&#34;
+        # 運動量スケールでの有効的非可換性
+        p_scale = momentum_scale
+        
+        # κ-ミンコフスキー代数からの有効θ
+        # 1次近似: θ_eff ≈ λ_κ * p²
+        theta_eff_1st = lambda_kappa * p_scale**2
+        
+        # 2次補正: 相対論的効果
+        gamma_factor = 1 / np.sqrt(1 - (p_scale / self.M_planck)**2)
+        theta_eff_2nd = theta_eff_1st * (1 + lambda_kappa * p_scale**2 / 2)
+        
+        # 量子補正: ループ効果
+        alpha_em = 1/137  # 微細構造定数
+        quantum_correction = 1 + alpha_em * np.log(p_scale / 1e-3) / (4 * pi)
+        theta_eff_quantum = theta_eff_2nd * quantum_correction
+        
+        # 非摂動的効果: インスタントン寄与
+        instanton_factor = np.exp(-2 * pi / (alpha_em * lambda_kappa * p_scale**2))
+        theta_eff_nonpert = theta_eff_quantum + instanton_factor * lambda_kappa
+        
+        return {
+            &#39;theta_1st_order&#39;: theta_eff_1st,
+            &#39;theta_2nd_order&#39;: theta_eff_2nd,
+            &#39;theta_quantum&#39;: theta_eff_quantum,
+            &#39;theta_nonperturbative&#39;: theta_eff_nonpert,
+            &#39;gamma_factor&#39;: gamma_factor,
+            &#39;quantum_correction&#39;: quantum_correction,
+            &#39;instanton_factor&#39;: instanton_factor
+        }
+    
+    def renormalization_group_flow(self, lambda_initial: float,
+                                 theta_initial: float,
+                                 energy_range: np.ndarray) -&gt; Dict:
+        &#34;&#34;&#34;
+        繰り込み群流れによるパラメータの走り
+        
+        β関数：
+        β_λ = dλ/d(log μ) = -γ_λ λ + δ_λ λ²
+        β_θ = dθ/d(log μ) = -γ_θ θ + δ_θ θ² + ε_λθ λθ
+        &#34;&#34;&#34;
+        # 繰り込み群係数（現象論的）
+        gamma_lambda = 0.1  # λの異常次元
+        delta_lambda = 0.05  # λの2ループ係数
+        gamma_theta = 0.15   # θの異常次元
+        delta_theta = 0.03   # θの2ループ係数
+        epsilon_lambda_theta = 0.02  # λ-θ混合項
+        
+        # エネルギースケールの対数
+        log_mu = np.log(energy_range / energy_range[0])
+        
+        # 微分方程式の数値解
+        lambda_running = np.zeros_like(log_mu)
+        theta_running = np.zeros_like(log_mu)
+        
+        lambda_running[0] = lambda_initial
+        theta_running[0] = theta_initial
+        
+        for i in range(1, len(log_mu)):
+            dt = log_mu[i] - log_mu[i-1]
+            
+            # β関数の評価
+            beta_lambda = (-gamma_lambda * lambda_running[i-1] + 
+                          delta_lambda * lambda_running[i-1]**2)
+            beta_theta = (-gamma_theta * theta_running[i-1] + 
+                         delta_theta * theta_running[i-1]**2 +
+                         epsilon_lambda_theta * lambda_running[i-1] * theta_running[i-1])
+            
+            # オイラー法による積分
+            lambda_running[i] = lambda_running[i-1] + beta_lambda * dt
+            theta_running[i] = theta_running[i-1] + beta_theta * dt
+        
+        return {
+            &#39;energy_scales&#39;: energy_range,
+            &#39;lambda_running&#39;: lambda_running,
+            &#39;theta_running&#39;: theta_running,
+            &#39;log_mu&#39;: log_mu,
+            &#39;beta_functions&#39;: {
+                &#39;gamma_lambda&#39;: gamma_lambda,
+                &#39;delta_lambda&#39;: delta_lambda,
+                &#39;gamma_theta&#39;: gamma_theta,
+                &#39;delta_theta&#39;: delta_theta,
+                &#39;epsilon_lambda_theta&#39;: epsilon_lambda_theta
+            }
+        }
+    
+    def phenomenological_constraints(self) -&gt; Dict:
+        &#34;&#34;&#34;
+        現象論的制約からのパラメータ関係
+        
+        実験的制約：
+        1. γ線天文学からのθ制約
+        2. 粒子物理学からのλ制約
+        3. 重力波観測からの制約
+        4. 宇宙論的制約
+        &#34;&#34;&#34;
+        constraints = {}
+        
+        # 1. γ線天文学制約
+        # 時間遅延: Δt/t ≈ θ E / M_Planck²
+        gamma_ray_energy = 100e9  # 100 GeV
+        time_delay_limit = 1e-6   # 観測限界
+        
+        theta_gamma_limit = (time_delay_limit * self.M_planck**2 / gamma_ray_energy)
+        constraints[&#39;theta_gamma_ray&#39;] = theta_gamma_limit
+        
+        # 2. 粒子物理学制約
+        # 散乱断面積修正: δσ/σ ≈ λ s / M_Planck⁴
+        lhc_energy = 13e3  # 13 TeV
+        cross_section_limit = 1e-3  # 3σ制限
+        
+        lambda_lhc_limit = (cross_section_limit * self.M_planck**4 / lhc_energy**2)
+        constraints[&#39;lambda_lhc&#39;] = lambda_lhc_limit
+        
+        # 3. 重力波制約
+        # 波形修正: δh/h ≈ θ f² / M_Planck²
+        gw_frequency = 100  # Hz
+        strain_sensitivity = 1e-23
+        
+        theta_gw_limit = (strain_sensitivity * self.M_planck**2 / gw_frequency**2)
+        constraints[&#39;theta_gravitational_wave&#39;] = theta_gw_limit
+        
+        # 4. 宇宙論的制約
+        # ダークエネルギー: ρ_Λ ≈ λ M_Planck⁴
+        dark_energy_density = 2.8e-47  # GeV⁴
+        
+        lambda_cosmological = dark_energy_density / self.M_planck**4
+        constraints[&#39;lambda_cosmological&#39;] = lambda_cosmological
+        
+        # 5. 統合制約
+        # θとλの関係から導出される制約
+        energy_scales = np.logspace(0, 19, 100)  # 1 GeV to Planck scale
+        
+        theta_theoretical = []
+        for E in energy_scales:
+            theta_E = self.theoretical_theta_lambda_relation(self.lambda_kappa, E)
+            theta_theoretical.append(theta_E)
+        
+        constraints[&#39;energy_scales&#39;] = energy_scales
+        constraints[&#39;theta_theoretical&#39;] = np.array(theta_theoretical)
+        
+        return constraints
+    
+    def experimental_predictions(self) -&gt; Dict:
+        &#34;&#34;&#34;
+        実験的予測の計算
+        
+        観測可能な効果：
+        1. 修正された分散関係
+        2. 真空複屈折
+        3. 粒子生成閾値の変化
+        4. 重力波の伝播速度変化
+        &#34;&#34;&#34;
+        predictions = {}
+        
+        # 1. 修正された分散関係
+        # E² = p²c² + m²c⁴ + θ p⁴/M_Planck²
+        def modified_dispersion(momentum, mass, theta):
+            classical = np.sqrt(momentum**2 + mass**2)
+            correction = theta * momentum**4 / (2 * self.M_planck**2 * classical)
+            return classical + correction
+        
+        # 高エネルギー光子の場合
+        photon_energies = np.logspace(9, 15, 100)  # 1 GeV to 1 PeV
+        dispersion_corrections = []
+        
+        for E in photon_energies:
+            p = E  # 光子の場合 E = pc
+            correction = self.theta_nc * p**4 / (2 * self.M_planck**2 * E)
+            relative_correction = correction / E
+            dispersion_corrections.append(relative_correction)
+        
+        predictions[&#39;photon_energies&#39;] = photon_energies
+        predictions[&#39;dispersion_corrections&#39;] = np.array(dispersion_corrections)
+        
+        # 2. 真空複屈折
+        # 偏光回転角: φ = θ B² L / M_Planck²
+        magnetic_fields = np.logspace(12, 15, 50)  # 10¹² to 10¹⁵ Gauss
+        path_length = 1e3  # 1 kpc in natural units
+        
+        birefringence_angles = []
+        for B in magnetic_fields:
+            phi = self.theta_nc * B**2 * path_length / self.M_planck**2
+            birefringence_angles.append(phi)
+        
+        predictions[&#39;magnetic_fields&#39;] = magnetic_fields
+        predictions[&#39;birefringence_angles&#39;] = np.array(birefringence_angles)
+        
+        # 3. 粒子生成閾値
+        # 修正された閾値: E_th = m (1 + λ m²/M_Planck²)
+        particle_masses = np.array([0.511e-3, 0.106, 1.777, 0.938, 4.18])  # e, μ, τ, p, b
+        particle_names = [&#39;electron&#39;, &#39;muon&#39;, &#39;tau&#39;, &#39;proton&#39;, &#39;bottom&#39;]
+        
+        threshold_corrections = []
+        for m in particle_masses:
+            correction = self.lambda_kappa * m**2 / self.M_planck**2
+            threshold_corrections.append(correction)
+        
+        predictions[&#39;particle_masses&#39;] = particle_masses
+        predictions[&#39;particle_names&#39;] = particle_names
+        predictions[&#39;threshold_corrections&#39;] = np.array(threshold_corrections)
+        
+        # 4. 重力波伝播
+        # 速度修正: δc/c = θ f²/M_Planck²
+        gw_frequencies = np.logspace(-3, 4, 100)  # mHz to 10 kHz
+        
+        gw_speed_corrections = []
+        for f in gw_frequencies:
+            delta_c = self.theta_nc * f**2 / self.M_planck**2
+            gw_speed_corrections.append(delta_c)
+        
+        predictions[&#39;gw_frequencies&#39;] = gw_frequencies
+        predictions[&#39;gw_speed_corrections&#39;] = np.array(gw_speed_corrections)
+        
+        return predictions
+    
+    def fit_experimental_data(self, mock_data: Dict) -&gt; Dict:
+        &#34;&#34;&#34;
+        模擬実験データへのフィッティング
+        
+        Args:
+            mock_data: 模擬実験データ
+            
+        Returns:
+            フィッティング結果
+        &#34;&#34;&#34;
+        # 模擬データの生成（実際の実験データの代わり）
+        if not mock_data:
+            mock_data = self._generate_mock_data()
+        
+        # フィッティング関数の定義
+        def theta_lambda_model(energy, lambda_param, alpha, beta):
+            &#34;&#34;&#34;θ-λ関係のパラメトリックモデル&#34;&#34;&#34;
+            x = energy / self.M_planck
+            return (lambda_param / self.M_planck**2) * energy**2 * np.power(x, alpha) * np.exp(-beta * x)
+        
+        # 実験データの準備
+        energies = mock_data[&#39;energies&#39;]
+        theta_observed = mock_data[&#39;theta_values&#39;]
+        theta_errors = mock_data[&#39;theta_errors&#39;]
+        
+        # 非線形最小二乗フィッティング
+        try:
+            popt, pcov = curve_fit(
+                theta_lambda_model, 
+                energies, 
+                theta_observed,
+                sigma=theta_errors,
+                p0=[self.lambda_kappa, -0.5, 0.1],  # 初期推定値
+                bounds=([1e-10, -2.0, 0.0], [1e-5, 2.0, 10.0])  # パラメータ範囲
+            )
+            
+            lambda_fit, alpha_fit, beta_fit = popt
+            param_errors = np.sqrt(np.diag(pcov))
+            
+            # フィッティング品質の評価
+            theta_fit = theta_lambda_model(energies, *popt)
+            chi_squared = np.sum(((theta_observed - theta_fit) / theta_errors)**2)
+            dof = len(energies) - len(popt)
+            reduced_chi_squared = chi_squared / dof
+            
+            fit_results = {
+                &#39;lambda_fitted&#39;: lambda_fit,
+                &#39;alpha_fitted&#39;: alpha_fit,
+                &#39;beta_fitted&#39;: beta_fit,
+                &#39;parameter_errors&#39;: param_errors,
+                &#39;chi_squared&#39;: chi_squared,
+                &#39;reduced_chi_squared&#39;: reduced_chi_squared,
+                &#39;degrees_of_freedom&#39;: dof,
+                &#39;theta_fitted&#39;: theta_fit,
+                &#39;fit_quality&#39;: &#39;good&#39; if reduced_chi_squared &lt; 2.0 else &#39;poor&#39;
+            }
+            
+        except Exception as e:
+            fit_results = {
+                &#39;error&#39;: str(e),
+                &#39;fit_quality&#39;: &#39;failed&#39;
+            }
+        
+        return fit_results
+    
+    def _generate_mock_data(self) -&gt; Dict:
+        &#34;&#34;&#34;模擬実験データの生成&#34;&#34;&#34;
+        # エネルギー範囲
+        energies = np.logspace(9, 15, 20)  # 1 GeV to 1 PeV
+        
+        # 理論値の計算
+        theta_theory = []
+        for E in energies:
+            theta_E = self.theoretical_theta_lambda_relation(self.lambda_kappa, E)
+            theta_theory.append(theta_E)
+        
+        theta_theory = np.array(theta_theory)
+        
+        # 実験誤差の追加（対数正規分布）
+        relative_errors = 0.1 + 0.05 * np.random.randn(len(energies))
+        theta_errors = np.abs(theta_theory * relative_errors)
+        theta_observed = theta_theory + theta_errors * np.random.randn(len(energies))
+        
+        return {
+            &#39;energies&#39;: energies,
+            &#39;theta_values&#39;: theta_observed,
+            &#39;theta_errors&#39;: theta_errors,
+            &#39;theta_theory&#39;: theta_theory
+        }
+    
+    def visualize_theta_lambda_relationship(self, save_path: Optional[str] = None):
+        &#34;&#34;&#34;θ-λ関係の可視化&#34;&#34;&#34;
+        
+        fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+        
+        # 1. 基本的なθ-λ関係
+        energy_range = np.logspace(0, 19, 1000)
+        theta_values = []
+        
+        for E in energy_range:
+            theta_E = self.theoretical_theta_lambda_relation(self.lambda_kappa, E)
+            theta_values.append(theta_E)
+        
+        axes[0, 0].loglog(energy_range, theta_values, &#39;b-&#39;, linewidth=2, 
+                         label=f&#39;λ_κ = {self.lambda_kappa:.2e}&#39;)
+        axes[0, 0].axhline(self.theta_nc, color=&#39;red&#39;, linestyle=&#39;--&#39;, 
+                          label=f&#39;θ_NC = {self.theta_nc:.2e}&#39;)
+        axes[0, 0].set_xlabel(&#39;エネルギー (GeV)&#39;)
+        axes[0, 0].set_ylabel(&#39;θ パラメータ&#39;)
+        axes[0, 0].set_title(&#39;θ-λ基本関係&#39;)
+        axes[0, 0].legend()
+        axes[0, 0].grid(True)
+        
+        # 2. 繰り込み群流れ
+        rg_results = self.renormalization_group_flow(
+            self.lambda_kappa, self.theta_nc, energy_range[::100]
+        )
+        
+        axes[0, 1].semilogx(rg_results[&#39;energy_scales&#39;], rg_results[&#39;lambda_running&#39;], 
+                           &#39;g-&#39;, label=&#39;λ(μ)&#39;)
+        axes[0, 1].semilogx(rg_results[&#39;energy_scales&#39;], rg_results[&#39;theta_running&#39;], 
+                           &#39;r-&#39;, label=&#39;θ(μ)&#39;)
+        axes[0, 1].set_xlabel(&#39;エネルギースケール μ (GeV)&#39;)
+        axes[0, 1].set_ylabel(&#39;走るパラメータ&#39;)
+        axes[0, 1].set_title(&#39;繰り込み群流れ&#39;)
+        axes[0, 1].legend()
+        axes[0, 1].grid(True)
+        
+        # 3. 現象論的制約
+        constraints = self.phenomenological_constraints()
+        
+        axes[0, 2].loglog(constraints[&#39;energy_scales&#39;], 
+                         np.abs(constraints[&#39;theta_theoretical&#39;]), 
+                         &#39;b-&#39;, label=&#39;理論予測&#39;)
+        axes[0, 2].axhline(constraints[&#39;theta_gamma_ray&#39;], color=&#39;purple&#39;, 
+                          linestyle=&#39;--&#39;, label=&#39;γ線制約&#39;)
+        axes[0, 2].axhline(constraints[&#39;theta_gravitational_wave&#39;], color=&#39;orange&#39;, 
+                          linestyle=&#39;--&#39;, label=&#39;重力波制約&#39;)
+        axes[0, 2].set_xlabel(&#39;エネルギー (GeV)&#39;)
+        axes[0, 2].set_ylabel(&#39;|θ| 制約&#39;)
+        axes[0, 2].set_title(&#39;現象論的制約&#39;)
+        axes[0, 2].legend()
+        axes[0, 2].grid(True)
+        
+        # 4. 実験的予測
+        predictions = self.experimental_predictions()
+        
+        axes[1, 0].loglog(predictions[&#39;photon_energies&#39;], 
+                         np.abs(predictions[&#39;dispersion_corrections&#39;]), 
+                         &#39;c-&#39;, linewidth=2)
+        axes[1, 0].set_xlabel(&#39;光子エネルギー (GeV)&#39;)
+        axes[1, 0].set_ylabel(&#39;相対的分散補正&#39;)
+        axes[1, 0].set_title(&#39;修正された分散関係&#39;)
+        axes[1, 0].grid(True)
+        
+        # 5. 真空複屈折
+        axes[1, 1].loglog(predictions[&#39;magnetic_fields&#39;], 
+                         np.abs(predictions[&#39;birefringence_angles&#39;]), 
+                         &#39;m-&#39;, linewidth=2)
+        axes[1, 1].set_xlabel(&#39;磁場強度 (Gauss)&#39;)
+        axes[1, 1].set_ylabel(&#39;偏光回転角 (rad)&#39;)
+        axes[1, 1].set_title(&#39;真空複屈折&#39;)
+        axes[1, 1].grid(True)
+        
+        # 6. フィッティング結果
+        mock_data = self._generate_mock_data()
+        fit_results = self.fit_experimental_data(mock_data)
+        
+        if &#39;theta_fitted&#39; in fit_results:
+            axes[1, 2].errorbar(mock_data[&#39;energies&#39;], mock_data[&#39;theta_values&#39;], 
+                               yerr=mock_data[&#39;theta_errors&#39;], fmt=&#39;ro&#39;, 
+                               label=&#39;模擬データ&#39;)
+            axes[1, 2].loglog(mock_data[&#39;energies&#39;], fit_results[&#39;theta_fitted&#39;], 
+                             &#39;b-&#39;, label=&#39;フィッティング&#39;)
+            axes[1, 2].loglog(mock_data[&#39;energies&#39;], mock_data[&#39;theta_theory&#39;], 
+                             &#39;g--&#39;, label=&#39;理論値&#39;)
+            axes[1, 2].set_xlabel(&#39;エネルギー (GeV)&#39;)
+            axes[1, 2].set_ylabel(&#39;θ パラメータ&#39;)
+            axes[1, 2].set_title(f&#39;データフィッティング (χ²/dof = {fit_results[&#34;reduced_chi_squared&#34;]:.2f})&#39;)
+            axes[1, 2].legend()
+            axes[1, 2].grid(True)
+        
+        plt.tight_layout()
+        
+        if save_path:
+            plt.savefig(save_path, dpi=300, bbox_inches=&#39;tight&#39;)
+        
+        plt.show()
+        return fig</code></pre>
+</details>
+<div class="desc"><p>κ-ミンコフスキー変形とθ-変形の関係解析クラス</p>
+<p>主要な理論的関係：
+1. λ_κ と θ の現象論的関係
+2. エネルギースケール依存性
+3. 量子重力効果の創発
+4. 実験的観測可能性</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.emergent_theta_from_kappa_minkowski"><code class="name flex">
+<span>def <span class="ident">emergent_theta_from_kappa_minkowski</span></span>(<span>self, lambda_kappa: float, momentum_scale: float) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def emergent_theta_from_kappa_minkowski(self, lambda_kappa: float,
+                                      momentum_scale: float) -&gt; Dict:
+    &#34;&#34;&#34;
+    κ-ミンコフスキー代数からの創発的θパラメータ
+    
+    κ-ミンコフスキー代数：
+    [x^μ, x^ν] = iλ_κ (η^μν x² - x^μ x^ν)
+    [x^μ, p^ν] = iℏ η^μν (1 + λ_κ p²)
+    [p^μ, p^ν] = 0
+    
+    から導出される有効的な非可換性
+    &#34;&#34;&#34;
+    # 運動量スケールでの有効的非可換性
+    p_scale = momentum_scale
+    
+    # κ-ミンコフスキー代数からの有効θ
+    # 1次近似: θ_eff ≈ λ_κ * p²
+    theta_eff_1st = lambda_kappa * p_scale**2
+    
+    # 2次補正: 相対論的効果
+    gamma_factor = 1 / np.sqrt(1 - (p_scale / self.M_planck)**2)
+    theta_eff_2nd = theta_eff_1st * (1 + lambda_kappa * p_scale**2 / 2)
+    
+    # 量子補正: ループ効果
+    alpha_em = 1/137  # 微細構造定数
+    quantum_correction = 1 + alpha_em * np.log(p_scale / 1e-3) / (4 * pi)
+    theta_eff_quantum = theta_eff_2nd * quantum_correction
+    
+    # 非摂動的効果: インスタントン寄与
+    instanton_factor = np.exp(-2 * pi / (alpha_em * lambda_kappa * p_scale**2))
+    theta_eff_nonpert = theta_eff_quantum + instanton_factor * lambda_kappa
+    
+    return {
+        &#39;theta_1st_order&#39;: theta_eff_1st,
+        &#39;theta_2nd_order&#39;: theta_eff_2nd,
+        &#39;theta_quantum&#39;: theta_eff_quantum,
+        &#39;theta_nonperturbative&#39;: theta_eff_nonpert,
+        &#39;gamma_factor&#39;: gamma_factor,
+        &#39;quantum_correction&#39;: quantum_correction,
+        &#39;instanton_factor&#39;: instanton_factor
+    }</code></pre>
+</details>
+<div class="desc"><p>κ-ミンコフスキー代数からの創発的θパラメータ</p>
+<p>κ-ミンコフスキー代数：
+[x^μ, x^ν] = iλ_κ (η^μν x² - x^μ x^ν)
+[x^μ, p^ν] = iℏ η^μν (1 + λ_κ p²)
+[p^μ, p^ν] = 0</p>
+<p>から導出される有効的な非可換性</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.experimental_predictions"><code class="name flex">
+<span>def <span class="ident">experimental_predictions</span></span>(<span>self) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def experimental_predictions(self) -&gt; Dict:
+    &#34;&#34;&#34;
+    実験的予測の計算
+    
+    観測可能な効果：
+    1. 修正された分散関係
+    2. 真空複屈折
+    3. 粒子生成閾値の変化
+    4. 重力波の伝播速度変化
+    &#34;&#34;&#34;
+    predictions = {}
+    
+    # 1. 修正された分散関係
+    # E² = p²c² + m²c⁴ + θ p⁴/M_Planck²
+    def modified_dispersion(momentum, mass, theta):
+        classical = np.sqrt(momentum**2 + mass**2)
+        correction = theta * momentum**4 / (2 * self.M_planck**2 * classical)
+        return classical + correction
+    
+    # 高エネルギー光子の場合
+    photon_energies = np.logspace(9, 15, 100)  # 1 GeV to 1 PeV
+    dispersion_corrections = []
+    
+    for E in photon_energies:
+        p = E  # 光子の場合 E = pc
+        correction = self.theta_nc * p**4 / (2 * self.M_planck**2 * E)
+        relative_correction = correction / E
+        dispersion_corrections.append(relative_correction)
+    
+    predictions[&#39;photon_energies&#39;] = photon_energies
+    predictions[&#39;dispersion_corrections&#39;] = np.array(dispersion_corrections)
+    
+    # 2. 真空複屈折
+    # 偏光回転角: φ = θ B² L / M_Planck²
+    magnetic_fields = np.logspace(12, 15, 50)  # 10¹² to 10¹⁵ Gauss
+    path_length = 1e3  # 1 kpc in natural units
+    
+    birefringence_angles = []
+    for B in magnetic_fields:
+        phi = self.theta_nc * B**2 * path_length / self.M_planck**2
+        birefringence_angles.append(phi)
+    
+    predictions[&#39;magnetic_fields&#39;] = magnetic_fields
+    predictions[&#39;birefringence_angles&#39;] = np.array(birefringence_angles)
+    
+    # 3. 粒子生成閾値
+    # 修正された閾値: E_th = m (1 + λ m²/M_Planck²)
+    particle_masses = np.array([0.511e-3, 0.106, 1.777, 0.938, 4.18])  # e, μ, τ, p, b
+    particle_names = [&#39;electron&#39;, &#39;muon&#39;, &#39;tau&#39;, &#39;proton&#39;, &#39;bottom&#39;]
+    
+    threshold_corrections = []
+    for m in particle_masses:
+        correction = self.lambda_kappa * m**2 / self.M_planck**2
+        threshold_corrections.append(correction)
+    
+    predictions[&#39;particle_masses&#39;] = particle_masses
+    predictions[&#39;particle_names&#39;] = particle_names
+    predictions[&#39;threshold_corrections&#39;] = np.array(threshold_corrections)
+    
+    # 4. 重力波伝播
+    # 速度修正: δc/c = θ f²/M_Planck²
+    gw_frequencies = np.logspace(-3, 4, 100)  # mHz to 10 kHz
+    
+    gw_speed_corrections = []
+    for f in gw_frequencies:
+        delta_c = self.theta_nc * f**2 / self.M_planck**2
+        gw_speed_corrections.append(delta_c)
+    
+    predictions[&#39;gw_frequencies&#39;] = gw_frequencies
+    predictions[&#39;gw_speed_corrections&#39;] = np.array(gw_speed_corrections)
+    
+    return predictions</code></pre>
+</details>
+<div class="desc"><p>実験的予測の計算</p>
+<p>観測可能な効果：
+1. 修正された分散関係
+2. 真空複屈折
+3. 粒子生成閾値の変化
+4. 重力波の伝播速度変化</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.fit_experimental_data"><code class="name flex">
+<span>def <span class="ident">fit_experimental_data</span></span>(<span>self, mock_data: Dict) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fit_experimental_data(self, mock_data: Dict) -&gt; Dict:
+    &#34;&#34;&#34;
+    模擬実験データへのフィッティング
+    
+    Args:
+        mock_data: 模擬実験データ
+        
+    Returns:
+        フィッティング結果
+    &#34;&#34;&#34;
+    # 模擬データの生成（実際の実験データの代わり）
+    if not mock_data:
+        mock_data = self._generate_mock_data()
+    
+    # フィッティング関数の定義
+    def theta_lambda_model(energy, lambda_param, alpha, beta):
+        &#34;&#34;&#34;θ-λ関係のパラメトリックモデル&#34;&#34;&#34;
+        x = energy / self.M_planck
+        return (lambda_param / self.M_planck**2) * energy**2 * np.power(x, alpha) * np.exp(-beta * x)
+    
+    # 実験データの準備
+    energies = mock_data[&#39;energies&#39;]
+    theta_observed = mock_data[&#39;theta_values&#39;]
+    theta_errors = mock_data[&#39;theta_errors&#39;]
+    
+    # 非線形最小二乗フィッティング
+    try:
+        popt, pcov = curve_fit(
+            theta_lambda_model, 
+            energies, 
+            theta_observed,
+            sigma=theta_errors,
+            p0=[self.lambda_kappa, -0.5, 0.1],  # 初期推定値
+            bounds=([1e-10, -2.0, 0.0], [1e-5, 2.0, 10.0])  # パラメータ範囲
+        )
+        
+        lambda_fit, alpha_fit, beta_fit = popt
+        param_errors = np.sqrt(np.diag(pcov))
+        
+        # フィッティング品質の評価
+        theta_fit = theta_lambda_model(energies, *popt)
+        chi_squared = np.sum(((theta_observed - theta_fit) / theta_errors)**2)
+        dof = len(energies) - len(popt)
+        reduced_chi_squared = chi_squared / dof
+        
+        fit_results = {
+            &#39;lambda_fitted&#39;: lambda_fit,
+            &#39;alpha_fitted&#39;: alpha_fit,
+            &#39;beta_fitted&#39;: beta_fit,
+            &#39;parameter_errors&#39;: param_errors,
+            &#39;chi_squared&#39;: chi_squared,
+            &#39;reduced_chi_squared&#39;: reduced_chi_squared,
+            &#39;degrees_of_freedom&#39;: dof,
+            &#39;theta_fitted&#39;: theta_fit,
+            &#39;fit_quality&#39;: &#39;good&#39; if reduced_chi_squared &lt; 2.0 else &#39;poor&#39;
+        }
+        
+    except Exception as e:
+        fit_results = {
+            &#39;error&#39;: str(e),
+            &#39;fit_quality&#39;: &#39;failed&#39;
+        }
+    
+    return fit_results</code></pre>
+</details>
+<div class="desc"><p>模擬実験データへのフィッティング</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>mock_data</code></strong></dt>
+<dd>模擬実験データ</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>フィッティング結果</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.phenomenological_constraints"><code class="name flex">
+<span>def <span class="ident">phenomenological_constraints</span></span>(<span>self) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def phenomenological_constraints(self) -&gt; Dict:
+    &#34;&#34;&#34;
+    現象論的制約からのパラメータ関係
+    
+    実験的制約：
+    1. γ線天文学からのθ制約
+    2. 粒子物理学からのλ制約
+    3. 重力波観測からの制約
+    4. 宇宙論的制約
+    &#34;&#34;&#34;
+    constraints = {}
+    
+    # 1. γ線天文学制約
+    # 時間遅延: Δt/t ≈ θ E / M_Planck²
+    gamma_ray_energy = 100e9  # 100 GeV
+    time_delay_limit = 1e-6   # 観測限界
+    
+    theta_gamma_limit = (time_delay_limit * self.M_planck**2 / gamma_ray_energy)
+    constraints[&#39;theta_gamma_ray&#39;] = theta_gamma_limit
+    
+    # 2. 粒子物理学制約
+    # 散乱断面積修正: δσ/σ ≈ λ s / M_Planck⁴
+    lhc_energy = 13e3  # 13 TeV
+    cross_section_limit = 1e-3  # 3σ制限
+    
+    lambda_lhc_limit = (cross_section_limit * self.M_planck**4 / lhc_energy**2)
+    constraints[&#39;lambda_lhc&#39;] = lambda_lhc_limit
+    
+    # 3. 重力波制約
+    # 波形修正: δh/h ≈ θ f² / M_Planck²
+    gw_frequency = 100  # Hz
+    strain_sensitivity = 1e-23
+    
+    theta_gw_limit = (strain_sensitivity * self.M_planck**2 / gw_frequency**2)
+    constraints[&#39;theta_gravitational_wave&#39;] = theta_gw_limit
+    
+    # 4. 宇宙論的制約
+    # ダークエネルギー: ρ_Λ ≈ λ M_Planck⁴
+    dark_energy_density = 2.8e-47  # GeV⁴
+    
+    lambda_cosmological = dark_energy_density / self.M_planck**4
+    constraints[&#39;lambda_cosmological&#39;] = lambda_cosmological
+    
+    # 5. 統合制約
+    # θとλの関係から導出される制約
+    energy_scales = np.logspace(0, 19, 100)  # 1 GeV to Planck scale
+    
+    theta_theoretical = []
+    for E in energy_scales:
+        theta_E = self.theoretical_theta_lambda_relation(self.lambda_kappa, E)
+        theta_theoretical.append(theta_E)
+    
+    constraints[&#39;energy_scales&#39;] = energy_scales
+    constraints[&#39;theta_theoretical&#39;] = np.array(theta_theoretical)
+    
+    return constraints</code></pre>
+</details>
+<div class="desc"><p>現象論的制約からのパラメータ関係</p>
+<p>実験的制約：
+1. γ線天文学からのθ制約
+2. 粒子物理学からのλ制約
+3. 重力波観測からの制約
+4. 宇宙論的制約</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.renormalization_group_flow"><code class="name flex">
+<span>def <span class="ident">renormalization_group_flow</span></span>(<span>self, lambda_initial: float, theta_initial: float, energy_range: numpy.ndarray) ‑> Dict</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def renormalization_group_flow(self, lambda_initial: float,
+                             theta_initial: float,
+                             energy_range: np.ndarray) -&gt; Dict:
+    &#34;&#34;&#34;
+    繰り込み群流れによるパラメータの走り
+    
+    β関数：
+    β_λ = dλ/d(log μ) = -γ_λ λ + δ_λ λ²
+    β_θ = dθ/d(log μ) = -γ_θ θ + δ_θ θ² + ε_λθ λθ
+    &#34;&#34;&#34;
+    # 繰り込み群係数（現象論的）
+    gamma_lambda = 0.1  # λの異常次元
+    delta_lambda = 0.05  # λの2ループ係数
+    gamma_theta = 0.15   # θの異常次元
+    delta_theta = 0.03   # θの2ループ係数
+    epsilon_lambda_theta = 0.02  # λ-θ混合項
+    
+    # エネルギースケールの対数
+    log_mu = np.log(energy_range / energy_range[0])
+    
+    # 微分方程式の数値解
+    lambda_running = np.zeros_like(log_mu)
+    theta_running = np.zeros_like(log_mu)
+    
+    lambda_running[0] = lambda_initial
+    theta_running[0] = theta_initial
+    
+    for i in range(1, len(log_mu)):
+        dt = log_mu[i] - log_mu[i-1]
+        
+        # β関数の評価
+        beta_lambda = (-gamma_lambda * lambda_running[i-1] + 
+                      delta_lambda * lambda_running[i-1]**2)
+        beta_theta = (-gamma_theta * theta_running[i-1] + 
+                     delta_theta * theta_running[i-1]**2 +
+                     epsilon_lambda_theta * lambda_running[i-1] * theta_running[i-1])
+        
+        # オイラー法による積分
+        lambda_running[i] = lambda_running[i-1] + beta_lambda * dt
+        theta_running[i] = theta_running[i-1] + beta_theta * dt
+    
+    return {
+        &#39;energy_scales&#39;: energy_range,
+        &#39;lambda_running&#39;: lambda_running,
+        &#39;theta_running&#39;: theta_running,
+        &#39;log_mu&#39;: log_mu,
+        &#39;beta_functions&#39;: {
+            &#39;gamma_lambda&#39;: gamma_lambda,
+            &#39;delta_lambda&#39;: delta_lambda,
+            &#39;gamma_theta&#39;: gamma_theta,
+            &#39;delta_theta&#39;: delta_theta,
+            &#39;epsilon_lambda_theta&#39;: epsilon_lambda_theta
+        }
+    }</code></pre>
+</details>
+<div class="desc"><p>繰り込み群流れによるパラメータの走り</p>
+<p>β関数：
+β_λ = dλ/d(log μ) = -γ_λ λ + δ_λ λ²
+β_θ = dθ/d(log μ) = -γ_θ θ + δ_θ θ² + ε_λθ λθ</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.theoretical_theta_lambda_relation"><code class="name flex">
+<span>def <span class="ident">theoretical_theta_lambda_relation</span></span>(<span>self, lambda_kappa: float, energy_scale: float) ‑> float</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def theoretical_theta_lambda_relation(self, lambda_kappa: float, 
+                                    energy_scale: float) -&gt; float:
+    &#34;&#34;&#34;
+    理論的なθ-λ関係の計算
+    
+    基本関係式：
+    θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)
+    
+    ここで、f(x)は無次元関数で、以下の性質を持つ：
+    - f(0) = 1 (低エネルギー極限)
+    - f(x) ~ x^α (高エネルギー極限、α &lt; 0)
+    &#34;&#34;&#34;
+    # 無次元エネルギー
+    x = energy_scale / self.M_planck
+    
+    # 現象論的関数 f(x) の定義
+    # 低エネルギー: f(x) ≈ 1 - x²/2
+    # 高エネルギー: f(x) ≈ x^(-1/2)
+    if x &lt; 0.1:
+        f_x = 1 - x**2 / 2 + x**4 / 24  # テイラー展開
+    else:
+        f_x = np.power(x, -0.5) * np.exp(-x/2)  # 指数的カットオフ
+    
+    # θパラメータの計算
+    theta_theoretical = (lambda_kappa / self.M_planck**2) * energy_scale**2 * f_x
+    
+    return theta_theoretical</code></pre>
+</details>
+<div class="desc"><p>理論的なθ-λ関係の計算</p>
+<p>基本関係式：
+θ(E) = (λ_κ / M_Planck²) * E² * f(E/M_Planck)</p>
+<p>ここで、f(x)は無次元関数で、以下の性質を持つ：
+- f(0) = 1 (低エネルギー極限)
+- f(x) ~ x^α (高エネルギー極限、α &lt; 0)</p></div>
+</dd>
+<dt id="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.visualize_theta_lambda_relationship"><code class="name flex">
+<span>def <span class="ident">visualize_theta_lambda_relationship</span></span>(<span>self, save_path: str | None = None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def visualize_theta_lambda_relationship(self, save_path: Optional[str] = None):
+    &#34;&#34;&#34;θ-λ関係の可視化&#34;&#34;&#34;
+    
+    fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+    
+    # 1. 基本的なθ-λ関係
+    energy_range = np.logspace(0, 19, 1000)
+    theta_values = []
+    
+    for E in energy_range:
+        theta_E = self.theoretical_theta_lambda_relation(self.lambda_kappa, E)
+        theta_values.append(theta_E)
+    
+    axes[0, 0].loglog(energy_range, theta_values, &#39;b-&#39;, linewidth=2, 
+                     label=f&#39;λ_κ = {self.lambda_kappa:.2e}&#39;)
+    axes[0, 0].axhline(self.theta_nc, color=&#39;red&#39;, linestyle=&#39;--&#39;, 
+                      label=f&#39;θ_NC = {self.theta_nc:.2e}&#39;)
+    axes[0, 0].set_xlabel(&#39;エネルギー (GeV)&#39;)
+    axes[0, 0].set_ylabel(&#39;θ パラメータ&#39;)
+    axes[0, 0].set_title(&#39;θ-λ基本関係&#39;)
+    axes[0, 0].legend()
+    axes[0, 0].grid(True)
+    
+    # 2. 繰り込み群流れ
+    rg_results = self.renormalization_group_flow(
+        self.lambda_kappa, self.theta_nc, energy_range[::100]
+    )
+    
+    axes[0, 1].semilogx(rg_results[&#39;energy_scales&#39;], rg_results[&#39;lambda_running&#39;], 
+                       &#39;g-&#39;, label=&#39;λ(μ)&#39;)
+    axes[0, 1].semilogx(rg_results[&#39;energy_scales&#39;], rg_results[&#39;theta_running&#39;], 
+                       &#39;r-&#39;, label=&#39;θ(μ)&#39;)
+    axes[0, 1].set_xlabel(&#39;エネルギースケール μ (GeV)&#39;)
+    axes[0, 1].set_ylabel(&#39;走るパラメータ&#39;)
+    axes[0, 1].set_title(&#39;繰り込み群流れ&#39;)
+    axes[0, 1].legend()
+    axes[0, 1].grid(True)
+    
+    # 3. 現象論的制約
+    constraints = self.phenomenological_constraints()
+    
+    axes[0, 2].loglog(constraints[&#39;energy_scales&#39;], 
+                     np.abs(constraints[&#39;theta_theoretical&#39;]), 
+                     &#39;b-&#39;, label=&#39;理論予測&#39;)
+    axes[0, 2].axhline(constraints[&#39;theta_gamma_ray&#39;], color=&#39;purple&#39;, 
+                      linestyle=&#39;--&#39;, label=&#39;γ線制約&#39;)
+    axes[0, 2].axhline(constraints[&#39;theta_gravitational_wave&#39;], color=&#39;orange&#39;, 
+                      linestyle=&#39;--&#39;, label=&#39;重力波制約&#39;)
+    axes[0, 2].set_xlabel(&#39;エネルギー (GeV)&#39;)
+    axes[0, 2].set_ylabel(&#39;|θ| 制約&#39;)
+    axes[0, 2].set_title(&#39;現象論的制約&#39;)
+    axes[0, 2].legend()
+    axes[0, 2].grid(True)
+    
+    # 4. 実験的予測
+    predictions = self.experimental_predictions()
+    
+    axes[1, 0].loglog(predictions[&#39;photon_energies&#39;], 
+                     np.abs(predictions[&#39;dispersion_corrections&#39;]), 
+                     &#39;c-&#39;, linewidth=2)
+    axes[1, 0].set_xlabel(&#39;光子エネルギー (GeV)&#39;)
+    axes[1, 0].set_ylabel(&#39;相対的分散補正&#39;)
+    axes[1, 0].set_title(&#39;修正された分散関係&#39;)
+    axes[1, 0].grid(True)
+    
+    # 5. 真空複屈折
+    axes[1, 1].loglog(predictions[&#39;magnetic_fields&#39;], 
+                     np.abs(predictions[&#39;birefringence_angles&#39;]), 
+                     &#39;m-&#39;, linewidth=2)
+    axes[1, 1].set_xlabel(&#39;磁場強度 (Gauss)&#39;)
+    axes[1, 1].set_ylabel(&#39;偏光回転角 (rad)&#39;)
+    axes[1, 1].set_title(&#39;真空複屈折&#39;)
+    axes[1, 1].grid(True)
+    
+    # 6. フィッティング結果
+    mock_data = self._generate_mock_data()
+    fit_results = self.fit_experimental_data(mock_data)
+    
+    if &#39;theta_fitted&#39; in fit_results:
+        axes[1, 2].errorbar(mock_data[&#39;energies&#39;], mock_data[&#39;theta_values&#39;], 
+                           yerr=mock_data[&#39;theta_errors&#39;], fmt=&#39;ro&#39;, 
+                           label=&#39;模擬データ&#39;)
+        axes[1, 2].loglog(mock_data[&#39;energies&#39;], fit_results[&#39;theta_fitted&#39;], 
+                         &#39;b-&#39;, label=&#39;フィッティング&#39;)
+        axes[1, 2].loglog(mock_data[&#39;energies&#39;], mock_data[&#39;theta_theory&#39;], 
+                         &#39;g--&#39;, label=&#39;理論値&#39;)
+        axes[1, 2].set_xlabel(&#39;エネルギー (GeV)&#39;)
+        axes[1, 2].set_ylabel(&#39;θ パラメータ&#39;)
+        axes[1, 2].set_title(f&#39;データフィッティング (χ²/dof = {fit_results[&#34;reduced_chi_squared&#34;]:.2f})&#39;)
+        axes[1, 2].legend()
+        axes[1, 2].grid(True)
+    
+    plt.tight_layout()
+    
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches=&#39;tight&#39;)
+    
+    plt.show()
+    return fig</code></pre>
+</details>
+<div class="desc"><p>θ-λ関係の可視化</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="kappa_minkowski_theta_relationship.demonstrate_kappa_minkowski_theta" href="#kappa_minkowski_theta_relationship.demonstrate_kappa_minkowski_theta">demonstrate_kappa_minkowski_theta</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="kappa_minkowski_theta_relationship.DeformationParameters" href="#kappa_minkowski_theta_relationship.DeformationParameters">DeformationParameters</a></code></h4>
+<ul class="">
+<li><code><a title="kappa_minkowski_theta_relationship.DeformationParameters.energy_scale" href="#kappa_minkowski_theta_relationship.DeformationParameters.energy_scale">energy_scale</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.DeformationParameters.lambda_kappa" href="#kappa_minkowski_theta_relationship.DeformationParameters.lambda_kappa">lambda_kappa</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.DeformationParameters.planck_scale" href="#kappa_minkowski_theta_relationship.DeformationParameters.planck_scale">planck_scale</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.DeformationParameters.theta_nc" href="#kappa_minkowski_theta_relationship.DeformationParameters.theta_nc">theta_nc</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta">KappaMinkowskiTheta</a></code></h4>
+<ul class="">
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.emergent_theta_from_kappa_minkowski" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.emergent_theta_from_kappa_minkowski">emergent_theta_from_kappa_minkowski</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.experimental_predictions" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.experimental_predictions">experimental_predictions</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.fit_experimental_data" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.fit_experimental_data">fit_experimental_data</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.phenomenological_constraints" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.phenomenological_constraints">phenomenological_constraints</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.renormalization_group_flow" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.renormalization_group_flow">renormalization_group_flow</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.theoretical_theta_lambda_relation" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.theoretical_theta_lambda_relation">theoretical_theta_lambda_relation</a></code></li>
+<li><code><a title="kappa_minkowski_theta_relationship.KappaMinkowskiTheta.visualize_theta_lambda_relationship" href="#kappa_minkowski_theta_relationship.KappaMinkowskiTheta.visualize_theta_lambda_relationship">visualize_theta_lambda_relationship</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>

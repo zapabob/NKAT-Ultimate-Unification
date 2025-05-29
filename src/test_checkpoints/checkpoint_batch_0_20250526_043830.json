@@ -1,0 +1,35 @@
+{
+  "batch_id": 0,
+  "gamma_start_idx": 0,
+  "gamma_end_idx": 10,
+  "completed_gammas": [
+    14.134725,
+    21.02204,
+    25.010858
+  ],
+  "results": [
+    {
+      "gamma": 14.134725,
+      "spectral_dimension": 1.0,
+      "real_part": 0.5
+    },
+    {
+      "gamma": 21.02204,
+      "spectral_dimension": 1.1,
+      "real_part": 0.55
+    },
+    {
+      "gamma": 25.010858,
+      "spectral_dimension": 0.9,
+      "real_part": 0.45
+    }
+  ],
+  "timestamp": "2025-05-26T04:37:00",
+  "system_state": {
+    "cpu": 50.0,
+    "memory": 60.0
+  },
+  "memory_usage": 60.0,
+  "gpu_memory": 2.5,
+  "total_progress": 10.0
+}

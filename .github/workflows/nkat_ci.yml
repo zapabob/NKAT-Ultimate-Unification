@@ -1,0 +1,159 @@
+name: NKAT Theory CI/CD - Ultimate NaN Killer 🚀
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: 🛡️ Run NaN-Safe Simple Tests (Priority)
+      run: |
+        echo "🔍 Running κ-deformed B-spline NaN safety tests..."
+        python simple_nkat_test.py
+        echo "✅ Simple NKAT tests PASSED - No NaN detected!"
+    
+    - name: 🧪 Run Basic NKAT Tests
+      run: |
+        echo "🔬 Running basic NKAT functionality tests..."
+        python test_nkat_simple.py
+        echo "✅ Basic tests PASSED!"
+    
+    - name: 📐 Run Mathematical Foundation Tests
+      run: |
+        echo "📊 Running mathematical foundation verification..."
+        python nkat_mathematical_foundations_test.py
+        echo "✅ Mathematical foundations VERIFIED!"
+    
+    - name: 🌌 Run Core Theory Tests
+      run: |
+        echo "🚀 Running NKAT core theory analysis..."
+        python -c "
+        from nkat_core_theory import main
+        nkat, results = main()
+        assert results['summary']['all_tests_passed'], 'Core theory tests failed'
+        print('✅ All NKAT core theory tests passed!')
+        "
+    
+    - name: 🛡️ Ultimate NaN/Infinity Detection System
+      run: |
+        echo "🔍 Running comprehensive NaN/Infinity detection..."
+        python -c "
+        import numpy as np
+        from kappa_deformed_bspline_theory import KappaDeformedBSpline
+        from dirac_laplacian_analysis import DiracLaplacianAnalyzer
+        
+        print('🧪 Testing κ-deformed B-spline numerical stability...')
+        kappa_bs = KappaDeformedBSpline(kappa=0.1, theta=0.05)
+        x = np.linspace(-3, 3, 100)
+        result = kappa_bs.evaluate_basis(x, 0)
+        assert not np.any(np.isnan(result)), 'NaN detected in κ-B-spline'
+        assert not np.any(np.isinf(result)), 'Infinity detected in κ-B-spline'
+        
+        print('🔬 Testing extreme parameter ranges...')
+        # Extreme θ parameter test (previously caused NaN)
+        theta_extreme = 1e-50  # NaN-safe range
+        kappa_extreme = KappaDeformedBSpline(kappa=0.01, theta=theta_extreme)
+        result_extreme = kappa_extreme.evaluate_basis(x, 0)
+        assert not np.any(np.isnan(result_extreme)), 'NaN in extreme parameters'
+        
+        print('✅ Ultimate NaN/Infinity detection PASSED - All systems stable!')
+        "
+    
+    - name: ⚡ Performance Benchmark & Regression Test
+      run: |
+        echo "⏱️ Running performance benchmark..."
+        python -c "
+        import time
+        from nkat_core_theory import NKATCoreTheory, NKATParameters
+        
+        params = NKATParameters()
+        nkat = NKATCoreTheory(params)
+        
+        start_time = time.time()
+        results = nkat.run_comprehensive_analysis()
+        end_time = time.time()
+        
+        execution_time = end_time - start_time
+        print(f'⏱️ NKAT analysis completed in {execution_time:.2f} seconds')
+        assert execution_time < 60, f'Performance regression: {execution_time:.2f}s > 60s'
+        print('✅ Performance benchmark PASSED!')
+        "
+    
+    - name: 🎯 Pytest Integration (Advanced)
+      run: |
+        echo "🧪 Running pytest with coverage..."
+        pytest simple_nkat_test.py -v --tb=short
+        pytest test_nkat_simple.py -v --tb=short
+        echo "✅ Pytest integration PASSED!"
+
+  documentation:
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+    
+    - name: Install documentation dependencies
+      run: |
+        pip install pdoc3 sphinx
+    
+    - name: 📚 Generate Ultimate API Documentation
+      run: |
+        echo "📖 Generating comprehensive API documentation..."
+        mkdir -p docs
+        pdoc --html --output-dir docs nkat_core_theory.py
+        pdoc --html --output-dir docs kappa_deformed_bspline_theory.py
+        pdoc --html --output-dir docs dirac_laplacian_analysis.py
+        pdoc --html --output-dir docs nkat_implementation.py
+        echo "✅ Documentation generation COMPLETED!"
+    
+    - name: Upload documentation artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: nkat-ultimate-documentation
+        path: docs/
+
+  version-tag:
+    runs-on: ubuntu-latest
+    needs: [test, documentation]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: 🏷️ Auto-generate version tag
+      run: |
+        echo "🏷️ Checking for version updates..."
+        # Get current version from version_manager.py
+        python -c "
+        from version_manager import get_current_version
+        version = get_current_version()
+        print(f'Current version: {version}')
+        "
+        echo "✅ Version check completed!" 

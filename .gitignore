@@ -63,8 +63,16 @@ docs/_build/
 # PyBuilder
 target/
 
+# PyTorch models
+*.pth
+*.pt
+
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
 
 # pyenv
 .python-version
@@ -120,15 +128,19 @@ Thumbs.db
 *.temp
 *.bak
 *.backup
+temp/
+tmp/
 
 # Logs
 logs/
 *.log
+*.out
 
 # Checkpoints (keep only essential ones)
 checkpoints/
 *.ckpt
-*.pth
+Results/checkpoints/
+Results/test_backups/
 
 # Large data files
 *.h5
@@ -136,14 +148,29 @@ checkpoints/
 *.pkl
 *.pickle
 
+# Images (keep only essential)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+results/images/*.png
+results/images/*.jpg
+results/images/*.pdf
+
 # Results (keep only final results)
 Results/test_*
 Results/backup_*
 Results/temp_*
 
 # Archives (keep only essential)
+Archives/
+Backups/
 Archives/temp_*
 Archives/backup_*
+*.zip
+*.tar.gz
+*.rar
 
 # Node modules (if any)
 node_modules/
@@ -161,5 +188,26 @@ node_modules/
 *.snm
 *.vrb
 
+# JSON files (keep only config)
+*.json
+!config/*.json
+!*config.json
+
+# Documentation builds
+docs/_build/
+docs/html/
+
+# Test outputs
+test_*.py
+*_test.py
+
+# NKAT specific
+results/checkpoints/
+results/logs/
+src/gpu/__pycache__/
+
+# Windows
+*.bat
+
 # Embedded repositories (avoid nested git repos)
-NKAT-Ultimate-Unification-main/ 
+NKAT-Ultimate-Unification-main/

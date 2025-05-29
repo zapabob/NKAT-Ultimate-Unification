@@ -148,7 +148,7 @@ python advanced_parameter_proof_system.py
   title={NKAT理論: 非可換コルモゴロフアーノルド表現理論によるリーマン予想CUDA超高速解析},
   author={峯岸亮理論実装チーム},
   year={2025},
-  url={https://github.com/your-repo/NKAT-Ultimate-Unification},
+  url={https://github.com/zapabob/NKAT-Ultimate-Unification},
   note={CUDA並列計算による数学理論の革命的実装}
 }
 ```
@@ -171,4 +171,4 @@ MIT License - 学術研究・教育目的での自由な利用を推奨
 
 *NKAT理論 - 非可換コルモゴロフアーノルド表現理論*  
 *完成日: 2025年5月29日*  
-*GPU並列計算による数学理論の革命的実装* 
+*GPU並列計算による数学理論の革命的実装*

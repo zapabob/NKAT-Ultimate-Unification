@@ -1,0 +1,45 @@
+{
+  "timestamp": "20250523_210751",
+  "nkat_results": {
+    "spectral_dimension": 4.0000433921813965,
+    "error": 4.34e-05,
+    "theta_parameter": 1e-10
+  },
+  "dimensional_consistency": {
+    "nkat_dimensions": 4.0000433921813965,
+    "m_theory_dimensions": 11,
+    "string_theory_dimensions": 10,
+    "compactified_dimensions": 6.9999566078186035,
+    "consistency_check": true
+  },
+  "calabi_yau_analysis": {
+    "euler_characteristic": 24,
+    "hodge_numbers": [
+      1,
+      101,
+      1
+    ],
+    "cy_volume": 7.380292245661929e-05,
+    "moduli_stabilization": 4.5399929762484854e-05,
+    "nkat_theta_relation": 1.6160000000000058e-35
+  },
+  "ads_cft_correspondence": {
+    "ads_radius": 1.1209982432795857e-34,
+    "central_charge": 333.8033775458702,
+    "boundary_dimensions": 4.0000433921813965,
+    "bulk_dimensions": 5.0000433921813965,
+    "holographic_entropy": 16062.675207111522
+  },
+  "brane_dynamics": {
+    "d3_brane_tension": 4.031441804149938e+133,
+    "d7_brane_tension": 2.586669376387242e+266,
+    "noncommutative_scale": 1e-05,
+    "brane_separation": 1e-39,
+    "interaction_strength": 4.03144180414994e+289
+  },
+  "matrix_model": {
+    "matrix_size": 316,
+    "yang_mills_coupling": 0.1,
+    "fuzzy_sphere_radius": 0.00017776388834631177,
+    "emergent_gravity": 3.1600000000000006,
+    "nkat_consistency": 

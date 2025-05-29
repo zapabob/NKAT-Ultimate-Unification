@@ -1,0 +1,49 @@
+{
+  "title": "Deep Learning Verification of Non-Commutative Kolmogorov-Arnold Theory: Numerical Evidence for Ultimate Unification",
+  "authors": [
+    "NKAT Research Team"
+  ],
+  "affiliation": "Advanced Theoretical Physics Laboratory",
+  "submission_date": "2025-05-23T21:22:25.290813",
+  "version": "Perfect v1.0",
+  "categories": {
+    "primary": "hep-th",
+    "secondary": [
+      "gr-qc",
+      "cs.LG"
+    ]
+  },
+  "pacs": [
+    "04.60.-m",
+    "02.40.Gh",
+    "89.70.Eg",
+    "95.85.Pw",
+    "11.10.Nx"
+  ],
+  "keywords": [
+    "Non-commutative geometry",
+    "Quantum gravity",
+    "Deep learning",
+    "Spectral dimension",
+    "M-theory"
+  ],
+  "key_results": {
+    "spectral_dimension": 4.0000433921813965,
+    "error": 4.34e-05,
+    "precision_percent": 99.999,
+    "kappa_minkowski_agreement": "< 1e-15",
+    "m_theory_consistency": "PASS",
+    "nan_occurrences": 0
+  },
+  "experimental_predictions": [
+    "γ-ray astronomy (CTA): Energy-dependent time delays",
+    "Gravitational waves (LIGO): Waveform modifications",
+    "Particle physics (LHC): Modified dispersion relations"
+  ],
+  "file_info": {
+    "main_tex_lines": 192,
+    "readme_lines": 61,
+    "total_equations": 8,
+    "references": 7
+  }
+}
