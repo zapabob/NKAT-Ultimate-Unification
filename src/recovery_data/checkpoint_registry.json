@@ -1,0 +1,137 @@
+{
+  "startup_20250526_060437": {
+    "timestamp": "20250526_060437",
+    "type": "startup",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 27.3,
+      "memory_percent": 62.5,
+      "memory_available": 12.83457024,
+      "disk_percent": 86.5,
+      "disk_free": 135.383691264,
+      "timestamp": 1748207078.1023421,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_060939": {
+    "timestamp": "20250526_060939",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 89.3,
+      "memory_percent": 65.5,
+      "memory_available": 11.815317504,
+      "disk_percent": 86.5,
+      "disk_free": 135.365808128,
+      "timestamp": 1748207380.48625,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_061541": {
+    "timestamp": "20250526_061541",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 53.7,
+      "memory_percent": 60.7,
+      "memory_available": 13.465628672,
+      "disk_percent": 86.5,
+      "disk_free": 135.354236928,
+      "timestamp": 1748207742.885503,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_062124": {
+    "timestamp": "20250526_062124",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 37.7,
+      "memory_percent": 64.1,
+      "memory_available": 12.286349312,
+      "disk_percent": 86.5,
+      "disk_free": 135.35582208,
+      "timestamp": 1748208085.7539165,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_062711": {
+    "timestamp": "20250526_062711",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 82.4,
+      "memory_percent": 66.1,
+      "memory_available": 11.600949248,
+      "disk_percent": 86.5,
+      "disk_free": 135.295004672,
+      "timestamp": 1748208432.0733094,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "startup_20250526_063218": {
+    "timestamp": "20250526_063218",
+    "type": "startup",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 54.9,
+      "memory_percent": 58.5,
+      "memory_available": 14.18944512,
+      "disk_percent": 86.5,
+      "disk_free": 135.13392128,
+      "timestamp": 1748208739.4557643,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "startup_20250526_063905": {
+    "timestamp": "20250526_063905",
+    "type": "startup",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 9.4,
+      "memory_percent": 68.6,
+      "memory_available": 10.74530304,
+      "disk_percent": 86.5,
+      "disk_free": 135.159128064,
+      "timestamp": 1748209146.6556175,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "startup_20250526_064723": {
+    "timestamp": "20250526_064723",
+    "type": "startup",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 8.5,
+      "memory_percent": 62.8,
+      "memory_available": 12.718231552,
+      "disk_percent": 86.5,
+      "disk_free": 135.126847488,
+      "timestamp": 1748209644.2843215,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  },
+  "auto_20250526_065339": {
+    "timestamp": "20250526_065339",
+    "type": "auto",
+    "file_count": 5,
+    "system_metrics": {
+      "cpu_percent": 84.2,
+      "memory_percent": 48.4,
+      "memory_available": 17.673650176,
+      "disk_percent": 86.5,
+      "disk_free": 135.163838464,
+      "timestamp": 1748210020.478323,
+      "gpu_memory_used": 0.0,
+      "gpu_memory_total": 10.73676288
+    }
+  }
+}

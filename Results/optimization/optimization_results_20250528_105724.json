@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-05-28T10:57:23.847714",
+  "system_profile": {
+    "cpu_count": 6,
+    "cpu_freq": 3600.0,
+    "memory_total": 34.22353408,
+    "memory_available": 18.43820544,
+    "gpu_count": 1,
+    "gpu_memory_total": 10.73676288,
+    "gpu_memory_available": 10.73676288,
+    "gpu_compute_capability": "8.6",
+    "storage_type": "SSD",
+    "network_speed": 1000.0
+  },
+  "original_config": {
+    "gpu_memory_fraction": 0.8,
+    "mixed_precision": true,
+    "cuda_optimization": true,
+    "cpu_threads": -1,
+    "cpu_affinity": null,
+    "memory_limit_gb": 16.0,
+    "swap_usage": false,
+    "memory_mapping": true,
+    "batch_size": 1000,
+    "precision": "float32",
+    "vectorization": true,
+    "async_io": true,
+    "buffer_size": 8192,
+    "compression": true,
+    "monitoring_enabled": true,
+    "auto_adjustment": true,
+    "performance_threshold": 0.7
+  },
+  "optimizations_applied": [
+    "GPU最適化",
+    "CPU最適化",
+    "メモリ最適化"
+  ],
+  "performance_improvements": {
+    "cpu_integer_ops_per_sec": 10.392703538006009,
+    "cpu_float_ops_per_sec": 22.823146830436173,
+    "cpu_memory_bandwidth_mb_s": 41.89237740922317,
+    "gpu_memory_bandwidth_gb_s": 21.66225509192057,
+    "gpu_compute_tflops": 43.67161823213979,
+    "memory_system_used_percent": 0.21598272138229252,
+    "memory_system_available_gb": -0.16629344661561732,
+    "memory_process_memory_mb": 5.712713519546136,
+    "memory_process_memory_percent": 5.712713519546135
+  },
+  "baseline_performance": {
+    "cpu_integer_ops_per_sec": 16423261.860384982,
+    "cpu_float_ops_per_sec": 36845048.54778309,
+    "cpu_memory_bandwidth_mb_s": 274.07258084277413,
+    "gpu_memory_bandwidth_gb_s": 94.97379526440356,
+    "gpu_compute_tflops": 2.711164230623255,
+    "memory_system_used_percent": 46.3,
+    "memory_system_available_gb": 18.369916928,
+    "memory_process_memory_mb": 528.498688,
+    "memory_process_memory_percent": 1.5442551513370766
+  },
+  "optimized_performance": {
+    "cpu_integer_ops_per_sec": 18130082.776805203,
+    "cpu_float_ops_per_sec": 45254248.07758912,
+    "cpu_memory_bandwidth_mb_s": 388.88810078462734,
+    "gpu_memory_bandwidth_gb_s": 115.54726106505704,
+    "gpu_compute_tflops": 3.8951735230673727,
+    "memory_system_used_percent": 46.4,
+    "memory_system_available_gb": 18.33936896,
+    "memory_process_memory_mb": 558.690304,
+    "memory_process_memory_percent": 1.6324740241437974
+  }
+}

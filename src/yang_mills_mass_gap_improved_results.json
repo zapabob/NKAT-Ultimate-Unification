@@ -1,0 +1,34 @@
+{
+  "improved_calculation": {
+    "mass_gap": 0.36058174403385723,
+    "ground_state_energy": 0.36058174403385723,
+    "first_excited_energy": 0.6386561516384787,
+    "excitation_gap": 0.27807440760462143,
+    "n_positive_eigenvalues": 64,
+    "eigenvalue_range": [
+      0.36058174403385723,
+      5.689232098200383
+    ],
+    "theoretical_prediction": 3.2565903422169596e-12,
+    "relative_error": 110723703671.34683,
+    "superconvergence_factor": 4.040880524464738
+  },
+  "theoretical_agreement": {
+    "theoretical_gap": 3.2565903422169596e-12,
+    "computed_gap": 0.36058174403385723,
+    "relative_error": 110723703671.34683,
+    "agreement": "False"
+  },
+  "physical_validity": {
+    "scale_appropriate": true,
+    "qcd_scale_ratio": 1.6616670231974988,
+    "qcd_scale_reasonable": true,
+    "superconvergence_reasonable": false
+  },
+  "verification_summary": {
+    "mass_gap_exists": "False",
+    "confidence_level": 0.6,
+    "nkat_prediction_confirmed": "False",
+    "physical_scale_appropriate": true
+  }
+}

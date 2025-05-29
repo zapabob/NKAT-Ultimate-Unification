@@ -1,0 +1,15 @@
+{
+<<<<<<< HEAD
+  "latest_checkpoint": "rtx3080_extreme_checkpoint_gamma_99_20250526_034135",
+  "checkpoint_file": "rtx3080_extreme_checkpoints\\rtx3080_extreme_checkpoint_gamma_99_20250526_034135.pkl",
+  "gamma_index": 99,
+  "timestamp": "20250526_034135",
+  "total_checkpoints": 10
+=======
+  "latest_checkpoint": "rtx3080_extreme_checkpoint_gamma_49_20250526_032947",
+  "checkpoint_file": "rtx3080_extreme_checkpoints\\rtx3080_extreme_checkpoint_gamma_49_20250526_032947.pkl",
+  "gamma_index": 49,
+  "timestamp": "20250526_032947",
+  "total_checkpoints": 5
+>>>>>>> 9458014a17a847ad756c05d21582676f906b41f1
+}

@@ -1,0 +1,93 @@
+# NKAT理論 - 非可換コルモゴロフ・アーノルド表現理論
+# Non-Commutative Kolmogorov-Arnold Theory Dependencies
+# NKAT リーマン予想解析システム対応版
+
+# 基本的な科学計算ライブラリ
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+
+# 機械学習・深層学習（CUDA対応版）
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+# CUDA対応PyTorchインストール用
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# GPU計算（オプション - CUDA環境がある場合）
+# cupy-cuda12x>=12.0.0
+
+# データ処理・可視化
+pandas>=2.0.0
+plotly>=5.15.0
+seaborn>=0.12.0
+
+# 進捗表示・ログ
+tqdm>=4.65.0
+
+# ファイル処理
+h5py>=3.9.0
+
+# Streamlit関連（ダッシュボード用）
+streamlit>=1.28.0
+streamlit-plotly-events>=0.0.6
+
+# システム監視
+psutil>=5.9.0
+GPUtil>=1.4.0
+nvidia-ml-py3>=7.352.0
+
+# その他のユーティリティ
+python-dateutil>=2.8.2
+
+# 開発・テスト用（オプション）
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+
+# ログ・設定
+loguru>=0.7.0
+pyyaml>=6.0
+
+# 並列処理
+multiprocessing-logging>=0.3.4
+
+# 数学的可視化
+# mayavi>=4.8.1  # 重いのでコメントアウト
+
+# 統計・確率
+statsmodels>=0.14.0
+
+# 暗号・ハッシュ
+cryptography>=41.0.0
+
+# ネットワーク・API
+requests>=2.31.0
+aiohttp>=3.8.0
+
+# 時系列・データベース
+sqlalchemy>=2.0.0
+# redis>=4.6.0  # オプション
+
+# 数値計算・最適化
+sympy>=1.12
+numba>=0.58.0
+scikit-learn>=1.3.0
+
+# 非可換幾何学・表現論関連
+mpmath>=1.3.0 
+
+# リーマン予想解析特化ライブラリ
+# 高精度数値計算
+decimal
+fractions
+
+# メモリプロファイリング
+memory-profiler>=0.61.0
+
+# 並列処理強化
+joblib>=1.3.0
+
+# 数学関数拡張
+special-functions>=1.0.0 

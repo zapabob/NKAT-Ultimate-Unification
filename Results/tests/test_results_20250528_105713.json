@@ -1,0 +1,118 @@
+{
+  "timestamp": "20250528_105713",
+  "total_tests": 10,
+  "passed_tests": 4,
+  "failed_tests": 6,
+  "total_duration": 19.092281103134155,
+  "results": [
+    {
+      "test_name": "基本インポートテスト",
+      "status": "FAIL",
+      "duration": 18.221064805984497,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    },
+    {
+      "test_name": "GPU環境テスト",
+      "status": "PASS",
+      "duration": 0.3888225555419922,
+      "error_message": "",
+      "details": {
+        "cuda_available": true,
+        "gpu_count": 1,
+        "gpu_info": [
+          {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10.73676288,
+            "compute_capability": "8.6"
+          }
+        ],
+        "gpu_test_passed": true
+      }
+    },
+    {
+      "test_name": "システム監視テスト",
+      "status": "FAIL",
+      "duration": 0.0040018558502197266,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    },
+    {
+      "test_name": "NKAT理論テスト",
+      "status": "FAIL",
+      "duration": 0.0009953975677490234,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    },
+    {
+      "test_name": "リーマン解析テスト",
+      "status": "FAIL",
+      "duration": 0.0010089874267578125,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    },
+    {
+      "test_name": "チェックポイントテスト",
+      "status": "FAIL",
+      "duration": 0.0009989738464355469,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    },
+    {
+      "test_name": "バックアップテスト",
+      "status": "PASS",
+      "duration": 0.12787771224975586,
+      "error_message": "",
+      "details": {
+        "backup_created": true,
+        "backup_id": "test_backup",
+        "backup_count": 1,
+        "backup_size": 74211
+      }
+    },
+    {
+      "test_name": "最適化テスト",
+      "status": "PASS",
+      "duration": 0.1573171615600586,
+      "error_message": "",
+      "details": {
+        "system_profile": {
+          "cpu_count": 6,
+          "cpu_freq": 3600.0,
+          "memory_total": 34.22353408,
+          "memory_available": 17.794985984,
+          "gpu_count": 1,
+          "gpu_memory_total": 10.73676288,
+          "gpu_memory_available": 10.7282432,
+          "gpu_compute_capability": "8.6",
+          "storage_type": "SSD",
+          "network_speed": 1000.0
+        },
+        "optimization_completed": true,
+        "cpu_cores": 6,
+        "memory_gb": 34.22353408,
+        "gpu_count": 1
+      }
+    },
+    {
+      "test_name": "パフォーマンステスト",
+      "status": "PASS",
+      "duration": 0.156968355178833,
+      "error_message": "",
+      "details": {
+        "cpu_performance_time": 0.023629188537597656,
+        "memory_performance_time": 0.048157691955566406,
+        "performance_acceptable": true,
+        "gpu_performance_time": 0.07615017890930176,
+        "gpu_available": true
+      }
+    },
+    {
+      "test_name": "統合テスト",
+      "status": "FAIL",
+      "duration": 0.0009961128234863281,
+      "error_message": "Unrecognized config option: deprecation.showPyplotGlobalUse",
+      "details": {}
+    }
+  ]
+}

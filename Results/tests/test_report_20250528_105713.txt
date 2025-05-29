@@ -1,0 +1,36 @@
+
+🧪 Enhanced NKAT システムテストレポート
+============================================================
+
+📊 テスト概要:
+- 実行日時: 20250528_105713
+- 総テスト数: 10
+- 成功: 3
+- 失敗: 7
+- 成功率: 30.0%
+- 総実行時間: 14.35秒
+
+📋 詳細結果:
+❌ 基本インポートテスト: FAIL (13.46s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+✅ GPU環境テスト: PASS (0.39s)
+❌ システム監視テスト: FAIL (0.01s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+❌ NKAT理論テスト: FAIL (0.00s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+❌ リーマン解析テスト: FAIL (0.00s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+❌ チェックポイントテスト: FAIL (0.00s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+❌ バックアップテスト: FAIL (0.11s)
+   エラー: Failed to create backup...
+✅ 最適化テスト: PASS (0.17s)
+✅ パフォーマンステスト: PASS (0.16s)
+❌ 統合テスト: FAIL (0.00s)
+   エラー: Unrecognized config option: deprecation.showPyplotGlobalUse...
+
+
+🔧 推奨事項:
+- 失敗したテストのログを確認してください
+- 依存関係を再インストールしてください: py -3 -m pip install -r requirements.txt
+- GPU環境を確認してください: nvidia-smi

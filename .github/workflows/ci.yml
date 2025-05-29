@@ -1,0 +1,352 @@
+name: 🚀 NKAT GPU加速理論フレームワーク CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:       # 手動実行も可能
+  schedule:
+    - cron: '0 6 * * 1'     # 毎週月曜日 6:00 UTC に自動実行
+
+env:
+  PYTHON_VERSION: "3.11"
+  CUDA_VERSION: "12.1"
+  TORCH_VERSION: "2.2.0"
+
+jobs:
+  # CPU版ベンチマーク（基本動作確認）
+  cpu-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: 📥 リポジトリチェックアウト
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python環境セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 依存関係インストール（CPU版）
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch==${{ env.TORCH_VERSION }}+cpu -f https://download.pytorch.org/whl/torch_stable.html
+          pip install -r requirements.txt
+          pip install psutil tqdm pytest
+          
+      - name: 🧪 基本動作テスト
+        run: |
+          cd src
+          python -c "
+          import numpy as np
+          import scipy.sparse
+          import matplotlib.pyplot as plt
+          print('✅ 基本ライブラリ動作確認完了')
+          "
+
+      - name: 🚀 CPU版軽量ベンチマーク（8³格子）
+        run: |
+          cd src
+          python riemann_gpu_accelerated_stable.py \
+                 --lattice 8 --precision complex128 \
+                 --sparse csr --eig 64 --no-gpu \
+                 --save ci_cpu_lattice8.json
+        
+      - name: 📊 結果検証
+        run: |
+          cd src
+          python -c "
+          import json
+          with open('ci_cpu_lattice8.json', 'r') as f:
+              data = json.load(f)
+          metrics = data.get('performance_metrics', {})
+          precision = float(metrics.get('precision_achieved', '0').replace('%', ''))
+          success_rate = metrics.get('success_rate', 0)
+          print(f'CPU版精度: {precision:.2f}%')
+          print(f'成功率: {success_rate:.2%}')
+          assert precision > 10.0, f'精度が低すぎます: {precision}%'
+          assert success_rate > 0.2, f'成功率が低すぎます: {success_rate}'
+          print('✅ CPU版ベンチマーク検証完了')
+          "
+
+      - name: 📤 CPU版結果アップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpu-benchmark-results
+          path: |
+            src/ci_cpu_lattice8.json
+            src/stabilized_gpu_nkat_benchmark_*.json
+          retention-days: 30
+
+  # GPU版ベンチマーク（CUDA対応）
+  gpu-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    container:
+      image: nvidia/cuda:12.1.1-devel-ubuntu22.04
+      options: --gpus all
+    
+    steps:
+      - name: 📥 リポジトリチェックアウト
+        uses: actions/checkout@v4
+
+      - name: 🔧 システム依存関係インストール
+        run: |
+          apt-get update
+          apt-get install -y python3 python3-pip python3-dev git
+          ln -sf /usr/bin/python3 /usr/bin/python
+
+      - name: 🎮 CUDA環境確認
+        run: |
+          nvidia-smi || echo "⚠️ GPU未検出、CPU版にフォールバック"
+          nvcc --version || echo "⚠️ NVCC未検出"
+
+      - name: 📦 GPU対応依存関係インストール
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch==${{ env.TORCH_VERSION }}+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+          pip install cupy-cuda12x  # GPU sparse backend
+          pip install -r requirements.txt
+          pip install psutil tqdm pytest
+          
+      - name: 🧪 GPU動作確認
+        run: |
+          python -c "
+          try:
+              import cupy as cp
+              print('✅ CuPy GPU加速利用可能')
+              print(f'GPU: {cp.cuda.get_device_name()}')
+              print(f'VRAM: {cp.cuda.Device().mem_info[1] / 1e9:.1f} GB')
+          except ImportError:
+              print('⚠️ CuPy未対応、CPU版で実行')
+          except Exception as e:
+              print(f'⚠️ GPU初期化エラー: {e}')
+          "
+
+      - name: 🚀 GPU版軽量ベンチマーク（8³格子）
+        run: |
+          cd src
+          python riemann_gpu_accelerated_stable.py \
+                 --lattice 8 --precision complex128 \
+                 --sparse csr --eig 64 \
+                 --save ci_gpu_lattice8.json
+
+      - name: 🚀 GPU版中規模ベンチマーク（10³格子）
+        run: |
+          cd src
+          python riemann_gpu_accelerated_stable.py \
+                 --lattice 10 --precision complex128 \
+                 --sparse csr --eig 128 \
+                 --save ci_gpu_lattice10.json
+
+      - name: 📊 GPU版結果検証
+        run: |
+          cd src
+          python -c "
+          import json
+          import numpy as np
+          
+          # 8³格子結果
+          with open('ci_gpu_lattice8.json', 'r') as f:
+              data8 = json.load(f)
+          metrics8 = data8.get('performance_metrics', {})
+          precision8 = float(metrics8.get('precision_achieved', '0').replace('%', ''))
+          
+          # 10³格子結果
+          with open('ci_gpu_lattice10.json', 'r') as f:
+              data10 = json.load(f)
+          metrics10 = data10.get('performance_metrics', {})
+          precision10 = float(metrics10.get('precision_achieved', '0').replace('%', ''))
+          
+          print(f'GPU版 8³格子精度: {precision8:.2f}%')
+          print(f'GPU版 10³格子精度: {precision10:.2f}%')
+          
+          # 精度向上の確認
+          assert precision8 > 20.0, f'8³格子精度が低すぎます: {precision8}%'
+          assert precision10 > 30.0, f'10³格子精度が低すぎます: {precision10}%'
+          
+          # 計算時間の確認
+          time8 = metrics8.get('average_iteration_time', 999)
+          time10 = metrics10.get('average_iteration_time', 999)
+          print(f'8³格子平均時間: {time8:.2f}秒')
+          print(f'10³格子平均時間: {time10:.2f}秒')
+          
+          assert time8 < 30.0, f'8³格子計算時間が長すぎます: {time8}秒'
+          assert time10 < 60.0, f'10³格子計算時間が長すぎます: {time10}秒'
+          
+          print('✅ GPU版ベンチマーク検証完了')
+          "
+
+      - name: 📤 GPU版結果アップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: gpu-benchmark-results
+          path: |
+            src/ci_gpu_lattice8.json
+            src/ci_gpu_lattice10.json
+            src/stabilized_gpu_nkat_benchmark_*.json
+            src/gpu_nkat_benchmark_analysis_*.png
+          retention-days: 30
+
+  # パフォーマンス比較分析
+  performance-analysis:
+    needs: [cpu-benchmark, gpu-benchmark]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: 📥 リポジトリチェックアウト
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python環境セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 📦 分析用ライブラリインストール
+        run: |
+          pip install numpy matplotlib pandas seaborn
+
+      - name: 📥 CPU版結果ダウンロード
+        uses: actions/download-artifact@v4
+        with:
+          name: cpu-benchmark-results
+          path: results/cpu/
+
+      - name: 📥 GPU版結果ダウンロード
+        uses: actions/download-artifact@v4
+        with:
+          name: gpu-benchmark-results
+          path: results/gpu/
+
+      - name: 📊 パフォーマンス比較分析
+        run: |
+          python -c "
+          import json
+          import matplotlib.pyplot as plt
+          import numpy as np
+          
+          # 結果読み込み
+          with open('results/cpu/ci_cpu_lattice8.json', 'r') as f:
+              cpu_data = json.load(f)
+          with open('results/gpu/ci_gpu_lattice8.json', 'r') as f:
+              gpu_data = json.load(f)
+          
+          cpu_metrics = cpu_data.get('performance_metrics', {})
+          gpu_metrics = gpu_data.get('performance_metrics', {})
+          
+          # 比較データ
+          cpu_precision = float(cpu_metrics.get('precision_achieved', '0').replace('%', ''))
+          gpu_precision = float(gpu_metrics.get('precision_achieved', '0').replace('%', ''))
+          cpu_time = cpu_metrics.get('average_iteration_time', 0)
+          gpu_time = gpu_metrics.get('average_iteration_time', 0)
+          
+          # 改善率計算
+          precision_improvement = gpu_precision / (cpu_precision + 1e-6)
+          speed_improvement = cpu_time / (gpu_time + 1e-6)
+          
+          print(f'=== NKAT理論フレームワーク CI/CD パフォーマンス比較 ===')
+          print(f'CPU版精度: {cpu_precision:.2f}%')
+          print(f'GPU版精度: {gpu_precision:.2f}%')
+          print(f'精度改善率: {precision_improvement:.2f}×')
+          print(f'CPU版時間: {cpu_time:.2f}秒')
+          print(f'GPU版時間: {gpu_time:.2f}秒')
+          print(f'速度改善率: {speed_improvement:.2f}×')
+          
+          # 可視化
+          plt.figure(figsize=(12, 8))
+          
+          # 精度比較
+          plt.subplot(2, 2, 1)
+          plt.bar(['CPU版', 'GPU版'], [cpu_precision, gpu_precision], 
+                  color=['blue', 'red'], alpha=0.7)
+          plt.ylabel('理論予測精度 (%)')
+          plt.title('精度比較')
+          plt.grid(True, alpha=0.3)
+          
+          # 時間比較
+          plt.subplot(2, 2, 2)
+          plt.bar(['CPU版', 'GPU版'], [cpu_time, gpu_time], 
+                  color=['blue', 'red'], alpha=0.7)
+          plt.ylabel('平均計算時間 (秒)')
+          plt.title('計算時間比較')
+          plt.grid(True, alpha=0.3)
+          
+          # 改善率
+          plt.subplot(2, 2, 3)
+          plt.bar(['精度改善', '速度改善'], [precision_improvement, speed_improvement], 
+                  color=['green', 'orange'], alpha=0.7)
+          plt.ylabel('改善率 (×)')
+          plt.title('GPU版改善率')
+          plt.grid(True, alpha=0.3)
+          
+          # 総合スコア
+          plt.subplot(2, 2, 4)
+          overall_score = np.sqrt(precision_improvement * speed_improvement)
+          plt.bar(['総合スコア'], [overall_score], color='purple', alpha=0.7)
+          plt.ylabel('総合改善スコア')
+          plt.title(f'総合パフォーマンス: {overall_score:.2f}×')
+          plt.grid(True, alpha=0.3)
+          
+          plt.tight_layout()
+          plt.savefig('ci_performance_comparison.png', dpi=300, bbox_inches='tight')
+          print('✅ パフォーマンス比較分析完了')
+          "
+
+      - name: 📤 分析結果アップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-analysis
+          path: |
+            ci_performance_comparison.png
+          retention-days: 30
+
+  # 結果サマリー作成
+  create-summary:
+    needs: [cpu-benchmark, gpu-benchmark, performance-analysis]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: 📊 CI/CD実行サマリー作成
+        run: |
+          cat > ci_summary.md << 'EOF'
+          # 🚀 NKAT GPU加速理論フレームワーク CI/CD 実行結果
+          
+          ## 実行日時
+          **${{ github.run_id }}** - ${{ github.event.head_commit.timestamp }}
+          
+          ## ブランチ情報
+          - **ブランチ**: ${{ github.ref_name }}
+          - **コミット**: ${{ github.sha }}
+          - **作成者**: ${{ github.actor }}
+          
+          ## 実行結果
+          - ✅ CPU版ベンチマーク: 完了
+          - ✅ GPU版ベンチマーク: 完了  
+          - ✅ パフォーマンス分析: 完了
+          
+          ## 次のステップ
+          1. Artifacts から詳細結果を確認
+          2. パフォーマンス比較画像を確認
+          3. 必要に応じて格子サイズを調整
+          
+          ## 生成ファイル
+          - `ci_cpu_lattice8.json` - CPU版8³格子結果
+          - `ci_gpu_lattice8.json` - GPU版8³格子結果
+          - `ci_gpu_lattice10.json` - GPU版10³格子結果
+          - `ci_performance_comparison.png` - パフォーマンス比較図
+          
+          ---
+          **NKAT Research Team** - 自動生成レポート
+          EOF
+
+      - name: 📤 サマリーアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-summary
+          path: ci_summary.md
+          retention-days: 90
