@@ -1,0 +1,38 @@
+NKAT Theory Ethics and Competing Interests Statement
+===============================================
+
+Date: June 1, 2025
+Project: Non-commutative Kolmogorov-Arnold representation Theory (NKAT)
+
+ETHICS STATEMENT:
+✓ This research is conducted entirely within academic institutions
+✓ No corporate funding or commercial interests involved
+✓ No patent applications pending or planned
+✓ Open source methodology with full code availability
+✓ No experimental human or animal subjects
+✓ Purely theoretical and computational mathematical physics research
+
+COMPETING INTERESTS:
+The authors declare that they have no competing interests.
+
+FUNDING:
+This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+DATA AVAILABILITY:
+All computational data, scripts, and theoretical derivations are made publicly available through GitHub and Zenodo repositories in accordance with open science principles.
+
+AUTHORS' CONTRIBUTIONS:
+- Theoretical framework development: NKAT Research Consortium
+- Mathematical derivations: NKAT Research Consortium  
+- Computational implementation: NKAT Research Consortium
+- Manuscript preparation: NKAT Research Consortium
+
+ACKNOWLEDGMENTS:
+The authors acknowledge the Clay Mathematics Institute for posing the Yang-Mills mass gap problem as one of the Millennium Problems, providing the mathematical foundation for this research.
+
+---
+For JHEP Submission:
+
+Competing Interests: None.
+
+This work contains original research conducted independently without any commercial or financial relationships that could be construed as a potential conflict of interest. 
