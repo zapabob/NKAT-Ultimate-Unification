@@ -66,6 +66,12 @@ target/
 # PyTorch models
 *.pth
 *.pt
+checkpoints/*.pth
+checkpoints/*.pt
+models/*.pth
+models/*.pt
+results/models/*.pth
+results/models/*.pt
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -218,15 +224,6 @@ data/MNIST/raw/*.gz
 data/FashionMNIST/raw/*.gz
 data/cifar-10-batches-py/*
 data/cifar-100-batches-py/*
-data/stl10_binary/unlabeled_X.bin
-data/stl10_binary/train_X.bin
-data/stl10_binary/test_X.bin
-data/stl10_binary/train_y.bin
-data/stl10_binary/test_y.bin
-data/stl10_binary/unlabeled_X.bin
-data/stl10_binary/train_X.bin
-data/stl10_binary/test_X.bin
-data/stl10_binary/train_y.bin
-data/stl10_binary/test_y.bin
+data/stl10_binary/*.bin
 
 
