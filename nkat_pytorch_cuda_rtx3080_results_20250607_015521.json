@@ -1,0 +1,32 @@
+{
+  "100": {
+    "eigenvalues_all": [],
+    "theta_params_all": [],
+    "metadata_all": [],
+    "trial_results": []
+  },
+  "200": {
+    "eigenvalues_all": [],
+    "theta_params_all": [],
+    "metadata_all": [],
+    "trial_results": []
+  },
+  "500": {
+    "eigenvalues_all": [],
+    "theta_params_all": [],
+    "metadata_all": [],
+    "trial_results": []
+  },
+  "1000": {
+    "eigenvalues_all": [],
+    "theta_params_all": [],
+    "metadata_all": [],
+    "trial_results": []
+  },
+  "2000": {
+    "eigenvalues_all": [],
+    "theta_params_all": [],
+    "metadata_all": [],
+    "trial_results": []
+  }
+}

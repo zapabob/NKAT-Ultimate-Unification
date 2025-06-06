@@ -1,0 +1,86 @@
+{
+  "200": {
+    "statistics": {
+      "mean_real_part": 0.5004984405951888,
+      "std_real_part": 0.00029517114794166537,
+      "convergence_to_half": 0.000498440595188776,
+      "num_successful_trials": 25,
+      "avg_computation_time": 0.05732928,
+      "total_eigenvalues": 5000,
+      "valid_eigenvalues": 5000,
+      "cuda_accelerated": true
+    },
+    "verification": {
+      "theoretical_bound": 0.004248123762090156,
+      "max_deviation": 0.0009982813523184975,
+      "mean_deviation": 0.0004984405951886367,
+      "bound_satisfied": true,
+      "bound_ratio": 0.23499347199511073,
+      "convergence_to_half": 0.0004984405951886367,
+      "valid_samples": 5000
+    }
+  },
+  "500": {
+    "statistics": {
+      "mean_real_part": 0.500495395152454,
+      "std_real_part": 0.0002849489614434379,
+      "convergence_to_half": 0.0004953951524540035,
+      "num_successful_trials": 25,
+      "avg_computation_time": 0.37090168,
+      "total_eigenvalues": 12500,
+      "valid_eigenvalues": 12500,
+      "cuda_accelerated": true
+    },
+    "verification": {
+      "theoretical_bound": 0.0022906111926764435,
+      "max_deviation": 0.0009980050971080123,
+      "mean_deviation": 0.0004953951524539599,
+      "bound_satisfied": true,
+      "bound_ratio": 0.4356938009815199,
+      "convergence_to_half": 0.0004953951524539599,
+      "valid_samples": 12500
+    }
+  },
+  "1000": {
+    "statistics": {
+      "mean_real_part": 0.500504319496921,
+      "std_real_part": 0.0002862725471818443,
+      "convergence_to_half": 0.0005043194969209797,
+      "num_successful_trials": 25,
+      "avg_computation_time": 1.6207478800000001,
+      "total_eigenvalues": 25000,
+      "valid_eigenvalues": 25000,
+      "cuda_accelerated": true
+    },
+    "verification": {
+      "theoretical_bound": 0.0014571799397011382,
+      "max_deviation": 0.0009996901452351548,
+      "mean_deviation": 0.0005043194969209659,
+      "bound_satisfied": true,
+      "bound_ratio": 0.6860444053602517,
+      "convergence_to_half": 0.0005043194969209659,
+      "valid_samples": 25000
+    }
+  },
+  "2000": {
+    "statistics": {
+      "mean_real_part": 0.5004966682167393,
+      "std_real_part": 0.0002899433406786361,
+      "convergence_to_half": 0.0004966682167393266,
+      "num_successful_trials": 25,
+      "avg_computation_time": 8.165004119999999,
+      "total_eigenvalues": 50000,
+      "valid_eigenvalues": 50000,
+      "cuda_accelerated": true
+    },
+    "verification": {
+      "theoretical_bound": 0.0009364184676829248,
+      "max_deviation": 0.0009996814424494405,
+      "mean_deviation": 0.000496668216739365,
+      "bound_satisfied": false,
+      "bound_ratio": 1.0675584441676527,
+      "convergence_to_half": 0.000496668216739365,
+      "valid_samples": 50000
+    }
+  }
+}
