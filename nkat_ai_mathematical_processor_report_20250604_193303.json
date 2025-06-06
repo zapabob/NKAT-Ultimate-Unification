@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-06-04T19:33:01.289616",
+  "system_parameters": {
+    "consciousness_dimension": 128,
+    "quantum_levels": 20,
+    "noncommutative_parameter": 1e-15,
+    "consciousness_coupling": 0.618,
+    "device": "cuda"
+  },
+  "differential_equation_demo": {
+    "solution_points": 1000,
+    "noncommutative_effect": 9.685320980535484e-16,
+    "max_amplitude": 1.0
+  },
+  "optimization_demo": {
+    "optimal_value": 4.183677936779479,
+    "solution": [
+      1.0323166712444112,
+      0.7253388121724618,
+      0.20133071152146043,
+      0.7054276558732238,
+      0.8991741234605451
+    ],
+    "consciousness_enhancement": 0.618
+  },
+  "integral_demo": {
+    "integral_value": 1.3803884470421275,
+    "error_estimate": 4.834100187439889e-14,
+    "consciousness_contribution": 0.618
+  },
+  "matrix_demo": {
+    "matrix_size": [
+      32,
+      32
+    ],
+    "singular_values": [
+      18.57773989751407,
+      3.6138178279420994,
+      3.3025781352740022,
+      3.0520146648093176,
+      2.8483760052779163
+    ],
+    "consciousness_effect": 5.013663493397844,
+    "noncommutative_effect": 0.3199999999999994
+  },
+  "learning_demo": {
+    "final_loss": 4.830663204193115,
+    "loss_reduction": 256.86486291885376,
+    "final_coherence": 1.6200388669967651
+  },
+  "quantum_demo": {
+    "entanglement_entropy": "(0.6931471805599452-0j)",
+    "noncommutative_correction": 0.01414213562373095
+  }
+}

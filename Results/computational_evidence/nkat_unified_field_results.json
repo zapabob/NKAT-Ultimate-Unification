@@ -1,0 +1,20 @@
+{
+  "parameters": {
+    "theta": 1e-15,
+    "dimensions": 4,
+    "consciousness_coupling": 1e-10,
+    "unified_coupling": 0.6180339887
+  },
+  "summary": {
+    "consciousness_eigenvalues": [
+      -12.170530319568968,
+      0.4996809514989877,
+      1.4984039478984812,
+      2.4958480465487582,
+      3.4920126533737346
+    ],
+    "unification_energy": 739072203.3525776,
+    "information_preservation": 0.9999999999929372
+  },
+  "timestamp": 1749032552.5733848
+}

@@ -1,0 +1,93 @@
+{
+  "basic_performance": {
+    "matrix_mult_100x100": {
+      "gpu_time_seconds": 6.726773262023926,
+      "cpu_time_seconds": 0.0010039806365966797,
+      "speedup_factor": 0.00014925144604838455,
+      "gflops_gpu": 0.00029731937172477964
+    },
+    "matrix_mult_500x500": {
+      "gpu_time_seconds": 0.002504110336303711,
+      "cpu_time_seconds": 0.001009225845336914,
+      "speedup_factor": 0.40302770636960866,
+      "gflops_gpu": 99.83585642197467
+    },
+    "matrix_mult_1000x1000": {
+      "gpu_time_seconds": 0.004002571105957031,
+      "cpu_time_seconds": 0.004029989242553711,
+      "speedup_factor": 1.0068501310459852,
+      "gflops_gpu": 499.67881820347867
+    },
+    "vector_add_10000": {
+      "gpu_time_seconds": 0.10234451293945312,
+      "cpu_time_seconds": 0.0,
+      "speedup_factor": 0.0
+    },
+    "vector_add_100000": {
+      "gpu_time_seconds": 0.0,
+      "cpu_time_seconds": 0.0005037784576416016,
+      "speedup_factor": 0
+    },
+    "vector_add_1000000": {
+      "gpu_time_seconds": 0.0015246868133544922,
+      "cpu_time_seconds": 0.0010075569152832031,
+      "speedup_factor": 0.6608287724784988
+    }
+  },
+  "nkat_computation": {
+    "nkat_gpu": {
+      "computation_time_seconds": 0.43781089782714844,
+      "mean": 0.4765963392498757,
+      "std": 0.35281661048369745,
+      "max": 0.9999999840294116,
+      "min": 0.003629677204088494,
+      "points_computed": 1000,
+      "theory_error_percent": 81.0127032106596
+    },
+    "nkat_cpu": {
+      "computation_time_seconds": 0.0,
+      "mean": 0.4765963392498757,
+      "std": 0.35281661048369745,
+      "max": 0.9999999840294116,
+      "min": 0.003629677204088494,
+      "points_computed": 1000,
+      "theory_error_percent": 81.0127032106596
+    },
+    "nkat_speedup": 0.0
+  },
+  "riemann_zeta": {
+    "zeta_gpu": {
+      "computation_time_seconds": 0.588752031326294,
+      "mean_magnitude": 1.4239511697116896,
+      "points_computed": 100,
+      "series_terms": 100
+    },
+    "zeta_cpu": {
+      "computation_time_seconds": 0.002501964569091797,
+      "mean_magnitude": 1.4239511697116896,
+      "points_computed": 100,
+      "series_terms": 100
+    },
+    "zeta_speedup": 0.00424960668663099
+  },
+  "benchmark_summary": {
+    "total_benchmark_time_seconds": 8.48984956741333,
+    "cuda_available": true,
+    "device_info": {
+      "cuda_available": true,
+      "device_id": 0,
+      "compute_capability": "86",
+      "total_memory_gb": 9.9993896484375,
+      "name": "NVIDIA RTX 3080",
+      "multiprocessor_count": 68,
+      "max_threads_per_block": 1024,
+      "warp_size": 32
+    },
+    "timestamp": "2025-05-29T21:02:17.977895",
+    "system_info": {
+      "cpu_count": 12,
+      "memory_total_gb": 31.873149871826172,
+      "python_version": "3.12"
+    }
+  }
+}

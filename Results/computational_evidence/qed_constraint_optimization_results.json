@@ -1,0 +1,64 @@
+{
+  "qed_constraint": 6.5e-20,
+  "classical_qed": {
+    "k_HE_classical_T2": 4.157227608480083e-56,
+    "B_critical": 1.3228826430362076e+18,
+    "ratio_to_constraint": 6.395734782277051e-37
+  },
+  "optimization_results": {
+    "intergalactic": {
+      "B_field": 1e-15,
+      "required_k_nkat": 7.421543681085665e-06,
+      "constraint_compliant": false,
+      "over_constraint_by": 114177595093625.61
+    },
+    "galaxy_cluster": {
+      "B_field": 1e-06,
+      "required_k_nkat": 7.421543681085666e-24,
+      "enhancement_factor": 1.785214662278028e+32,
+      "theta_optimal": 8.452948580734568e+16,
+      "constraint_compliant": true,
+      "constraint_margin": 8758.285714285714
+    },
+    "primordial": {
+      "B_field": 1e-09,
+      "required_k_nkat": 7.421543681085664e-18,
+      "constraint_compliant": false,
+      "over_constraint_by": 114.1775950936256
+    }
+  },
+  "realistic_analysis": {
+    "theta_used": 1e-12,
+    "alpha_eff": 15.418145967344289,
+    "k_nkat_realistic": 1.856006172249535e-49,
+    "constraint_ratio": 2.8553941111531304e-30,
+    "constraint_compliant": true,
+    "cosmic_predictions": {
+      "CMB_intergalactic": {
+        "B_field": 1e-15,
+        "delta_n": 1.856006172249535e-79,
+        "rotation_deg": 8.752925108328806e-45,
+        "detectable": false
+      },
+      "galaxy_clusters": {
+        "B_field": 1e-06,
+        "delta_n": 1.856006172249535e-61,
+        "rotation_deg": 8.752925108328808e-27,
+        "detectable": false
+      },
+      "pulsar_vicinity": {
+        "B_field": 1000000.0,
+        "delta_n": 1.8560061722495348e-37,
+        "rotation_deg": 0.008752925108328806,
+        "detectable": true
+      },
+      "neutron_star": {
+        "B_field": 100000000.0,
+        "delta_n": 1.856006172249535e-33,
+        "rotation_deg": 87.52925108328806,
+        "detectable": true
+      }
+    }
+  },
+  "timestamp": "2025-06-04T00:07:48.861921"
+}

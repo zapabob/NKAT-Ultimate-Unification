@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-06-04T09:21:50.046631",
+  "test_config": {
+    "t_max": 30,
+    "num_points": 200
+  },
+  "results": [
+    {
+      "theta": 1e-08,
+      "theta_scientific": "1e-08",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 118.93128371238708,
+      "avg_zeta_magnitude": 1.3384050037647467e-07,
+      "avg_equation_error": 50.217568134136435,
+      "efficiency_score": 0.42683267178174716,
+      "quality_score": 0.010113668907999127,
+      "stability_score": 0.9999998661595174
+    },
+    {
+      "theta": 5e-09,
+      "theta_scientific": "5e-09",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 114.79836058616638,
+      "avg_zeta_magnitude": 1.3384196458154504e-07,
+      "avg_equation_error": 50.21755100563875,
+      "efficiency_score": 0.44219932520106375,
+      "quality_score": 0.010113672290276318,
+      "stability_score": 0.9999998661580533
+    },
+    {
+      "theta": 1e-09,
+      "theta_scientific": "1e-09",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 112.40622973442078,
+      "avg_zeta_magnitude": 1.3384313595702995e-07,
+      "avg_equation_error": 50.21753730284544,
+      "efficiency_score": 0.4516098236310332,
+      "quality_score": 0.010113674996098741,
+      "stability_score": 0.999999866156882
+    },
+    {
+      "theta": 5e-10,
+      "theta_scientific": "5e-10",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 115.14021492004395,
+      "avg_zeta_magnitude": 1.3384328237968075e-07,
+      "avg_equation_error": 50.217535589995805,
+      "efficiency_score": 0.4408864237455411,
+      "quality_score": 0.010113675334326739,
+      "stability_score": 0.9999998661567354
+    },
+    {
+      "theta": 1e-10,
+      "theta_scientific": "1e-10",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 115.71382451057434,
+      "avg_zeta_magnitude": 1.3384339951791274e-07,
+      "avg_equation_error": 50.21753421971655,
+      "efficiency_score": 0.4387008881618306,
+      "quality_score": 0.010113675604909065,
+      "stability_score": 0.9999998661566184
+    },
+    {
+      "theta": 5e-11,
+      "theta_scientific": "5e-11",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 114.95107769966125,
+      "avg_zeta_magnitude": 1.3384341416019924e-07,
+      "avg_equation_error": 50.21753404843201,
+      "efficiency_score": 0.44161184567598677,
+      "quality_score": 0.010113675638731785,
+      "stability_score": 0.9999998661566037
+    },
+    {
+      "theta": 1e-11,
+      "theta_scientific": "1e-11",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 114.77632308006287,
+      "avg_zeta_magnitude": 1.338434258740291e-07,
+      "avg_equation_error": 50.21753391140351,
+      "efficiency_score": 0.44228422921320304,
+      "quality_score": 0.010113675665790132,
+      "stability_score": 0.999999866156592
+    },
+    {
+      "theta": 5e-12,
+      "theta_scientific": "5e-12",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 113.19665551185608,
+      "avg_zeta_magnitude": 1.3384342733825726e-07,
+      "avg_equation_error": 50.21753389427559,
+      "efficiency_score": 0.4484563378294709,
+      "quality_score": 0.010113675669172298,
+      "stability_score": 0.9999998661565906
+    },
+    {
+      "theta": 1e-12,
+      "theta_scientific": "1e-12",
+      "zeros_found": 98,
+      "verification_accuracy": 0.5179975263815425,
+      "computation_time": 120.76657176017761,
+      "avg_zeta_magnitude": 1.338434285096411e-07,
+      "avg_equation_error": 50.21753388057291,
+      "efficiency_score": 0.4203461011230788,
+      "quality_score": 0.010113675671878099,
+      "stability_score": 0.9999998661565893
+    }
+  ],
+  "best_theta": 1e-09,
+  "best_theta_scientific": "1e-09",
+  "overall_score": 0.9999999832947477,
+  "recommendations": {
+    "optimal_theta": 1e-09,
+    "confidence": 0.9999999832947477,
+    "next_step": "Run full computation with theta=1e-09"
+  }
+}

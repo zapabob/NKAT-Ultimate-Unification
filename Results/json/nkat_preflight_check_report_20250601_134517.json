@@ -1,0 +1,469 @@
+{
+  "timestamp": "20250601_134517",
+  "summary": {
+    "total_checks": 10,
+    "passed_checks": 7,
+    "pass_rate": 70.0,
+    "action_needed": [
+      "Cover Letterトーン",
+      "数式参照完全性",
+      "倫理・利益相反"
+    ],
+    "ready_for_submission": false
+  },
+  "detailed_results": {
+    "arXiv先行投稿決定": {
+      "arxiv_directories_found": 2,
+      "arxiv_submission_prepared": true,
+      "recommended_category": "hep-th",
+      "recommendation": {
+        "arxiv_category": "hep-th",
+        "timing": "before_journal_submission",
+        "benefits": [
+          "タイムスタンプ確保",
+          "コミュニティからの早期フィードバック",
+          "JHEP重複投稿ポリシー適合"
+        ],
+        "ready": true
+      },
+      "action_needed": false,
+      "estimated_time_minutes": 15
+    },
+    "Zenodo DOI公開": {
+      "git_repository_ready": true,
+      "doi_mentioned_in_readme": true,
+      "zenodo_referenced": true,
+      "public_repository_required": true,
+      "doi_fixed_required": true,
+      "action_items": [
+        "Zenodo \"Publish\" ボタンクリック",
+        "DOI固定化",
+        "READMEに引用例明記"
+      ],
+      "status": "ready",
+      "estimated_time_minutes": 10
+    },
+    "著者名・ORCID": {
+      "tex_files_found": 52,
+      "author_formatting_present": true,
+      "orcid_mentioned": true,
+      "recommended_format": "\\author{Firstname LASTNAME (日本語表記)}",
+      "orcid_format": "\\orcid{0000-0000-0000-0000}",
+      "action_needed": false,
+      "estimated_time_minutes": 5
+    },
+    "図フォント埋め込み": {
+      "pdf_figures_found": 0,
+      "font_check_results": [],
+      "all_fonts_embedded": true,
+      "recommended_check_command": "pdffonts figure.pdf",
+      "action_if_problem": "フォント埋め込み再生成",
+      "estimated_time_minutes": 10
+    },
+    "Cover Letterトーン": {
+      "cover_letter_exists": true,
+      "excessive_claims_avoided": false,
+      "technical_checklist_style": true,
+      "tone_appropriate": false,
+      "recommended_style": "Point 1 β係数 → 完全一致 (Sec. 2.3)",
+      "words_to_avoid": [
+        "revolutionary",
+        "breakthrough",
+        "革命的"
+      ],
+      "action_needed": true,
+      "estimated_time_minutes": 15
+    },
+    "数式参照完全性": {
+      "tex_files_checked": 52,
+      "potential_issues": [
+        {
+          "file": "Archives\\NKAT_arXiv_submission_20250523_204120.tex",
+          "equations_count": 5,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "Archives\\NKAT_arXiv_submission_20250523_204219.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "arxiv_submission\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "arxiv_submission\\nkat_v11_arxiv_paper.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "arxiv_submission_v13_20250526_083647\\nkat_v13_information_tensor_ontology.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\nkat_quantum_gravity_riemann.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\NKAT_v8_Ultimate_Manuscript.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\NKAT_v9_1000gamma_breakthrough.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "Archives\\nkat_arxiv_final_20250523_211726\\main.tex",
+          "equations_count": 7,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "Archives\\nkat_arxiv_perfect_20250523_212225\\main.tex",
+          "equations_count": 6,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "arxiv_submission\\arxiv_package_20250524_220318\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "arxiv_submission\\package_20250526_041104\\source\\manuscript.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\Archives\\NKAT_arXiv_submission_20250523_204120.tex",
+          "equations_count": 5,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\Archives\\NKAT_arXiv_submission_20250523_204219.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\arxiv_submission\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\arxiv_submission\\nkat_v11_arxiv_paper.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\arxiv_submission_v13_20250526_083647\\nkat_v13_information_tensor_ontology.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\papers\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\papers\\nkat_quantum_gravity_riemann.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\papers\\NKAT_v8_Ultimate_Manuscript.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\papers\\NKAT_v9_1000gamma_breakthrough.tex",
+          "equations_count": 4,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\Archives\\nkat_arxiv_final_20250523_211726\\main.tex",
+          "equations_count": 7,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\Archives\\nkat_arxiv_perfect_20250523_212225\\main.tex",
+          "equations_count": 6,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\arxiv_submission\\arxiv_package_20250524_220318\\nkat_arxiv_submission_complete.tex",
+          "equations_count": 8,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\arxiv_submission\\package_20250526_041104\\source\\manuscript.tex",
+          "equations_count": 3,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\riemann_proof_2025\\riemann_hypothesis_proof_nkat_2025.tex",
+          "equations_count": 12,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\riemann_proof_2025\\rigorous_parameter_proof_nkat.tex",
+          "equations_count": 23,
+          "references_count": 0,
+          "potential_issue": true
+        },
+        {
+          "file": "papers\\riemann_proof_2025\\super_convergence_parameter_proof.tex",
+          "equations_count": 22,
+          "references_count": 0,
+          "potential_issue": true
+        }
+      ],
+      "check_command": "grep -n \"(17)\" *.tex",
+      "all_equations_referenced": false,
+      "estimated_time_minutes": 10
+    },
+    "引用キー一意性": {
+      "bib_files_found": 8,
+      "total_citations": 32,
+      "duplicate_keys": [],
+      "no_duplicates": true,
+      "check_command": "bibtex main.tex",
+      "estimated_time_minutes": 5
+    },
+    "再計算スクリプト": {
+      "reproduction_scripts_found": 11,
+      "main_script_exists": true,
+      "makefile_exists": false,
+      "one_click_reproduction": true,
+      "recommended_command": "make reproduce",
+      "target_time_minutes": 10,
+      "action_needed": false,
+      "estimated_time_minutes": 30
+    },
+    "倫理・利益相反": {
+      "conflict_indicators_found": 43,
+      "potential_conflicts": [
+        {
+          "file": "NKAT_最終投稿前アクションプラン_35分完了ガイド.md",
+          "keyword": "特許"
+        },
+        {
+          "file": "applications\\case_studies.md",
+          "keyword": "企業"
+        },
+        {
+          "file": "docs\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "Documentation\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "papers\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "reports\\nkat_v12_phase2_integration_plan.md",
+          "keyword": "企業"
+        },
+        {
+          "file": ".specstory\\history\\2025-05-25_17-07-続ける会話.md",
+          "keyword": "funding"
+        },
+        {
+          "file": ".specstory\\history\\2025-05-25_20-20-再開のための電源確認.md",
+          "keyword": "企業"
+        },
+        {
+          "file": ".specstory\\history\\2025-05-30_06-10-nkat-enhanced-v3版技術的補完分析.md",
+          "keyword": "特許"
+        },
+        {
+          "file": ".specstory\\history\\2025-05-30_12-28-査読コメントと修正提案の整理.md",
+          "keyword": "funding"
+        },
+        {
+          "file": ".specstory\\history\\2025-06-01_04-08-review-of-revised-manuscript-claims.md",
+          "keyword": "patent"
+        },
+        {
+          "file": "docs\\research\\NKAT_arXiv_Version_2025.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "docs\\research\\NKAT_Enhanced_V3_Future_Research_Proposal.md",
+          "keyword": "資金"
+        },
+        {
+          "file": "docs\\research\\NKAT_Enhanced_V3_Impact_Assessment.md",
+          "keyword": "特許"
+        },
+        {
+          "file": "docs\\research\\NKAT_V4_Technical_Performance_Analysis.md",
+          "keyword": "特許"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\applications\\case_studies.md",
+          "keyword": "企業"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\docs\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\Documentation\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\papers\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\reports\\nkat_v12_phase2_integration_plan.md",
+          "keyword": "企業"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\.specstory\\history\\2025-05-25_17-07-続ける会話.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\.specstory\\history\\2025-05-25_20-20-再開のための電源確認.md",
+          "keyword": "企業"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\releases\\NKAT_v2.0.0_20250528_154454\\docs\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "papers\\arxiv\\NKAT_arXiv_Version_2025.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "papers\\japanese\\NKAT_Japanese_Complete_Paper_2025.md",
+          "keyword": "資金"
+        },
+        {
+          "file": "papers\\journal\\NKAT_Japanese_Complete_Paper_2025.md",
+          "keyword": "資金"
+        },
+        {
+          "file": "releases\\NKAT_v2.0.0_20250528_154454\\docs\\NKAT_Journal_Paper_Complete.md",
+          "keyword": "funding"
+        },
+        {
+          "file": "reports\\technical\\NKAT_V4_Ultimate_Achievement_Summary.md",
+          "keyword": "特許"
+        },
+        {
+          "file": "NKAT_Ethics_Statement.txt",
+          "keyword": "patent"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\CERN_Theory_Division_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\Clay_Mathematics_Institute_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\CTA_Observatory_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\Fermilab_E989_Muon_g-2_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\KAGRA_Collaboration_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\LIGO_Scientific_Collaboration_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "NKAT-Ultimate-Unification-main\\src\\collaboration_proposals\\NIST_Post-Quantum_Cryptography_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\CERN_Theory_Division_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\Clay_Mathematics_Institute_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\CTA_Observatory_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\Fermilab_E989_Muon_g-2_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\KAGRA_Collaboration_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\LIGO_Scientific_Collaboration_20250526_041210.txt",
+          "keyword": "funding"
+        },
+        {
+          "file": "src\\collaboration_proposals\\NIST_Post-Quantum_Cryptography_20250526_041210.txt",
+          "keyword": "funding"
+        }
+      ],
+      "clean_academic_research": false,
+      "jhep_statement": "None.",
+      "competing_interests_section": "JHEP requires explicit statement",
+      "estimated_time_minutes": 5
+    },
+    "図キャプション単位": {
+      "total_figures": 45,
+      "captions_missing_units": 0,
+      "unit_compliance": 100.0,
+      "issues_found": [],
+      "check_command": "grep -n \"Figure\" *.tex",
+      "all_units_present": true,
+      "estimated_time_minutes": 10
+    }
+  },
+  "ready_for_submission": false
+}

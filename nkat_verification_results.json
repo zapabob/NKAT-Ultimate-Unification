@@ -1,0 +1,33 @@
+{
+  "phase1": {
+    "moyal_associativity": true,
+    "convergence": {
+      "passed": false,
+      "rates": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_rate": 0.0
+    }
+  },
+  "phase2": {
+    "error": "Cannot convert complex to float"
+  },
+  "phase3": {
+    "mass_gap_gev": 2.506670520591427e-72,
+    "confinement_verified": true,
+    "experimental_agreement": false,
+    "relative_error": 1.0
+  },
+  "overall": {
+    "total_score": 2,
+    "success_rate": 0.6666666666666666,
+    "status": "\u26a0\ufe0f \u8981\u6539\u5584"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "timestamp": "20250601_161944",
+  "model": "NKAT-Vision Transformer",
+  "test_accuracy": 9.8,
+  "total_samples": 10000,
+  "total_errors": 9020,
+  "error_rate_percent": 90.2,
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 0.098,
+      "f1-score": 0.1785063752276867,
+      "support": 10000.0
+    },
+    "1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "2": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "3": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "4": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "5": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "6": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "7": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "accuracy": 0.098,
+    "macro avg": {
+      "precision": 0.1,
+      "recall": 0.0098,
+      "f1-score": 0.01785063752276867,
+      "support": 10000.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 0.098,
+      "f1-score": 0.1785063752276867,
+      "support": 10000.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      980,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1135,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1032,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1010,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      982,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      892,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      958,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1028,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      974,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1009,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "class_performance": [
+    {
+      "Class": 0,
+      "Precision": 0.098,
+      "Recall": 1.0,
+      "F1-Score": 0.1785063752276867,
+      "Support": 980,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 1,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 1135,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 2,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 1032,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 3,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 1010,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 4,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 982,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 5,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 892,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 6,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 958,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 7,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 1028,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 8,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 974,
+      "Avg_Confidence": NaN
+    },
+    {
+      "Class": 9,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1-Score": 0.0,
+      "Support": 1009,
+      "Avg_Confidence": NaN
+    }
+  ],
+  "throughput_samples_per_sec": 5636.983349257038,
+  "inference_time_per_batch": 0.0886999249458313
+}

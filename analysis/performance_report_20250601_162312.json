@@ -1,0 +1,61 @@
+{
+  "timestamp": "20250601_162312",
+  "model": "NKAT-Vision Transformer",
+  "overall_accuracy": 97.79,
+  "throughput_samples_per_sec": 8130.106389288731,
+  "inference_time_per_batch": 0.061499810218811034,
+  "class_performance": {
+    "0": {
+      "accuracy": 99.18367346938776,
+      "confidence": "0.9066999",
+      "count": "980"
+    },
+    "1": {
+      "accuracy": 99.29515418502203,
+      "confidence": "0.90822786",
+      "count": "1135"
+    },
+    "2": {
+      "accuracy": 97.86821705426357,
+      "confidence": "0.8821438",
+      "count": "1032"
+    },
+    "3": {
+      "accuracy": 97.32673267326733,
+      "confidence": "0.88626224",
+      "count": "1010"
+    },
+    "4": {
+      "accuracy": 97.45417515274949,
+      "confidence": "0.8887292",
+      "count": "982"
+    },
+    "5": {
+      "accuracy": 96.74887892376681,
+      "confidence": "0.8845548",
+      "count": "892"
+    },
+    "6": {
+      "accuracy": 98.32985386221294,
+      "confidence": "0.887955",
+      "count": "958"
+    },
+    "7": {
+      "accuracy": 97.08171206225681,
+      "confidence": "0.87853456",
+      "count": "1028"
+    },
+    "8": {
+      "accuracy": 98.25462012320328,
+      "confidence": "0.87583756",
+      "count": "974"
+    },
+    "9": {
+      "accuracy": 96.13478691774033,
+      "confidence": "0.8744906",
+      "count": "1009"
+    }
+  },
+  "total_samples": 10000,
+  "gpu_memory_gb": 0.29227638244628906
+}

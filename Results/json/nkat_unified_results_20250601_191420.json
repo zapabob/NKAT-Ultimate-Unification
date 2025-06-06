@@ -1,0 +1,243 @@
+{
+  "timestamp": "20250601_191420",
+  "unified_metrics": {
+    "overall_performance_score": 0.09956190476190477,
+    "generalization_score": 0.0,
+    "robustness_score": 9.956190476190477,
+    "efficiency_score": 0.0,
+    "tpe_score": 0.0,
+    "recommendations": [
+      {
+        "priority": "HIGH",
+        "category": "Generalization",
+        "issue": "Global TPE Score (0.000) < 0.70 target",
+        "solution": "ハイパーパラメータ最適化、データ拡張強化、アーキテクチャ調整"
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "Robustness",
+        "issue": "Robustness Score (10.0%) < 75% target",
+        "solution": "敵対的訓練、データ正則化強化、アンサンブル手法"
+      }
+    ]
+  },
+  "stage_results": {
+    "stage2": {
+      "timestamp": "2025-06-01T19:03:10.311882",
+      "best_params": {
+        "temperature": 0.5469995537778101,
+        "top_k": 6,
+        "top_p": 0.7554317362491326,
+        "nkat_strength": 0.0023912273756024186,
+        "nkat_decay": 0.992297354758566,
+        "lr": 0.00023485677334823308,
+        "label_smoothing": 0.06691314688896288,
+        "dropout_attn": 0.17479367920079422,
+        "dropout_embed": 0.07883647026878872,
+        "embed_dim": 384,
+        "depth": 5
+      },
+      "training_config": {
+        "epochs_per_dataset": 8,
+        "batch_size": 128,
+        "train_samples": 8000,
+        "test_samples": 2000,
+        "early_stopping_patience": 3,
+        "grad_clip_norm": 1.0
+      },
+      "global_metrics": {
+        "global_tpe": 0.5275221763726897,
+        "global_accuracy": 0.6975,
+        "generalization_score": 0.26168125164867473,
+        "consistency_score": 0.8354621156381946,
+        "robustness_score": 1.0
+      },
+      "dataset_results": [
+        {
+          "dataset": "MNIST",
+          "num_classes": 10,
+          "best_accuracy": 0.91,
+          "final_val_loss": 0.631303396075964,
+          "training_time": 120.34313416481018,
+          "epochs_completed": 8,
+          "tpe_score": 0.688236817919925,
+          "lambda_theory": 20,
+          "nkat_ratio": 1.9361955789878247e-06,
+          "total_params": 10329535,
+          "train_losses": [
+            1.9162456175637623,
+            1.4915866416598123,
+            1.3169920822930714,
+            1.124176197581821,
+            0.9563996687767997,
+            0.8309021932738168,
+            0.7402445778014168,
+            0.6760229808943612
+          ],
+          "val_accuracies": [
+            0.366,
+            0.4865,
+            0.5955,
+            0.7375,
+            0.8275,
+            0.872,
+            0.9075,
+            0.91
+          ]
+        },
+        {
+          "dataset": "FashionMNIST",
+          "num_classes": 10,
+          "best_accuracy": 0.841,
+          "final_val_loss": 0.7271934151649475,
+          "training_time": 134.20122456550598,
+          "epochs_completed": 8,
+          "tpe_score": 0.6360518284292933,
+          "lambda_theory": 20,
+          "nkat_ratio": 1.9361955789878247e-06,
+          "total_params": 10329535,
+          "train_losses": [
+            1.584424754929921,
+            1.1481415913218544,
+            1.0230569054209997,
+            0.9444312122133043,
+            0.8875097206660679,
+            0.8374906683725024,
+            0.8024657945784311,
+            0.7779577686673119
+          ],
+          "val_accuracies": [
+            0.2555,
+            0.7335,
+            0.738,
+            0.781,
+            0.7875,
+            0.8125,
+            0.8325,
+            0.841
+          ]
+        },
+        {
+          "dataset": "EMNIST",
+          "num_classes": 27,
+          "best_accuracy": 0.693,
+          "final_val_loss": 1.412346288561821,
+          "training_time": 146.54730486869812,
+          "epochs_completed": 8,
+          "tpe_score": 0.5241188074928659,
+          "lambda_theory": 20,
+          "nkat_ratio": 1.935886535367098e-06,
+          "total_params": 10331184,
+          "train_losses": [
+            3.0353508184826565,
+            2.513336658477783,
+            2.229466150677393,
+            1.9498426270863367,
+            1.766522558908614,
+            1.6153126652278598,
+            1.4986735847261217,
+            1.437730389928061
+          ],
+          "val_accuracies": [
+            0.107,
+            0.259,
+            0.372,
+            0.5215,
+            0.5725,
+            0.602,
+            0.6775,
+            0.693
+          ]
+        },
+        {
+          "dataset": "CIFAR10",
+          "num_classes": 10,
+          "best_accuracy": 0.346,
+          "final_val_loss": 1.8249259889125824,
+          "training_time": 219.1916539669037,
+          "epochs_completed": 8,
+          "tpe_score": 0.26168125164867473,
+          "lambda_theory": 20,
+          "nkat_ratio": 1.9361955789878247e-06,
+          "total_params": 10329535,
+          "train_losses": [
+            2.1529368408142573,
+            1.9768808020485773,
+            1.9132347371843126,
+            1.877331745056879,
+            1.8194487340866574,
+            1.7675023097840568,
+            1.70649710723332,
+            1.6685492670725262
+          ],
+          "val_accuracies": [
+            0.173,
+            0.2475,
+            0.2665,
+            0.283,
+            0.307,
+            0.3165,
+            0.341,
+            0.346
+          ]
+        }
+      ],
+      "tpe_scores": [
+        0.688236817919925,
+        0.6360518284292933,
+        0.5241188074928659,
+        0.26168125164867473
+      ],
+      "accuracies": [
+        0.91,
+        0.841,
+        0.693,
+        0.346
+      ],
+      "performance_analysis": {
+        "best_dataset": "MNIST",
+        "worst_dataset": "CIFAR10",
+        "tpe_range": 0.42655556627125024,
+        "accuracy_range": 0.5640000000000001
+      }
+    },
+    "stage3": {
+      "timestamp": "20250601_191052",
+      "dataset": "MNIST",
+      "device": "cuda",
+      "robustness_score": 9.956190476190477,
+      "test_results": {
+        "adversarial": {
+          "0.05": 10.3,
+          "0.1": 10.3,
+          "0.15": 10.3,
+          "0.2": 10.3,
+          "0.25": 10.3,
+          "0.3": 10.3
+        },
+        "rotation": {
+          "-30": 9.3,
+          "-20": 9.2,
+          "-10": 9.2,
+          "0": 9.2,
+          "10": 9.3,
+          "20": 9.5,
+          "30": 9.5
+        },
+        "noise": {
+          "0.1": 10.3,
+          "0.2": 10.3,
+          "0.3": 10.3,
+          "0.4": 10.3,
+          "0.5": 10.3
+        }
+      },
+      "checkpoint_path": "checkpoints/nkat_enhanced_v2_best.pth"
+    }
+  },
+  "summary": {
+    "total_stages_analyzed": 2,
+    "overall_score": 0.09956190476190477,
+    "primary_recommendations": 1
+  }
+}

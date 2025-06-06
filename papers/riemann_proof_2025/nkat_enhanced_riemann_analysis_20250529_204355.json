@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-05-29T20:43:55.071339",
+  "parameters": {
+    "gamma_opt": 0.2347463135,
+    "delta_opt": 0.0350603028,
+    "Nc_opt": 17.0372816457,
+    "resolution": 50000,
+    "t_max": 500,
+    "fourier_terms": 500,
+    "loop_order": 6
+  },
+  "super_convergence_stats": {
+    "mean": 3.1944384454533545,
+    "std": 3.820069464651051,
+    "max": 10.0,
+    "min": 0.001
+  },
+  "zero_detection": {
+    "detected_count": 5,
+    "detected_zeros": [
+      232.22996160793718,
+      287.7970670210118,
+      347.16191196197195,
+      405.04653132828764,
+      481.78587118825163
+    ],
+    "matching_accuracy": 0.0,
+    "matches": 0,
+    "total_known": 50
+  }
+}

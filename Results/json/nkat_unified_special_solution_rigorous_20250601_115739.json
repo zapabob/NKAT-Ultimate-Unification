@@ -1,0 +1,31 @@
+{
+  "timestamp": "20250601_115739",
+  "configuration": {
+    "dimension": 8,
+    "max_harmonics": 50,
+    "chebyshev_order": 30,
+    "precision": 1e-15
+  },
+  "solution_statistics": {
+    "num_test_points": 100,
+    "mean_real": 2.861497028166276,
+    "mean_imag": 0.06140966612486057,
+    "std_real": 0.00042876996309414357,
+    "std_imag": 0.020458767084908062
+  },
+  "boundary_verification": {
+    "boundary_0": {
+      "mean_error": 2.8616831293283096,
+      "max_error": 2.8635926454164977,
+      "std_error": 0.0008129466160676542
+    },
+    "boundary_1": {
+      "mean_error": 2.8617785443902912,
+      "max_error": 2.8635707628842337,
+      "std_error": 0.0007797812862802856
+    }
+  },
+  "correspondences": {
+    "harmonic_analysis": {
+      "fourier_coefficients": {
+        

@@ -1,0 +1,52 @@
+{
+  "benchmark_results": {
+    "original": {
+      "accuracy": 11.6,
+      "inference_time": 0.5254311561584473,
+      "throughput": 1903.198902994712,
+      "num_params": 12108970,
+      "model_size_mb": 46.192054748535156
+    },
+    "distilled": {
+      "accuracy": 98.5,
+      "inference_time": 0.23650884628295898,
+      "throughput": 4228.171654956199,
+      "num_params": 2128906,
+      "model_size_mb": 8.121131896972656
+    },
+    "pruned": {
+      "accuracy": 11.6,
+      "inference_time": 0.28864455223083496,
+      "throughput": 3464.4686423885096,
+      "num_params": 12108970,
+      "model_size_mb": 46.192054748535156
+    }
+  },
+  "distillation_training": {
+    "total_losses": [
+      0.4541629637355235,
+      0.40785708673981463,
+      0.39870663212814816,
+      0.3923067828612541,
+      0.3878283717993226
+    ],
+    "hard_losses": [
+      1.0677898916354311,
+      0.8710221757512611,
+      0.8329913456048539,
+      0.8051313205060165,
+      0.7847508626706057
+    ],
+    "soft_losses": [
+      0.19117998025580638,
+      0.20935775104489154,
+      0.2125846008692723,
+      0.2153819716180057,
+      0.21771872434407663
+    ]
+  },
+  "pruning_ratio": 0.3000001914456958,
+  "timestamp": "20250601_191143",
+  "device": "cuda",
+  "visualization": "nkat_stage4_deployment_optimization_20250601_191143.png"
+}

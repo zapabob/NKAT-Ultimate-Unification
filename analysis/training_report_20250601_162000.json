@@ -1,0 +1,24 @@
+{
+  "timestamp": "20250601_162000",
+  "model": "NKAT-Vision Transformer",
+  "training_summary": {
+    "total_epochs": 11,
+    "final_validation_accuracy": 0,
+    "best_validation_accuracy": 0,
+    "best_epoch": 3,
+    "convergence_std_last_10": 0.0,
+    "converged": "True",
+    "final_train_val_gap": 0,
+    "average_train_val_gap": 0.0,
+    "overfitting_detected": "False"
+  },
+  "milestones": {
+    "epochs_to_90_percent": null,
+    "epochs_to_95_percent": null,
+    "epochs_to_97_percent": null
+  },
+  "training_efficiency": {
+    "average_improvement_per_epoch": 0.0,
+    "training_stability": "High"
+  }
+}

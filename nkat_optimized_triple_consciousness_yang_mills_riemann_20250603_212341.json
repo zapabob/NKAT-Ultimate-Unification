@@ -1,0 +1,113 @@
+{
+  "timestamp": "2025-06-03T21:23:41.647754",
+  "system_parameters": {
+    "consciousness_modes": 8,
+    "gauge_group": "SU(3)",
+    "riemann_terms": 8,
+    "triple_basis_size": 1152,
+    "coupling_constants": {
+      "yang_mills": 0.3,
+      "consciousness_gauge": 0.12,
+      "riemann_consciousness": 0.08,
+      "qcd_scale": 0.2
+    }
+  },
+  "ground_state_results": {
+    "ground_state_energy": -0.22947742988216838,
+    "excited_energies": [
+      -0.12965911163466076,
+      -0.0296591116346607,
+      0.07034088836533997,
+      0.17034088836533867,
+      0.2703408883653383
+    ],
+    "energy_gaps": [
+      0.09981831824750761,
+      0.19981831824750768,
+      0.2998183182475084,
+      0.399818318247507,
+      0.49981831824750667
+    ],
+    "computation_times": {
+      "hamiltonian_construction": 9.159135341644287,
+      "eigenvalue_computation": 0.3349490165710449
+    }
+  },
+  "consciousness_riemann_correlation": {
+    "dominant_correlations": [
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 32.935061588,
+        "amplitude": 0.06184512603043631,
+        "correlation_strength": 2.0368730347300423
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 30.424876126,
+        "amplitude": 0.06262801541306426,
+        "correlation_strength": 1.9054496109596988
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 37.586178159,
+        "amplitude": 0.04991075865527402,
+        "correlation_strength": 1.8759546668679805
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 40.918719012,
+        "amplitude": 0.03830155081167094,
+        "correlation_strength": 1.5672503953866037
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 25.01085758,
+        "amplitude": 0.0557487823602828,
+        "correlation_strength": 1.3943248558714494
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 43.327073281,
+        "amplitude": 0.02745124407931277,
+        "correlation_strength": 1.1893820638790018
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 21.022039639,
+        "amplitude": 0.04568689307634199,
+        "correlation_strength": 0.9604316772336159
+      },
+      {
+        "consciousness_mode": 1,
+        "consciousness_level": 0,
+        "riemann_gamma": 30.424876126,
+        "amplitude": 0.021172450863118596,
+        "correlation_strength": 0.6441691947942051
+      }
+    ],
+    "total_correlations": 149,
+    "average_riemann_gamma": 32.706210188875,
+    "gamma_standard_deviation": 7.161195411471549,
+    "consciousness_riemann_coherence": 1.4467294374653248
+  },
+  "riemann_hypothesis_implications": {
+    "eigenvalue_statistics": {
+      "mean_real": 0.17494683558270113,
+      "std_real": 0.2332299614734298,
+      "mean_imag": 0.0,
+      "std_imag": 0.0
+    },
+    "riemann_zero_correlation": 0.9953443922884522,
+    "critical_line_proximity": 0.32505316441729887,
+    "hypothesis_support_indicator": 0.7546867000161135,
+    "spectral_gap_ratio": 0.5650190160367312
+  },
+  "total_computation_time": 9.50810194015503
+}

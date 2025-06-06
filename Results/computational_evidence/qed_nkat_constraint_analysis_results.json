@@ -1,0 +1,64 @@
+{
+  "constraint": {
+    "k_QED_limit": 6.5e-20,
+    "confidence_level": 0.95
+  },
+  "qed_classical": {
+    "k_HE_classical": 3.554450509112515e-06,
+    "k_HE_classical_T2": 1.0100703911203149e+37,
+    "ratio_to_constraint": 1.5539544478774074e+56
+  },
+  "nkat_theory": {
+    "alpha_eff": 1.5473361796572107e+28,
+    "alpha_correction": 2.1205100447542975e+30,
+    "kappa_param": 1456197117410379.0,
+    "k_HE_nkat_T2": 6.6138215916272985e+112,
+    "k_NKAT_total": 1.4228265093928885e+113,
+    "enhancement_factor": 1.4086409441373358e+76,
+    "constraint_ratio": 2.1889638606044437e+132
+  },
+  "cosmic_analysis": {
+    "Intergalactic Medium": {
+      "B_field_T": 1e-15,
+      "delta_n_qed": 10100703.91120315,
+      "delta_n_nkat": 1.4228265093928887e+83,
+      "rotation_qed_deg": 4.7634919645234054e+41,
+      "rotation_nkat_deg": 6.710049818296863e+117,
+      "enhancement_factor": 1.408640944137336e+76
+    },
+    "Galaxy Clusters": {
+      "B_field_T": 1e-06,
+      "delta_n_qed": 1.0100703911203149e+25,
+      "delta_n_nkat": 1.4228265093928886e+101,
+      "rotation_qed_deg": 4.763491964523404e+59,
+      "rotation_nkat_deg": 6.710049818296863e+135,
+      "enhancement_factor": 1.408640944137336e+76
+    },
+    "Pulsar Magnetosphere": {
+      "B_field_T": 100000000.0,
+      "delta_n_qed": 1.0100703911203148e+53,
+      "delta_n_nkat": 1.4228265093928885e+129,
+      "rotation_qed_deg": 4.763491964523405e+87,
+      "rotation_nkat_deg": 6.710049818296862e+163,
+      "enhancement_factor": 1.408640944137336e+76
+    },
+    "Magnetar Surface": {
+      "B_field_T": 100000000000.0,
+      "delta_n_qed": 1.010070391120315e+59,
+      "delta_n_nkat": 1.4228265093928885e+135,
+      "rotation_qed_deg": 4.7634919645234045e+93,
+      "rotation_nkat_deg": 6.710049818296863e+169,
+      "enhancement_factor": 1.4086409441373358e+76
+    },
+    "Near Black Hole": {
+      "B_field_T": 10000.0,
+      "delta_n_qed": 1.0100703911203148e+45,
+      "delta_n_nkat": 1.4228265093928886e+121,
+      "rotation_qed_deg": 4.763491964523404e+79,
+      "rotation_nkat_deg": 6.710049818296861e+155,
+      "enhancement_factor": 1.408640944137336e+76
+    }
+  },
+  "compatibility": {
+    "qed_classical_compliant": false,
+    "nkat_compliant": 
