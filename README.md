@@ -1,5 +1,9 @@
 # NKAT Ultimate Unification Theory 🌟
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15496874.svg)](https://doi.org/10.5281/zenodo.15496874)
+
+**DOI: 10.5281/zenodo.15496874**
+
 ## 概要 (Overview)
 
 **NKAT (Noncommutative Kappa Arnold Tensor) Ultimate Unification Theory** は、リーマン予想をはじめとする数学の未解決問題の統一的解決を目指す革新的な理論フレームワークです。
