@@ -180,6 +180,27 @@ session = recovery_manager.restore_latest_session()
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## 📚 データセットと引用
+
+### Zenodo データセット
+このプロジェクトの研究データとコードは以下のZenodoリポジトリで公開されています：
+
+**Ryo, M. (2025). NKAT-Ultimate-Unification [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15496874**
+
+### 引用方法
+この研究を引用する場合は、以下の形式をご利用ください：
+
+```bibtex
+@dataset{ryo_2025_nkat,
+  author       = {Ryo, M.},
+  title        = {NKAT-Ultimate-Unification},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15496874},
+  url          = {https://doi.org/10.5281/zenodo.15496874}
+}
+```
+
 ## 📄 ライセンス
 
 このプロジェクトはMITライセンスの下で公開されています。詳細は[LICENSE](LICENSE)ファイルをご覧ください。
