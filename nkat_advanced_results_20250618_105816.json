@@ -1,0 +1,113 @@
+{
+  "timestamp": "2025-06-18T10:53:38.949651",
+  "config": {
+    "device": "cuda",
+    "N_gauge": 2,
+    "coupling_constant": 1.0,
+    "theta": 1e-69,
+    "alpha": 0.2,
+    "lattice_sizes": [
+      8,
+      12,
+      16,
+      20
+    ],
+    "rtx3080_optimized": true
+  },
+  "spectral_analysis": {
+    "lattice_analysis": {
+      "8": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.18537114524233594,
+        "first_excited_energy": -0.18537104091668932,
+        "mass_gap": 1.043256466215503e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "12": {
+        "lattice_size": 12,
+        "matrix_size": 5184,
+        "ground_state_energy": -0.3646585261196921,
+        "first_excited_energy": -0.36465851997361604,
+        "mass_gap": 6.146076036994685e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "16": {
+        "lattice_size": 16,
+        "matrix_size": 6000,
+        "ground_state_energy": -0.48089675581145075,
+        "first_excited_energy": -0.4808967508820266,
+        "mass_gap": 4.929424146649097e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "20": {
+        "lattice_size": 20,
+        "matrix_size": 6000,
+        "ground_state_energy": -0.5609879388685604,
+        "first_excited_energy": -0.5609879349296915,
+        "mass_gap": 3.938868897712666e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      }
+    },
+    "precision_analysis": {},
+    "coupling_sweep": {
+      "0.5": {
+        "lattice_size": 16,
+        "matrix_size": 6000,
+        "ground_state_energy": -0.30819777660538394,
+        "first_excited_energy": -0.3081977672224746,
+        "mass_gap": 9.382909338384593e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "1.0": {
+        "lattice_size": 16,
+        "matrix_size": 6000,
+        "ground_state_energy": -0.48089675581145075,
+        "first_excited_energy": -0.4808967508820266,
+        "mass_gap": 4.929424146649097e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "1.5": {
+        "lattice_size": 16,
+        "matrix_size": 6000,
+        "ground_state_energy": -0.5140677179012265,
+        "first_excited_energy": -0.5140677167560695,
+        "mass_gap": 1.1451569692511043e-09,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      }
+    },
+    "optimal_mass_gap": 1.043256466215503e-07,
+    "statistical_summary": {
+      "mean_mass_gap": 1.9256786593884508e-08,
+      "std_mass_gap": 3.4804169473878746e-08,
+      "max_mass_gap": 1.043256466215503e-07,
+      "min_mass_gap": 1.1451569692511043e-09,
+      "sample_count": 7
+    }
+  },
+  "proof_verdict": {
+    "mass_gap_detected": true,
+    "proof_level": "Weak Evidence",
+    "total_score": 0.3,
+    "clay_submittable": false,
+    "recommendations": [
+      "統計サンプル数の増加を推奨",
+      "高精度計算の実行を推奨"
+    ],
+    "mass_gap_value": 1.043256466215503e-07
+  }
+}

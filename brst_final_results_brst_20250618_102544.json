@@ -1,0 +1,49 @@
+{
+  "session_id": "brst_20250618_102544",
+  "mode": "quick",
+  "device": "cuda",
+  "total_combinations": 1,
+  "successful_runs": 1,
+  "success_rate": 1.0,
+  "individual_results": [
+    {
+      "config": "BRSTConfiguration(N_gauge=2, lattice_size=8, K_max=10, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+      "brst_tests": {},
+      "physical_quantities": {
+        "ghost_norm": 3.1622776601683795,
+        "anti_ghost_norm": 3.1622776601683795,
+        "gauge_field_norm": 22.183582642327845
+      },
+      "verification_results": {
+        "nilpotency": "tensor(False, device='cuda:0')"
+      },
+      "success": true,
+      "computation_time": 0.3282477855682373,
+      "session_id": "brst_20250618_102544",
+      "timestamp": "2025-06-18T10:25:45.060964"
+    }
+  ],
+  "summary_statistics": {
+    "total_successful": 1,
+    "computation_time": {
+      "mean": 0.3282477855682373,
+      "std": 0.0,
+      "min": 0.3282477855682373,
+      "max": 0.3282477855682373
+    },
+    "ghost_norm": {
+      "mean": 3.1622776601683795,
+      "std": 0.0,
+      "min": 3.1622776601683795,
+      "max": 3.1622776601683795
+    },
+    "anti_ghost_norm": {
+      "mean": 3.1622776601683795,
+      "std": 0.0,
+      "min": 3.1622776601683795,
+      "max": 3.1622776601683795
+    },
+    "nilpotency_success_rate": 0.0
+  },
+  "timestamp": "2025-06-18T10:25:45.062971"
+}

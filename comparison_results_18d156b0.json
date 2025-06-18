@@ -1,0 +1,22 @@
+{
+  "su2_mass_gap": 0.26462837142006135,
+  "su3_mass_gap": 0.3241022407214287,
+  "scaling_factor": 1.224744871391589,
+  "expected_scaling": 1.224744871391589,
+  "agreement": true,
+  "parameters": {
+    "gauge": 2,
+    "lattice": 24,
+    "modes": 30,
+    "alpha": 0.5,
+    "iterations": 20,
+    "device": "cuda",
+    "no_checkpoints": false,
+    "session_id": null,
+    "output_dir": ".",
+    "plot": false,
+    "continuity_test": false,
+    "quick": false,
+    "full": true
+  }
+}

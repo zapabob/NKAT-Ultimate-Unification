@@ -1,0 +1,612 @@
+{
+  "session_id": "959beb6e",
+  "evaluation_history": [
+    {
+      "evaluation_idx": 0,
+      "parameters": {
+        "coupling_constant": 0.3093885140052096,
+        "theta": 5.623830814100005e-68,
+        "alpha": 0.09804293067900474
+      },
+      "score": 0.7666677055536175,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": 0.4049553864809019,
+        "first_excited_energy": 0.404955490369597,
+        "mass_gap": 1.0388869509103671e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:39.706682"
+    },
+    {
+      "evaluation_idx": 1,
+      "parameters": {
+        "coupling_constant": 1.6833000389928534,
+        "theta": 4.354602037590967e-68,
+        "alpha": 0.4583528381181676
+      },
+      "score": 0.7666723683908983,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5547384568284341,
+        "first_excited_energy": -0.554737886656011,
+        "mass_gap": 5.701724231643723e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:43.375725"
+    },
+    {
+      "evaluation_idx": 2,
+      "parameters": {
+        "coupling_constant": 2.5846978441962216,
+        "theta": 3.303869353658485e-68,
+        "alpha": 0.3760206462569992
+      },
+      "score": 0.7666668271015215,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.4646304028657905,
+        "first_excited_energy": -0.464630386822305,
+        "mass_gap": 1.604348548456258e-08,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:46.802254"
+    },
+    {
+      "evaluation_idx": 3,
+      "parameters": {
+        "coupling_constant": 1.0050789037378225,
+        "theta": 6.495609185030012e-68,
+        "alpha": 0.19647205901524856
+      },
+      "score": 0.7666673892417386,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.18160288380106315,
+        "first_excited_energy": -0.18160281154355595,
+        "mass_gap": 7.225750719985768e-08,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:50.217302"
+    },
+    {
+      "evaluation_idx": 4,
+      "parameters": {
+        "coupling_constant": 1.9462358646648237,
+        "theta": 8.915150091417816e-68,
+        "alpha": 0.4530087827379234
+      },
+      "score": 0.7666705022502684,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5540502251618209,
+        "first_excited_energy": -0.5540498416034607,
+        "mass_gap": 3.835583601841108e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:53.935986"
+    },
+    {
+      "evaluation_idx": 5,
+      "parameters": {
+        "coupling_constant": 1.700281537585845,
+        "theta": 2.0078835269384143e-68,
+        "alpha": 0.4561195635916363
+      },
+      "score": 0.7666722998904296,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.552396176005563,
+        "first_excited_energy": -0.5523956126831867,
+        "mass_gap": 5.633223763013007e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:58:58.293826"
+    },
+    {
+      "evaluation_idx": 6,
+      "parameters": {
+        "coupling_constant": 1.8390841755149756,
+        "theta": 2.839802939141026e-68,
+        "alpha": 0.4606649424630296
+      },
+      "score": 0.7666713997733932,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5615594709441756,
+        "first_excited_energy": -0.5615589976335029,
+        "mass_gap": 4.7331067265510285e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:02.012273"
+    },
+    {
+      "evaluation_idx": 7,
+      "parameters": {
+        "coupling_constant": 1.4891753139963226,
+        "theta": 4.335876055502087e-68,
+        "alpha": 0.45286908116900493
+      },
+      "score": 0.7666711770118173,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5411453727889544,
+        "first_excited_energy": -0.5411449217544393,
+        "mass_gap": 4.5103451506989245e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:05.952899"
+    },
+    {
+      "evaluation_idx": 8,
+      "parameters": {
+        "coupling_constant": 1.521647994004027,
+        "theta": 2.904213707078091e-68,
+        "alpha": 0.441935826362548
+      },
+      "score": 0.766671280690896,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5286353363368026,
+        "first_excited_energy": -0.5286348749343797,
+        "mass_gap": 4.614024229354641e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:09.955110"
+    },
+    {
+      "evaluation_idx": 9,
+      "parameters": {
+        "coupling_constant": 1.742642889851542,
+        "theta": 3.9420374788318945e-68,
+        "alpha": 0.4435876938709839
+      },
+      "score": 0.7666720745474231,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5377033228740024,
+        "first_excited_energy": -0.5377027820859267,
+        "mass_gap": 5.407880756536088e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:13.620296"
+    },
+    {
+      "evaluation_idx": 10,
+      "parameters": {
+        "coupling_constant": 1.671681031510062,
+        "theta": 4.849131421665157e-68,
+        "alpha": 0.4291617555652662
+      },
+      "score": 0.7666720478743083,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5175433518393463,
+        "first_excited_energy": -0.5175428137185821,
+        "mass_gap": 5.38120764170813e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:17.471891"
+    },
+    {
+      "evaluation_idx": 11,
+      "parameters": {
+        "coupling_constant": 1.3257040084829674,
+        "theta": 5.1162241856230695e-68,
+        "alpha": 0.46958230347720964
+      },
+      "score": 0.7666675642507614,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5542271568943734,
+        "first_excited_energy": -0.5542270671359639,
+        "mass_gap": 8.975840948277636e-08,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:21.080696"
+    },
+    {
+      "evaluation_idx": 12,
+      "parameters": {
+        "coupling_constant": 1.6658150414729684,
+        "theta": 8.0986071862294e-68,
+        "alpha": 0.4085281761649028
+      },
+      "score": 0.7666716419512792,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.4913177752512972,
+        "first_excited_energy": -0.49131727772283595,
+        "mass_gap": 4.975284612629416e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:24.977314"
+    },
+    {
+      "evaluation_idx": 13,
+      "parameters": {
+        "coupling_constant": 1.6297689094748484,
+        "theta": 8.699989134408247e-68,
+        "alpha": 0.4688850825676791
+      },
+      "score": 0.7666725622306603,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5664330962973588,
+        "first_excited_energy": -0.5664325067409595,
+        "mass_gap": 5.895563993663089e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:28.789153"
+    },
+    {
+      "evaluation_idx": 14,
+      "parameters": {
+        "coupling_constant": 1.7681248464533803,
+        "theta": 7.599661277273284e-68,
+        "alpha": 0.46973047333686513
+      },
+      "score": 0.7666719297193025,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5713571024174066,
+        "first_excited_energy": -0.571356576112143,
+        "mass_gap": 5.263052635928744e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:32.575427"
+    },
+    {
+      "evaluation_idx": 15,
+      "parameters": {
+        "coupling_constant": 1.1994784564225662,
+        "theta": 1e-67,
+        "alpha": 0.5
+      },
+      "score": 0.7666695323158113,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5840784560271485,
+        "first_excited_energy": -0.584078169462234,
+        "mass_gap": 2.865649144645488e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:36.268739"
+    },
+    {
+      "evaluation_idx": 16,
+      "parameters": {
+        "coupling_constant": 1.6630340138137054,
+        "theta": 8.221252740476734e-68,
+        "alpha": 0.4299387372709172
+      },
+      "score": 0.7666720446818165,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5182704884769029,
+        "first_excited_energy": -0.518269950675388,
+        "mass_gap": 5.378015149881676e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:40.163438"
+    },
+    {
+      "evaluation_idx": 17,
+      "parameters": {
+        "coupling_constant": 1.8240964678295692,
+        "theta": 5.872174350148518e-68,
+        "alpha": 0.5
+      },
+      "score": 0.7666712048839397,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.6108983588554162,
+        "first_excited_energy": -0.6108979050336889,
+        "mass_gap": 4.5382172730867865e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:44.080555"
+    },
+    {
+      "evaluation_idx": 18,
+      "parameters": {
+        "coupling_constant": 1.2773834146618945,
+        "theta": 8.43174563702229e-68,
+        "alpha": 0.48102016291816285
+      },
+      "score": 0.7666670668491193,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.565691034944935,
+        "first_excited_energy": -0.5656909949266897,
+        "mass_gap": 4.0018245273110153e-08,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:47.828922"
+    },
+    {
+      "evaluation_idx": 19,
+      "parameters": {
+        "coupling_constant": 2.100768259511776,
+        "theta": 1e-67,
+        "alpha": 0.4246997435314248
+      },
+      "score": 0.7666694822355935,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5208536114994956,
+        "first_excited_energy": -0.5208533299426029,
+        "mass_gap": 2.81556892689494e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:51.745404"
+    },
+    {
+      "evaluation_idx": 20,
+      "parameters": {
+        "coupling_constant": 1.059792961062757,
+        "theta": 1e-67,
+        "alpha": 0.48480822996887263
+      },
+      "score": 0.7666723684565824,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5516907218706556,
+        "first_excited_energy": -0.551690151691664,
+        "mass_gap": 5.701789915768529e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:55.617528"
+    },
+    {
+      "evaluation_idx": 21,
+      "parameters": {
+        "coupling_constant": 1.8581893040512887,
+        "theta": 8.048021523584117e-68,
+        "alpha": 0.4803407551654478
+      },
+      "score": 0.766671054934096,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.586818084849957,
+        "first_excited_energy": -0.5868176460232141,
+        "mass_gap": 4.3882674294337676e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T10:59:59.557429"
+    },
+    {
+      "evaluation_idx": 22,
+      "parameters": {
+        "coupling_constant": 2.014746438985404,
+        "theta": 8.585336659214724e-68,
+        "alpha": 0.4414339212089508
+      },
+      "score": 0.7666700125375281,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.54063735625163,
+        "first_excited_energy": -0.5406370216645439,
+        "mass_gap": 3.34587086148197e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:03.210499"
+    },
+    {
+      "evaluation_idx": 23,
+      "parameters": {
+        "coupling_constant": 1.223810156320828,
+        "theta": 5.14772204762815e-68,
+        "alpha": 0.4530473604489461
+      },
+      "score": 0.766670626581939,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5266623359860595,
+        "first_excited_energy": -0.5266619399945323,
+        "mass_gap": 3.9599152723557296e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:07.301591"
+    },
+    {
+      "evaluation_idx": 24,
+      "parameters": {
+        "coupling_constant": 1.2523202978139472,
+        "theta": 1e-67,
+        "alpha": 0.4744832606847533
+      },
+      "score": 0.7666684916701993,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5557585445685842,
+        "first_excited_energy": -0.5557583620682309,
+        "mass_gap": 1.82500353274051e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:11.040366"
+    },
+    {
+      "evaluation_idx": 25,
+      "parameters": {
+        "coupling_constant": 1.4386848509791572,
+        "theta": 7.42474279487602e-68,
+        "alpha": 0.48197952032582414
+      },
+      "score": 0.7666713779423062,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5757112948445187,
+        "first_excited_energy": -0.5757108237169547,
+        "mass_gap": 4.711275639612822e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:14.938434"
+    },
+    {
+      "evaluation_idx": 26,
+      "parameters": {
+        "coupling_constant": 1.8166218567063876,
+        "theta": 7.316284351088066e-68,
+        "alpha": 0.4476987648049975
+      },
+      "score": 0.7666716437736754,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5446847491547936,
+        "first_excited_energy": -0.5446842514440927,
+        "mass_gap": 4.977107008752313e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:18.934633"
+    },
+    {
+      "evaluation_idx": 27,
+      "parameters": {
+        "coupling_constant": 1.86186358815651,
+        "theta": 1e-67,
+        "alpha": 0.4264165360975167
+      },
+      "score": 0.7666714041101308,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5188018294232707,
+        "first_excited_energy": -0.5188013556789243,
+        "mass_gap": 4.737443464186697e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:22.631217"
+    },
+    {
+      "evaluation_idx": 28,
+      "parameters": {
+        "coupling_constant": 1.611705873816001,
+        "theta": 7.856141559008851e-68,
+        "alpha": 0.5
+      },
+      "score": 0.7666728863522465,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.6051446092914992,
+        "first_excited_energy": -0.6051439873229412,
+        "mass_gap": 6.219685579900158e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:26.579958"
+    },
+    {
+      "evaluation_idx": 29,
+      "parameters": {
+        "coupling_constant": 1.4873273002900356,
+        "theta": 7.802478729090141e-68,
+        "alpha": 0.47013008512106946
+      },
+      "score": 0.7666717513837196,
+      "result": {
+        "lattice_size": 8,
+        "matrix_size": 1536,
+        "ground_state_energy": -0.5628633715412459,
+        "first_excited_energy": -0.5628628630695406,
+        "mass_gap": 5.084717052961096e-07,
+        "quality_score": 0.7666666666666666,
+        "solver_used": "eigh",
+        "eigenvalue_count": 100
+      },
+      "timestamp": "2025-06-18T11:00:30.509990"
+    }
+  ],
+  "best_parameters": {
+    "coupling_constant": 1.611705873816001,
+    "theta": 7.856141559008851e-68,
+    "alpha": 0.5
+  },
+  "best_score": 0.7666728863522465,
+  "timestamp": "2025-06-18T11:00:30.511990"
+}

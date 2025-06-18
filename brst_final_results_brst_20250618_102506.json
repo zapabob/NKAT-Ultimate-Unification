@@ -1,0 +1,25 @@
+{
+  "session_id": "brst_20250618_102506",
+  "mode": "quick",
+  "device": "cuda",
+  "total_combinations": 1,
+  "successful_runs": 0,
+  "success_rate": 0.0,
+  "individual_results": [
+    {
+      "config": "BRSTConfiguration(N_gauge=2, lattice_size=8, K_max=10, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+      "brst_tests": {},
+      "physical_quantities": {},
+      "verification_results": {},
+      "success": false,
+      "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+      "computation_time": 0.1856844425201416,
+      "session_id": "brst_20250618_102506",
+      "timestamp": "2025-06-18T10:25:07.000360"
+    }
+  ],
+  "summary_statistics": {
+    "error": "No successful results to analyze"
+  },
+  "timestamp": "2025-06-18T10:25:07.000360"
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.49121522903442383,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.052222"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0025131702423095703,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.056736"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0030133724212646484,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.061260"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0035185813903808594,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.065779"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0035276412963867188,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.070316"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0025191307067871094,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.075837"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.02158355712890625,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.098926"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0035240650177001953,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.104966"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.004522085189819336,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.110490"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.004512786865234375,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.117004"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.0030062198638916016,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.122536"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.002521991729736328,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.126578"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.01604914665222168,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.144141"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.008519649505615234,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.153670"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.006040096282958984,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.161730"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.005033969879150391,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.169774"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.006025791168212891,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.178317"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.005517244338989258,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.184841"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=50, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.03168201446533203,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.218528"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=50, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {},
+    "verification_results": {},
+    "success": false,
+    "error": "exp(): argument 'input' (position 1) must be Tensor, not complex",
+    "computation_time": 0.005009174346923828,
+    "session_id": "brst_20250618_102405",
+    "timestamp": "2025-06-18T10:24:06.225553"
+  }
+]

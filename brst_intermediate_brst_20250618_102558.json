@@ -1,0 +1,322 @@
+[
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.4721359549995805,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 88.7004341064159
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.24248123168945312,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:58.922231"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 88.74255018874346
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.07459259033203125,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:58.999336"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 88.71089759676244
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.08366131782531738,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.083998"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.4721359549995805,
+      "anti_ghost_norm": 4.4721359549995805,
+      "gauge_field_norm": 88.74784258220853
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.07969522476196289,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.165702"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.472135954999579,
+      "gauge_field_norm": 88.6484906598781
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.08291339874267578,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.249616"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=20, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.472135954999579,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 88.71408705011676
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.08744430541992188,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.342100"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865476,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 88.64342008107009
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.19839715957641602,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.541506"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865476,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 88.75398529847483
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.1887805461883545,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.731302"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.0710678118654755,
+      "anti_ghost_norm": 7.071067811865475,
+      "gauge_field_norm": 88.72991018485801
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.2073051929473877,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:25:59.940161"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865476,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 88.77180727024717
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.19654130935668945,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:00.136702"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865475,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 88.64049822376614
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.190047025680542,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:00.330748"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=2, lattice_size=16, K_max=50, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865475,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 88.68596533124396
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.3064255714416504,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:00.639693"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 144.81941448721182
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.2346813678741455,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:00.875882"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.4721359549995805,
+      "gauge_field_norm": 144.79067630779014
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.20305466651916504,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:01.079937"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.5, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 144.73295452194708
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.20999574661254883,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:01.292445"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.5, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.4721359549995805,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 144.85196608758386
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.2511587142944336,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:01.548628"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.7, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.472135954999579,
+      "gauge_field_norm": 144.78572082153823
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.19726037979125977,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:01.747902"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=20, alpha=0.7, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 4.47213595499958,
+      "anti_ghost_norm": 4.47213595499958,
+      "gauge_field_norm": 144.90052368828972
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.2043461799621582,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:01.953254"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=50, alpha=0.3, xi=0.1, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.071067811865476,
+      "anti_ghost_norm": 7.071067811865475,
+      "gauge_field_norm": 144.88244451019892
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.7257826328277588,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:02.680047"
+  },
+  {
+    "config": "BRSTConfiguration(N_gauge=3, lattice_size=16, K_max=50, alpha=0.3, xi=1.0, ghost_mass=0.0, theta=6.58e-70, device='cuda', dtype=torch.complex128)",
+    "brst_tests": {},
+    "physical_quantities": {
+      "ghost_norm": 7.0710678118654755,
+      "anti_ghost_norm": 7.0710678118654755,
+      "gauge_field_norm": 144.7494694442089
+    },
+    "verification_results": {
+      "nilpotency": "tensor(False, device='cuda:0')"
+    },
+    "success": true,
+    "computation_time": 0.6326310634613037,
+    "session_id": "brst_20250618_102558",
+    "timestamp": "2025-06-18T10:26:03.314186"
+  }
+]
