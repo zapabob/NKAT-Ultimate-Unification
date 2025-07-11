@@ -1,0 +1,29 @@
+{
+  "basic_stats": {
+    "num_nodes": 64,
+    "num_edges": 360,
+    "density": 0.17857142857142858,
+    "is_connected": true
+  },
+  "centrality_measures": {
+    "avg_degree_centrality": 0.17857142857142855,
+    "avg_betweenness_centrality": 0.020993343573988736,
+    "avg_closeness_centrality": 0.4403957347233228
+  },
+  "physical_properties": {
+    "total_volume": 3.506817981118289e-102,
+    "avg_cell_distance": 2.934041122946064,
+    "avg_quantum_correlation": 0.8611111111111109,
+    "avg_nc_coupling": 0.13821737382523847
+  },
+  "quantum_information": {
+    "total_information_bits": 128.0,
+    "entropy_per_cell": 1.3862943611198906,
+    "total_entropy": 88.722839111673
+  },
+  "path_properties": {
+    "avg_shortest_path_length": 2.3015873015873014,
+    "diameter": 5,
+    "radius": 3
+  }
+}

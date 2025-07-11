@@ -1,8 +1,0 @@
-{
-  "session_id": "riemann_a02c7fc4",
-  "Kmax": 1000,
-  "precision": 1e-15,
-  "lambda_coeffs": null,
-  "timestamp": "2025-06-18T18:59:10.011083",
-  "cuda_available": true
-}

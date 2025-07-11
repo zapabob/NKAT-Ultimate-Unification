@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-06-18T21:34:03.147635",
+  "cell_parameters": {
+    "cell_size": 3.7981993073957076e-35,
+    "cell_size_planck_units": 2.35,
+    "bits_per_cell": 2
+  },
+  "analysis_results": {
+    "theta_analysis": {
+      "theta_physical": 1.4426317978701234e-69,
+      "commutator_matrix": "[[0.+0.j 0.+0.j 0.+0.j 0.+0.j]\n [0.+0.j 0.+0.j 0.+0.j 0.+0.j]\n [0.+0.j 0.+0.j 0.+0.j 0.+0.j]\n [0.+0.j 0.+0.j 0.+0.j 0.+0.j]]",
+      "theta_coefficient": "[[0.-0.j 0.-0.j 0.-0.j 0.-0.j]\n [0.-0.j 0.-0.j 0.-0.j 0.-0.j]\n [0.-0.j 0.-0.j 0.-0.j 0.-0.j]\n [0.-0.j 0.-0.j 0.-0.j 0.-0.j]]",
+      "info_entropy": 1.3862943611198906,
+      "info_density": 2.5300098148629937e+103,
+      "cell_volume": 5.479403095497327e-104
+    },
+    "holographic_analysis": {
+      "bekenstein_area": 7.242778910129838e-70,
+      "two_bit_area": 1.4485557820259675e-69,
+      "area_cell_size": 3.8059897293949275e-35,
+      "volume_area_ratio": 0.9979531153384226
+    },
+    "king_plot_analysis": {
+      "nc_effect_ratio": 1.1776586105062232e-40,
+      "correction_factor": 2.5084766133490947e-42,
+      "predicted_significance": 2.5084766133490946e-30,
+      "consistency": 32.60058994356618
+    },
+    "qec_analysis": {
+      "state_dimension": 4,
+      "phase_error_op": "[[ 1.+0.j  0.+0.j  0.+0.j  0.+0.j]\n [ 0.+0.j  1.+0.j  0.+0.j  0.+0.j]\n [ 0.+0.j  0.+0.j -1.+0.j -0.+0.j]\n [ 0.+0.j  0.+0.j -0.+0.j -1.+0.j]]",
+      "bit_flip_error_op": "[[0.+0.j 0.+0.j 1.+0.j 0.+0.j]\n [0.+0.j 0.+0.j 0.+0.j 1.+0.j]\n [1.+0.j 0.+0.j 0.+0.j 0.+0.j]\n [0.+0.j 1.+0.j 0.+0.j 0.+0.j]]",
+      "decoherence_time": 8.133533405744311e+17
+    }
+  }
+}
