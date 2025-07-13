@@ -1,0 +1,15 @@
+dt: 0.01
+method: euler
+moyal_order: 1
+nsteps: 100
+nu: 0.01
+nx: 64
+ny: 64
+nz: 64
+theta: 1.0e-66
+urt_modes:
+- 14.134725
+- 21.02204
+- 25.010858
+- 30.424876
+- 32.935062
