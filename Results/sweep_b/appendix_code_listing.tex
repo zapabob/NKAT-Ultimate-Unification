@@ -1,0 +1,234 @@
+\section*{Code Listing: nkat_outlier_heatmap_pdf_labeler.py}
+\begin{verbatim}
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+import logging
+import traceback
+from sklearn.cluster import DBSCAN
+from scipy.stats import gaussian_kde
+
+# ログ設定
+logging.basicConfig(filename='logs/outlier_heatmap_pdf_labeler.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+
+RESULTS_DIR = 'Results/sweep_b'
+
+# matplotlib英語表記
+plt.rcParams['font.family'] = 'DejaVu Sans'
+plt.rcParams['axes.unicode_minus'] = False
+
+# 安全なCSV読込
+def safe_load_csv(path):
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        logging.warning(f"{path}が存在しないか空です。新規作成します。")
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(path)
+        return df
+    except pd.errors.EmptyDataError:
+        logging.error(f"{path}が空データです。新規作成します。")
+        return pd.DataFrame()
+    except KeyError as e:
+        logging.error(f"{path}のKeyError: {e}。新規作成します。")
+        return pd.DataFrame()
+    except Exception as e:
+        logging.error(f"{path}の読み込みエラー: {e}\n{traceback.format_exc()}")
+        return pd.DataFrame()
+
+# データ読込
+df_sweep = safe_load_csv(os.path.join(RESULTS_DIR, 'sweep_results.csv'))
+df_dim = safe_load_csv(os.path.join(RESULTS_DIR, 'fractal_dim_results.csv'))
+
+# 外れ値判定（tau_diff, energy, vorticity, spectrum_slope）
+def detect_outliers(series, threshold=3.0):
+    if series.isnull().all():
+        return pd.Series([False]*len(series))
+    z = (series - series.mean()) / (series.std() + 1e-8)
+    return np.abs(z) > threshold
+
+# 残差ヒートマップ・PDF・クラスタラベル付与
+def main():
+    if df_sweep.empty or df_dim.empty:
+        logging.warning('sweep_results.csvまたはfractal_dim_results.csvが空です。E1出力はスキップされます。')
+        return
+    # マージ
+    df = df_sweep.copy()
+    if 'idx' in df_dim.columns:
+        df = df.merge(df_dim[['idx', 'tau_diff', 'fractal_dim']], left_index=True, right_on='idx', how='left')
+    else:
+        df['tau_diff'] = np.nan
+        df['fractal_dim'] = np.nan
+    # 外れ値判定
+    df['outlier_tau'] = detect_outliers(df['tau_diff'])
+    df['outlier_energy'] = detect_outliers(df['energy'])
+    df['outlier_vorticity'] = detect_outliers(df['vorticity'])
+    df['outlier_slope'] = detect_outliers(df['spectrum_slope'])
+    df['any_outlier'] = df[['outlier_tau','outlier_energy','outlier_vorticity','outlier_slope']].any(axis=1)
+    # クラスタリング（tau_diff, energy, vorticity, spectrum_slope）
+    X = df[['tau_diff','energy','vorticity','spectrum_slope']].fillna(0).values
+    try:
+        clustering = DBSCAN(eps=1.5, min_samples=3).fit(X)
+        df['cluster'] = clustering.labels_
+    except Exception as e:
+        logging.error(f"クラスタリングエラー: {e}\n{traceback.format_exc()}")
+        df['cluster'] = -1
+    # 残差ヒートマップ
+    try:
+        plt.figure(figsize=(8,6))
+        plt.scatter(df['energy'], df['tau_diff'], c=df['any_outlier'], cmap='coolwarm', alpha=0.7, label='Outlier')
+        plt.xlabel('Energy')
+        plt.ylabel('tau_diff')
+        plt.title('Residual Heatmap (English)')
+        plt.colorbar(label='Outlier')
+        plt.savefig(os.path.join(RESULTS_DIR, 'outlier_residual_heatmap.png'))
+        plt.close()
+    except Exception as e:
+        logging.error(f"ヒートマップ描画エラー: {e}\n{traceback.format_exc()}")
+    # 渦度PDF
+    try:
+        vorticity = df['vorticity'].dropna()
+        if len(vorticity) > 10:
+            kde = gaussian_kde(vorticity)
+            x_grid = np.linspace(vorticity.min(), vorticity.max(), 100)
+            plt.figure()
+            plt.plot(x_grid, kde(x_grid), label='Vorticity PDF')
+            plt.title('Vorticity PDF (English)')
+            plt.xlabel('Vorticity')
+            plt.ylabel('Density')
+            plt.legend()
+            plt.savefig(os.path.join(RESULTS_DIR, 'vorticity_pdf.png'))
+            plt.close()
+    except Exception as e:
+        logging.error(f"渦度PDF描画エラー: {e}\n{traceback.format_exc()}")
+    # クラスタラベル付きCSV出力
+    try:
+        df.to_csv(os.path.join(RESULTS_DIR, 'outlier_labeled_results.csv'), index=False)
+    except Exception as e:
+        logging.error(f"outlier_labeled_results.csv保存エラー: {e}\n{traceback.format_exc()}")
+    # TeX出力（外れ値テーブル）
+    try:
+        outlier_df = df[df['any_outlier']]
+        tex_path = os.path.join(RESULTS_DIR, 'outlier_table.tex')
+        with open(tex_path, 'w', encoding='utf-8') as f:
+            f.write(outlier_df.to_latex(index=False, float_format='%.4g'))
+    except Exception as e:
+        logging.error(f"TeX出力エラー: {e}\n{traceback.format_exc()}")
+    print('E1: Outlier heatmap, vorticity PDF, cluster labeling, TeX/CSV/PNG output completed.')
+
+if __name__ == '__main__':
+    main() \end{verbatim}
+
+\section*{Code Listing: nkat_highorder_riemann_noncommutative_correction.py}
+\begin{verbatim}
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+import logging
+import traceback
+
+# ログ設定
+logging.basicConfig(filename='logs/highorder_riemann_noncommutative_correction.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+
+RESULTS_DIR = 'Results/sweep_b'
+
+plt.rcParams['font.family'] = 'DejaVu Sans'
+plt.rcParams['axes.unicode_minus'] = False
+
+def safe_load_csv(path):
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        logging.warning(f"{path}が存在しないか空です。新規作成します。")
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(path)
+        return df
+    except pd.errors.EmptyDataError:
+        logging.error(f"{path}が空データです。新規作成します。")
+        return pd.DataFrame()
+    except KeyError as e:
+        logging.error(f"{path}のKeyError: {e}。新規作成します。")
+        return pd.DataFrame()
+    except Exception as e:
+        logging.error(f"{path}の読み込みエラー: {e}\n{traceback.format_exc()}")
+        return pd.DataFrame()
+
+def riemann_zero_spectrum(n=20):
+    # 最初のn個のリーマン零点虚部
+    return np.array([14.134725, 21.022040, 25.010858, 30.424876, 32.935062, 37.586178, 40.918719, 43.327073, 48.005150, 49.773832,
+                     52.970321, 56.446247, 59.347044, 60.83178, 65.112544, 67.079811, 69.546401, 72.067158, 75.704690, 77.144840][:n])
+
+def moyal_star_correction(x, m=2, theta=0.1):
+    # 高次Moyal積補正（m=2,4,6...）
+    lam = riemann_zero_spectrum(m)
+    corr = 0
+    for l in lam:
+        corr += np.sin(l*x) * (theta**(m//2)) / np.math.factorial(m)
+    return corr
+
+def theoretical_fractal_tau_highorder(q, alpha_k, lambda_k, lambda_max, moyal_order=2, theta=0.1):
+    # 高次Moyal補正付きτ(q)
+    base = np.sum([a * (l/lambda_max)**q for a, l in zip(alpha_k, lambda_k)])
+    corr = moyal_star_correction(q, m=moyal_order, theta=theta)
+    return base + corr
+
+def main():
+    df_sweep = safe_load_csv(os.path.join(RESULTS_DIR, 'sweep_results.csv'))
+    df_dim = safe_load_csv(os.path.join(RESULTS_DIR, 'fractal_dim_results.csv'))
+    if df_sweep.empty or df_dim.empty:
+        logging.warning('sweep_results.csvまたはfractal_dim_results.csvが空です。E2出力はスキップされます。')
+        return
+    # パラメータ例
+    fractal_qs = np.linspace(0.5, 3, 20)
+    alpha_k = np.ones(10) / 10
+    lambda_k = riemann_zero_spectrum(10)
+    lambda_max = np.max(lambda_k)
+    # 高次Moyal積補正付き理論値
+    tau_theory_m4 = [theoretical_fractal_tau_highorder(q, alpha_k, lambda_k, lambda_max, moyal_order=4, theta=0.1) for q in fractal_qs]
+    tau_theory_m6 = [theoretical_fractal_tau_highorder(q, alpha_k, lambda_k, lambda_max, moyal_order=6, theta=0.1) for q in fractal_qs]
+    # 数値値
+    tau_num = df_dim['fractal_dim'].values if 'fractal_dim' in df_dim.columns else np.zeros(len(fractal_qs))
+    # 差分
+    diff_m4 = np.abs(tau_num[:len(tau_theory_m4)] - tau_theory_m4)
+    diff_m6 = np.abs(tau_num[:len(tau_theory_m6)] - tau_theory_m6)
+    # 結果保存
+    df_out = pd.DataFrame({
+        'q': fractal_qs[:len(tau_num)],
+        'tau_num': tau_num[:len(fractal_qs)],
+        'tau_theory_m4': tau_theory_m4,
+        'tau_theory_m6': tau_theory_m6,
+        'diff_m4': diff_m4,
+        'diff_m6': diff_m6
+    })
+    try:
+        df_out.to_csv(os.path.join(RESULTS_DIR, 'highorder_riemann_noncommutative_comparison.csv'), index=False)
+    except Exception as e:
+        logging.error(f"CSV保存エラー: {e}\n{traceback.format_exc()}")
+    # 可視化
+    try:
+        plt.figure()
+        plt.plot(fractal_qs, tau_theory_m4, label='Theory tau(q) m=4')
+        plt.plot(fractal_qs, tau_theory_m6, label='Theory tau(q) m=6')
+        plt.scatter(fractal_qs[:len(tau_num)], tau_num[:len(fractal_qs)], label='Numerical Fractal Dim', alpha=0.6)
+        plt.title('High-order Riemann/Noncommutative Correction (English)')
+        plt.xlabel('q')
+        plt.ylabel('tau(q) / Fractal Dim')
+        plt.legend()
+        plt.savefig(os.path.join(RESULTS_DIR, 'highorder_riemann_noncommutative_comparison.png'))
+        plt.close()
+    except Exception as e:
+        logging.error(f"可視化エラー: {e}\n{traceback.format_exc()}")
+    # TeX出力
+    try:
+        tex_path = os.path.join(RESULTS_DIR, 'highorder_riemann_noncommutative_comparison.tex')
+        with open(tex_path, 'w', encoding='utf-8') as f:
+            f.write(df_out.to_latex(index=False, float_format='%.4g'))
+    except Exception as e:
+        logging.error(f"TeX出力エラー: {e}\n{traceback.format_exc()}")
+    print('E2: High-order Riemann/noncommutative correction, comparison, PNG/CSV/TeX output completed.')
+
+if __name__ == '__main__':
+    main() \end{verbatim}
+

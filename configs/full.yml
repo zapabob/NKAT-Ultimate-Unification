@@ -1,0 +1,129 @@
+# NKAT理論 完全検証設定ファイル
+# 実行時間: 数時間
+# 用途: 包括的な理論検証と高精度計算
+
+# 基本設定
+lattice:
+  size: [64, 64, 64]  # 高解像度格子
+  spacing: 0.05        # 高精度離散化
+
+# 時間積分設定
+time_integration:
+  time_step: 0.001     # 高精度時間ステップ
+  n_steps: 1000        # 長時間積分
+  method: "rk8"        # 8次ルンゲクッタ法（高精度）
+
+# 非可換パラメータ
+noncommutative:
+  theta: 1e-6          # 高精度非可換パラメータ
+  kappa: 1e-7          # 高精度補正パラメータ
+  max_order: 4         # 高次展開
+  adaptive_order: true  # 適応的展開次数
+
+# リーマンゼータ関数設定
+riemann_zeta:
+  max_zeros: 1000      # 多数の零点
+  precision: 1e-12     # 超高精度
+  method: "rigorous"   # 厳密計算法
+  verify_rh: true      # リーマン予想検証
+
+# 数値計算設定
+numerical:
+  tolerance: 1e-12     # 超高精度収束判定
+  max_iterations: 10000 # 多数反復
+  parallel: true        # 並列計算有効
+  num_threads: 8       # 8スレッド並列
+
+# 出力設定
+output:
+  save_frequency: 5    # 高頻度保存
+  plot_frequency: 10   # 高頻度プロット
+  format: ["json", "png", "pdf", "tex"]
+  directory: "./output_full"
+  compression: true     # データ圧縮
+
+# 検証設定
+verification:
+  check_riemann_hypothesis: true
+  check_convergence: true
+  check_stability: true
+  check_uniqueness: true
+  check_analyticity: true
+  tolerance_rh: 1e-10  # 超高精度リーマン予想検証
+  statistical_tests: true
+  cross_validation: true
+
+# プロット設定
+plotting:
+  figure_size: [12, 8]
+  dpi: 300
+  style: "seaborn-v0_8"
+  save_format: ["png", "pdf"]
+  latex_export: true
+
+# ログ設定
+logging:
+  level: "DEBUG"
+  file: "nkat_full.log"
+  console: true
+  detailed_timing: true
+
+# パフォーマンス設定
+performance:
+  memory_limit: "16GB"
+  timeout: 7200        # 2時間タイムアウト
+  checkpoint_frequency: 20
+  auto_save: true
+  recovery_mode: true
+
+# 統計解析設定
+statistical_analysis:
+  confidence_level: 0.99
+  bootstrap_samples: 10000
+  monte_carlo_iterations: 100000
+  error_propagation: true
+
+# 高精度検証データ
+test_data:
+  known_zeros: [
+    0.5 + 14.1347251417346937904572519835624702707842571156992431756855674601499634298092567649490103931715610127792j,
+    0.5 + 21.0220396387715549926284795938969027773343405249027817546295194037035493954935446050503462490904461415324j,
+    0.5 + 25.0108575801456887632137909925628218186595496725579966724965420067450920984416445572278811174912932987j
+  ]
+  expected_convergence_rate: 0.01
+  stability_threshold: 1e-12
+  uniqueness_tolerance: 1e-10
+
+# 理論的検証設定
+theoretical_verification:
+  hurwitz_theorem: true
+  analytic_continuation: true
+  functional_equation: true
+  zero_density: true
+  critical_line: true
+
+# 計算機代数設定
+computer_algebra:
+  use_sympy: true
+  use_sage: false
+  precision: 100        # 100桁精度
+  symbolic_computation: true
+
+# 可視化詳細設定
+visualization:
+  plot_3d: true
+  plot_phase_space: true
+  plot_spectrum: true
+  plot_convergence: true
+  plot_stability: true
+  interactive_plots: false
+  animation: false
+
+# レポート生成設定
+reporting:
+  generate_latex: true
+  generate_html: true
+  include_plots: true
+  include_tables: true
+  include_statistics: true
+  bibliography: true 

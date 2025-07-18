@@ -1,0 +1,71 @@
+# NKAT理論 クイック検証設定ファイル
+# 実行時間: 5分以内
+# 用途: 基本的な再現性検証
+
+# 基本設定
+lattice:
+  size: [16, 16, 16]  # 小さな格子サイズで高速化
+  spacing: 0.1         # 離散化間隔
+
+# 時間積分設定
+time_integration:
+  time_step: 0.005     # 安定性のための小さな時間ステップ
+  n_steps: 100         # 総ステップ数（5分以内）
+  method: "rk4"        # 4次ルンゲクッタ法
+
+# 非可換パラメータ
+noncommutative:
+  theta: 1e-3          # 小さな非可換パラメータ
+  kappa: 1e-4          # 補正パラメータ
+  max_order: 2         # 展開次数を制限
+
+# リーマンゼータ関数設定
+riemann_zeta:
+  max_zeros: 50        # 零点数を制限
+  precision: 1e-6      # 数値精度
+  method: "fast"       # 高速計算法
+
+# 数値計算設定
+numerical:
+  tolerance: 1e-8      # 収束判定
+  max_iterations: 1000 # 最大反復回数
+  parallel: false      # シングルスレッド（安定性重視）
+
+# 出力設定
+output:
+  save_frequency: 10   # 10ステップごとに保存
+  plot_frequency: 20   # 20ステップごとにプロット
+  format: ["json", "png"]
+  directory: "./output_quick"
+
+# 検証設定
+verification:
+  check_riemann_hypothesis: true
+  check_convergence: true
+  check_stability: true
+  tolerance_rh: 1e-4   # リーマン予想検証の許容誤差
+
+# プロット設定
+plotting:
+  figure_size: [8, 6]
+  dpi: 150
+  style: "default"
+  save_format: "png"
+
+# ログ設定
+logging:
+  level: "INFO"
+  file: "nkat_quick.log"
+  console: true
+
+# パフォーマンス設定
+performance:
+  memory_limit: "2GB"
+  timeout: 300         # 5分タイムアウト
+  checkpoint_frequency: 50
+
+# 検証用データ
+test_data:
+  known_zeros: [0.5 + 14.134725j, 0.5 + 21.022040j, 0.5 + 25.010858j]
+  expected_convergence_rate: 0.1
+  stability_threshold: 1e-6 
