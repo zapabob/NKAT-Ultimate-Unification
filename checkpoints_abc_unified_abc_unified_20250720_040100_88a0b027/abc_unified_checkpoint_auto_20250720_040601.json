@@ -1,0 +1,35 @@
+{
+  "session_id": "abc_unified_20250720_040100_88a0b027",
+  "save_type": "auto",
+  "timestamp": "20250720_040601",
+  "results": {
+    "abc_triples": [],
+    "quality_analysis": {},
+    "nc_proof": {},
+    "unified_proof": {},
+    "statistical_evidence": {},
+    "theoretical_rigor": {}
+  },
+  "params": {
+    "theta_nc": 1e-18,
+    "kappa_nc": 1e-20,
+    "lambda_max": 100.0,
+    "n_modes": 50,
+    "l_layers": 10,
+    "max_abc_test": 10000,
+    "precision": 100,
+    "checkpoint_interval": 300,
+    "max_backups": 10,
+    "auto_save_interval": 300,
+    "emergency_save_enabled": true,
+    "session_id": "abc_unified_20250720_040100_88a0b027"
+  },
+  "constants": {
+    "pi": "(3.141592653589793+0j)",
+    "e": "(2.718281828459045+0j)",
+    "zeta_2": "(1.6449340668482264+0j)",
+    "euler_gamma": "(0.5772156649015329+0j)",
+    "golden_ratio": "(1.618033988749895+0j)",
+    "abc_constant": "(1.6299+0j)"
+  }
+}

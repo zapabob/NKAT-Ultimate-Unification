@@ -1,0 +1,7 @@
+{
+  "ai_enabled": true,
+  "proof_generation": true,
+  "theorem_discovery": true,
+  "verification_assistance": true,
+  "confidence_threshold": 0.95
+}

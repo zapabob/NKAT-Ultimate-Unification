@@ -1,0 +1,10 @@
+name = "ai_proofs-lean"
+version = "0.1.0"
+defaultTargets = ["ai_proofs-lean"]
+
+[[lean_lib]]
+name = "AiProofs.Lean"
+
+[[lean_exe]]
+name = "ai_proofs-lean"
+root = "Main"

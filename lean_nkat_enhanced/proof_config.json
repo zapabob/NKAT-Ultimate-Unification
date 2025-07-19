@@ -1,0 +1,16 @@
+{
+  "max_proof_length": 1000,
+  "timeout_seconds": 300,
+  "auto_tactics": [
+    "simp",
+    "rw",
+    "apply",
+    "exact"
+  ],
+  "advanced_tactics": [
+    "ring",
+    "linarith",
+    "norm_num",
+    "omega"
+  ]
+}
