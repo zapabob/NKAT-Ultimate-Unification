@@ -1,0 +1,25 @@
+{
+  "max_proof_length": 2000,
+  "timeout_seconds": 600,
+  "auto_tactics": [
+    "simp",
+    "rw",
+    "apply",
+    "exact",
+    "ring",
+    "linarith"
+  ],
+  "advanced_tactics": [
+    "ring",
+    "linarith",
+    "norm_num",
+    "omega",
+    "aesop"
+  ],
+  "ai_tactics": [
+    "ai_simp",
+    "ai_ring",
+    "ai_apply",
+    "ai_exact"
+  ]
+}

@@ -1,0 +1,48 @@
+定理ガチャ結果
+================
+seedファイル: Main.lean
+生成数: 20
+成功数: 11
+タイムスタンプ: 20240101_000000
+
+生成された定理:
+- topology_basic (Topology, 難易度: 3, 信頼度: 0.800000)
+  Every α-open set is pre-open under certain conditions
+- algebra_center (Algebra, 難易度: 5, 信頼度: 0.600000)
+  For any group G, the center Z(G) is a normal subgroup
+- analysis_uniform (Analysis, 難易度: 7, 信頼度: 0.700000)
+  If f is continuous on [a,b], then f is uniformly continuous
+- numbertheory_twin (NumberTheory, 難易度: 9, 信頼度: 0.400000)
+  There exist infinitely many twin primes
+- geometry_triangle (Geometry, 難易度: 4, 信頼度: 0.900000)
+  The sum of angles in a triangle equals 180 degrees
+- logic_consistency (Logic, 難易度: 6, 信頼度: 0.500000)
+  Every consistent theory has a model
+- combinatorics_graph (Combinatorics, 難易度: 8, 信頼度: 0.800000)
+  In any graph, the number of vertices of odd degree is even
+- topology_basic (Topology, 難易度: 3, 信頼度: 0.800000)
+  Every α-open set is pre-open under certain conditions
+- algebra_center (Algebra, 難易度: 5, 信頼度: 0.600000)
+  For any group G, the center Z(G) is a normal subgroup
+- analysis_uniform (Analysis, 難易度: 7, 信頼度: 0.700000)
+  If f is continuous on [a,b], then f is uniformly continuous
+- numbertheory_twin (NumberTheory, 難易度: 9, 信頼度: 0.400000)
+  There exist infinitely many twin primes
+- geometry_triangle (Geometry, 難易度: 4, 信頼度: 0.900000)
+  The sum of angles in a triangle equals 180 degrees
+- logic_consistency (Logic, 難易度: 6, 信頼度: 0.500000)
+  Every consistent theory has a model
+- combinatorics_graph (Combinatorics, 難易度: 8, 信頼度: 0.800000)
+  In any graph, the number of vertices of odd degree is even
+- topology_basic (Topology, 難易度: 3, 信頼度: 0.800000)
+  Every α-open set is pre-open under certain conditions
+- algebra_center (Algebra, 難易度: 5, 信頼度: 0.600000)
+  For any group G, the center Z(G) is a normal subgroup
+- analysis_uniform (Analysis, 難易度: 7, 信頼度: 0.700000)
+  If f is continuous on [a,b], then f is uniformly continuous
+- numbertheory_twin (NumberTheory, 難易度: 9, 信頼度: 0.400000)
+  There exist infinitely many twin primes
+- geometry_triangle (Geometry, 難易度: 4, 信頼度: 0.900000)
+  The sum of angles in a triangle equals 180 degrees
+- logic_consistency (Logic, 難易度: 6, 信頼度: 0.500000)
+  Every consistent theory has a model

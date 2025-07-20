@@ -1,0 +1,42 @@
+{
+  "project_name": "nkat_unified_theory",
+  "version": "1.0.0",
+  "description": "NKAT統合理論のLean 4形式化",
+  "lean_version": "v4.8.0-rc1",
+  "dependencies": [
+    "mathlib",
+    "aesop"
+  ],
+  "structure": {
+    "src": [
+      "NKAT/NonCommutativeAlgebra.lean",
+      "NKAT/MoyalProduct.lean",
+      "NKAT/RepresentationTheorem.lean",
+      "UnifiedSolution/QuantumCell.lean",
+      "UnifiedSolution/RiemannZeros.lean",
+      "UnifiedSolution/Multifractal.lean",
+      "UnifiedSolution/UnifiedSolution.lean",
+      "Integration/UnifiedTheory.lean",
+      "Integration/PhysicalApplications.lean",
+      "Integration/ExperimentalPredictions.lean",
+      "Applications/QuantumGravity.lean",
+      "Applications/ParticlePhysics.lean",
+      "Applications/Cosmology.lean"
+    ],
+    "test": [
+      "test_nkat_theory.lean",
+      "test_unified_solution.lean",
+      "test_integration.lean"
+    ],
+    "docs": [
+      "README.md",
+      "THEORY.md",
+      "IMPLEMENTATION.md"
+    ]
+  },
+  "parameters": {
+    "theta": 1e-25,
+    "confidence": 0.999,
+    "integration_level": "complete"
+  }
+}

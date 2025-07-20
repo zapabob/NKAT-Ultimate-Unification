@@ -1,0 +1,14 @@
+{
+  "timestamp": "20250720_075836",
+  "optimization_metrics": {
+    "role_clarity": false,
+    "task_specificity": false,
+    "requirements_completeness": false,
+    "restrictions_clarity": false,
+    "examples_relevance": false
+  },
+  "improvements": [],
+  "suggestions": [
+    "より詳細な実装要件の追加"
+  ]
+}

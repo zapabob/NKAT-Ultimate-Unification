@@ -1,0 +1,26 @@
+🎯 証明結果レポート
+==================================================
+✅ theorem_0: simp (1.000000s)
+❌ theorem_1: simp failed: no proof found
+✅ theorem_2: simp (2.000000s)
+❌ theorem_3: aesop failed: no proof found
+✅ theorem_4: aesop (3.000000s)
+❌ theorem_5: aesop failed: no proof found
+✅ theorem_6: cases (4.000000s)
+❌ theorem_7: cases failed: no proof found
+✅ theorem_8: cases (5.000000s)
+❌ theorem_9: cases failed: no proof found
+✅ theorem_10: simp (1.000000s)
+❌ theorem_11: simp failed: no proof found
+✅ theorem_12: simp (2.000000s)
+❌ theorem_13: aesop failed: no proof found
+✅ theorem_14: aesop (3.000000s)
+❌ theorem_15: aesop failed: no proof found
+✅ theorem_16: cases (4.000000s)
+❌ theorem_17: cases failed: no proof found
+✅ theorem_18: cases (5.000000s)
+❌ theorem_19: cases failed: no proof found
+
+📊 統計情報
+   🎯 成功率: 50.000000%
+   📈 成功数: 10/20

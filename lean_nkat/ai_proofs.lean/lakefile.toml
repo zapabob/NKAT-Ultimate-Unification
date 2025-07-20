@@ -2,9 +2,21 @@ name = "ai_proofs-lean"
 version = "0.1.0"
 defaultTargets = ["ai_proofs-lean"]
 
+dependencies = [
+  { name = "mathlib", git = "https://github.com/leanprover-community/mathlib4.git", rev = "v4.7.0" }
+]
+
 [[lean_lib]]
 name = "AiProofs.Lean"
 
 [[lean_exe]]
 name = "ai_proofs-lean"
 root = "Main"
+
+[[lean_exe]]
+name = "conjecture_generator_simple"
+root = "conjecture_generator_simple"
+
+[[lean_exe]]
+name = "proof_trainer_simple"
+root = "proof_trainer_simple" 

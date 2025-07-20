@@ -2,13 +2,16 @@
 import Lake
 open Lake DSL
 
-package nkat_bsd_solver {
-  -- add package configuration options here
+package nkat_minimal {
+  -- 最小限のパッケージ設定
 }
 
 @[default_target]
-lean_lib nkat_bsd_solver {
-  -- add library configuration options here
+lean_lib nkat_minimal {
+  -- 最小限のライブラリ設定
 }
 
-require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "v4.8.0-rc1"
+@[default_target]
+lean_exe nkat_minimal_exe {
+  root := `Main
+}
