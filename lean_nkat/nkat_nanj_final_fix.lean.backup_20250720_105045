@@ -127,19 +127,19 @@ theorem nanj_test_3_von_waldenfels_structure :
 
 theorem nanj_test_4_noncommutativity :
   ∃ a b : A, a * b ≠ b * a := by
-  sorry -- 段階的実装予定（仮説検証中）
+  sorry -- 次回実装予定
 
 theorem nanj_test_5_basic_ka_representation (f : A → A) :
   ncKAT₁ f →
   ∃ (g : A → A) (h : A → A) (φ : A → A),
     f = φ ∘ g ∘ h := by
   intro h_ncKAT
-  sorry -- 段階的実装予定（仮説検証中）
+  sorry -- 次回実装予定
 
 theorem nanj_test_6_von_waldenfels_ka_representation (f : A → A) :
   ∃ (g : A → A) (h : A → A) (φ : A → A),
     f = φ ∘ g ∘ h := by
-  sorry -- 段階的実装予定（仮説検証中）
+  sorry -- 次回実装予定
 
 -- なんJ風 Step 11: 中心極限定理（最終修正版）
 -- 仮説: Ring.zeroとRing.oneを使い続ける
@@ -159,7 +159,7 @@ theorem nanj_test_8_levy_process :
   independent_increments X_t X_t ∧
   stationary_increments X_t X_t := by
   intro t X_t
-  sorry -- 段階的実装予定（仮説検証中）
+  sorry -- 次回実装予定
 
 -- なんJ風 Step 12: 万物の理論（最終修正版）
 -- 仮説: エラーなく定義

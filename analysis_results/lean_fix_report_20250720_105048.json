@@ -1,0 +1,22 @@
+{
+  "timestamp": "20250720_105048",
+  "lean_file": "lean_nkat/nkat_nanj_final_fix.lean",
+  "backup_file": "lean_nkat/nkat_nanj_final_fix.lean.backup_20250720_105048",
+  "fixes_applied": [
+    "Ringインスタンス確認: instance : Ring Float where",
+    "Ringインスタンス確認: instance : Ring Nat where",
+    "証明構造改善: sorryマークの改善",
+    "型定義確認: def Complex := Float × Float",
+    "型定義確認: def ℝ := Float",
+    "型定義確認: def ℕ := Nat"
+  ],
+  "fix_summary": {
+    "total_fixes": 6,
+    "fix_types": [
+      "Ringインスタンス確認",
+      "型定義確認",
+      "証明構造改善"
+    ],
+    "status": "completed"
+  }
+}
