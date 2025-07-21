@@ -1,0 +1,29 @@
+{
+  "status": "SUCCESS",
+  "computation_time": 0.6454973220825195,
+  "num_zeros_found": 0,
+  "zeros": [],
+  "functional_equation": {
+    "status": "FAILED",
+    "results": [
+      {
+        "s": "(0.5+14.134725j)",
+        "error": 0.5307297596071806,
+        "status": "FAILED"
+      },
+      {
+        "s": "(0.5+21.02204j)",
+        "error": 0.07849275615600892,
+        "status": "FAILED"
+      }
+    ]
+  },
+  "statistical_analysis": {
+    "mean_real": 1.4405903855566298,
+    "mean_imag": -0.00348335513249768,
+    "std_real": 2.654545328674452,
+    "std_imag": 0.5265284889909034,
+    "num_samples": 10
+  },
+  "early_stop_count": 0
+}
