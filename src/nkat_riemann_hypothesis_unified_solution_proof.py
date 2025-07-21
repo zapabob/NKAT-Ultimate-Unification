@@ -550,6 +550,65 @@ class NKATRecoverySystem:
         print("\n🧹 セッション終了処理中...")
         self.save_emergency_checkpoint()
         print("✅ セッション終了処理完了")
+    
+    def save_emergency_checkpoint(self):
+        """緊急チェックポイント保存"""
+        try:
+            # 現在の計算状態を保存
+            checkpoint_data = {
+                'session_id': self.session_id,
+                'timestamp': datetime.now().isoformat(),
+                'recovery_dir': str(self.recovery_dir),
+                'start_time': self.start_time.isoformat(),
+                'checkpoint_type': 'emergency'
+            }
+            
+            # JSON形式で保存
+            with open(self.checkpoint_file, 'w', encoding='utf-8') as f:
+                json.dump(checkpoint_data, f, ensure_ascii=False, indent=2)
+            
+            # バックアップ作成
+            backup_filename = f"emergency_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            backup_path = self.backup_dir / backup_filename
+            with open(backup_path, 'w', encoding='utf-8') as f:
+                json.dump(checkpoint_data, f, ensure_ascii=False, indent=2)
+            
+            # バックアップ数の管理
+            self._manage_backups()
+            
+            print(f"💾 緊急チェックポイント保存完了: {self.checkpoint_file}")
+            print(f"📦 バックアップ作成: {backup_path}")
+            
+        except Exception as e:
+            print(f"❌ 緊急保存エラー: {e}")
+    
+    def _manage_backups(self):
+        """バックアップファイルの管理"""
+        try:
+            backup_files = list(self.backup_dir.glob("*.json"))
+            if len(backup_files) > self.max_backups:
+                # 古いファイルを削除
+                backup_files.sort(key=lambda x: x.stat().st_mtime)
+                for old_file in backup_files[:-self.max_backups]:
+                    old_file.unlink()
+                    print(f"🗑️ 古いバックアップ削除: {old_file}")
+        except Exception as e:
+            print(f"⚠️ バックアップ管理エラー: {e}")
+    
+    def load_emergency_checkpoint(self):
+        """緊急チェックポイントの読み込み"""
+        try:
+            if self.checkpoint_file.exists():
+                with open(self.checkpoint_file, 'r', encoding='utf-8') as f:
+                    checkpoint_data = json.load(f)
+                print(f"📂 緊急チェックポイント読み込み: {checkpoint_data['session_id']}")
+                return checkpoint_data
+            else:
+                print("📂 緊急チェックポイントが見つかりません")
+                return None
+        except Exception as e:
+            print(f"❌ チェックポイント読み込みエラー: {e}")
+            return None
 
 def main():
     """メイン実行関数"""
