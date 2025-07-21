@@ -1,0 +1,162 @@
+name: Lean4 Test & Python Numerical Experiments
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # 毎日午前3時に実行
+    - cron: '0 3 * * *'
+
+jobs:
+  lean-test:
+    runs-on: ubuntu-latest
+    name: Lean4 Theorem Proving
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Lean
+      run: |
+        wget -q https://raw.githubusercontent.com/leanprover/lean4/master/elan/install.sh
+        sh install.sh -y
+        . ~/.profile
+        
+    - name: Build Lean Project
+      run: |
+        cd lean_nkat
+        lake build
+        
+    - name: Run Lean Tests
+      run: |
+        cd lean_nkat
+        lake test
+        
+    - name: Check Phase A MVP
+      run: |
+        cd lean_nkat
+        lake build phase_a_mvp
+        
+  python-numerical:
+    runs-on: ubuntu-latest
+    name: Python Numerical Experiments
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run Phase A Numerical Tests
+      run: |
+        cd src
+        python phase_a_numerical_test.py
+        
+    - name: Upload Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: phase-a-results
+        path: |
+          src/phase_a_results.json
+          src/phase_a_results/
+          
+  strip-comments:
+    runs-on: ubuntu-latest
+    name: Strip Comments for Academic Publication
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install regex
+        
+    - name: Strip Comments
+      run: |
+        python -c "import re, os; [open(f, 'w').write(re.sub(r'/-!\s*strip:off\s*.*?strip:on\s*-/', '', open(f, 'r').read(), flags=re.DOTALL)) for root, dirs, files in os.walk('lean_nkat') for file in files if file.endswith('.lean') for f in [os.path.join(root, file)]]"
+        
+    - name: Create Academic Version
+      run: |
+        mkdir -p academic_version
+        cp -r lean_nkat academic_version/
+        cp -r src academic_version/
+        cp README.md academic_version/
+        cp requirements.txt academic_version/
+        
+    - name: Upload Academic Version
+      uses: actions/upload-artifact@v3
+      with:
+        name: academic-version
+        path: academic_version/
+        
+  documentation:
+    runs-on: ubuntu-latest
+    name: Generate Documentation
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx sphinx-rtd-theme myst-parser
+        
+    - name: Generate Documentation
+      run: |
+        cd docs
+        make html
+        
+    - name: Upload Documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: documentation
+        path: docs/_build/html/
+        
+  notify:
+    runs-on: ubuntu-latest
+    name: Notify Results
+    needs: [lean-test, python-numerical, strip-comments, documentation]
+    if: always()
+    
+    steps:
+    - name: Check Results
+      run: |
+        echo "Lean Test Status: ${{ needs.lean-test.result }}"
+        echo "Python Test Status: ${{ needs.python-numerical.result }}"
+        echo "Strip Comments Status: ${{ needs.strip-comments.result }}"
+        echo "Documentation Status: ${{ needs.documentation.result }}"
+        
+    - name: Notify on Failure
+      if: failure()
+      run: |
+        echo "❌ Some tests failed!"
+        echo "Check the workflow logs for details."
+        
+    - name: Notify on Success
+      if: success()
+      run: |
+        echo "✅ All tests passed!"
+        echo "🎉 Phase A MVP is ready for review!" 
