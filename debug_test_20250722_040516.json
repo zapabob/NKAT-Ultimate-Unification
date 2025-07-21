@@ -1,0 +1,23 @@
+{
+  "array": [
+    1,
+    2,
+    3
+  ],
+  "bool": true,
+  "int": 42,
+  "float": 3.14,
+  "nested": {
+    "array": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "bool": false
+  }
+}
