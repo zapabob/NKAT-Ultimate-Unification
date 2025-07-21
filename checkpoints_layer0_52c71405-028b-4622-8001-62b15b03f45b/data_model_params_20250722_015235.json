@@ -1,5 +1,0 @@
-{
-  "theta": 1e-25,
-  "kappa": 1e-35,
-  "cuda_available": true
-}

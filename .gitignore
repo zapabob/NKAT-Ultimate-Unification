@@ -1,3 +1,5 @@
+# NKAT Ultimate Unification Project - .gitignore
+
 # Python
 __pycache__/
 *.py[cod]
@@ -21,7 +23,13 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual environments
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
 .env
 .venv
 env/
@@ -33,95 +41,118 @@ venv.bak/
 # PyCharm
 .idea/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
 # VS Code
 .vscode/
 
-# OS
-.DS_Store
-Thumbs.db
+# Checkpoints and backups
+checkpoints*/
+backup_archive*/
+cuda_nkat_backups*/
+enhanced_nkat_backups*/
+pytorch_cuda_backups*/
+nkat_unified_recovery*/
+recovery_data*/
+optimization_checkpoints*/
+*checkpoint*.json
+*backup*.json
+*emergency*.json
 
-# Backup files and recovery data - 重要！無限ループを防ぐ
-*backup*/
-*recovery*/
-emergency_backups_*/
-ultimate_backups_*/
-nkat_*_backups/
-nkat_*_checkpoints/
-*_backups_*/
-tensornetwork_checkpoints_*/
-checkpoints_test/
-nkat_ultra_backups/
-recovery_data/
-
-# Large result files
-*.png
-*.jpg
-*.gif
-*.mp4
-*.avi
-*.mkv
-*.pth
-*.pkl
+# Large data files
 *.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npz
+*.npy
 
 # Logs
-*.log
 logs/
+*.log
 
 # Temporary files
 *.tmp
 *.temp
-temp/
-tmp/
-
-# System files
-*.swp
-*.swo
 *~
 
-# Large data files
-*.bin
-*.dat
-data/
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Model checkpoints
-model_checkpoints/
-*.ckpt
-*.pt
+# Lean build artifacts
+.lake/
+lake-manifest.json
 
-# EMNIST and large training datasets - GitHub size limit対策
-data/EMNIST/
-**/emnist-*
-data/MNIST/
-**/mnist-*
-data/ImageNet/
-data/CIFAR/
-*.idx3-ubyte
-*.idx1-ubyte
+# Results and analysis (keep only essential)
+Results/checkpoints/
+Results/test_backups/
+Results/hamiltonian_backup_*/
 
-# Large training files (100MB以上のファイル)
-*.tar.gz
-*.zip
-*.7z
-*.rar
+# Model files
+model/0.0_cache_data
+model/0.0_state
+
+# Large JSON files (keep only essential analysis results)
+analysis/*.json
+analysis_results/*.json
+brst_final_results_*.json
+
+# ArXiv packages (keep only latest)
+arxiv_submission/package_*/
+
+# Test outputs
+tests/output/
+scripts/output/
 
 # GPU memory dumps
-*.meminfo
-*.nvvp
+*.dump
+*.mem
 
-# Large output files
-results_large/
-*.npy
-*.npz
+# Emergency saves
+*emergency*.json
+*_emergency_*.json
 
-# Video files
-*.webm
-*.mov
+# Session data
+session_*.json
+*_session_*.json
 
-# Large model files
-*.safetensors
-*.onnx
-*.tflite
+# Recovery data
+recovery_*.json
+*_recovery_*.json
+
+# Large visualization files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.pdf
+!figures/*.svg
+!figures/*.png
+!figures/*.pdf
+
+# Data files
+data/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Cache directories
+.cache/
+cache/
+__pycache__/
+
+# Backup files
+*.bak
+*.backup
+*_backup_*
+
+# Temporary directories
+temp/
+tmp/
+.tmp/

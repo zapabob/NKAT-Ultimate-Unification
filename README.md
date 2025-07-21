@@ -41,12 +41,16 @@ NKAT-Ultimate-Unification/
 │   ├── core/              # 核となる理論実装
 │   ├── mathematical/      # 数学的基盤
 │   ├── gpu/              # GPU実装
-│   └── quantum/          # 量子理論拡張
+│   ├── quantum/          # 量子理論拡張
+│   └── verification/     # 検証システム
+├── lean_nkat/            # Lean定理証明
 ├── docs/                  # ドキュメント
+├── _docs/                 # 実装ログ
 ├── reports/              # 研究レポート
 ├── Results/              # 計算結果
 ├── scripts/              # ユーティリティスクリプト
-└── tests/                # テストスイート
+├── tests/                # テストスイート
+└── config/               # 設定ファイル
 ```
 
 ## 🚀 クイックスタート
