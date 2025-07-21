@@ -1,0 +1,8 @@
+{
+  "session_id": "naj_4ea41d13",
+  "timestamp": "20250722_013251",
+  "device": "cuda",
+  "proof_results": {
+    "noncommutative_kolmogorov_arnold": {
+      "representation_valid": false,
+      "noncommutativity_valid": 
