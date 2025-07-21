@@ -65,6 +65,11 @@ optimization_checkpoints*/
 *.npz
 *.npy
 
+# Large JSON files (>50MB)
+*verification_medium*.json
+*verification_large*.json
+*_large_*.json
+
 # Logs
 logs/
 *.log
