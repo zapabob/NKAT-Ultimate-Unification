@@ -1,0 +1,766 @@
+{
+  "basic_experiments": {
+    "test_matrix": [
+      [
+        "(1+0j)",
+        "(2+0j)"
+      ],
+      [
+        "(3+0j)",
+        "(4+0j)"
+      ]
+    ],
+    "extended_moyal_product": [
+      [
+        "(7+0j)",
+        "(10+0j)"
+      ],
+      [
+        "(15+0j)",
+        "(22+0j)"
+      ]
+    ],
+    "noncommutative_probability_measure": 5.0,
+    "noncommutative_expectation": "(5+0j)",
+    "noncommutative_variance": 29.0,
+    "unified_special_solution": [
+      [
+        "(1.6487212707001282+0j)",
+        "0j"
+      ],
+      [
+        "0j",
+        "(1.6487212707001282+0j)"
+      ]
+    ],
+    "yang_mills_mass_gap": 1.0,
+    "noncommutative_zeta": [
+      [
+        "(-2+0j)",
+        "0j"
+      ],
+      [
+        "0j",
+        "(-2+0j)"
+      ]
+    ]
+  },
+  "convergence_experiments": {
+    "convergence_data": [
+      {
+        "iteration": 0,
+        "commutator_norm": 3.3829817661705794,
+        "probability_measure": 2.228785323817211,
+        "moyal_product_norm": 7.310780333710017
+      },
+      {
+        "iteration": 1,
+        "commutator_norm": 5.739043070140047,
+        "probability_measure": 0.09753395126161905,
+        "moyal_product_norm": 4.547456919645397
+      },
+      {
+        "iteration": 2,
+        "commutator_norm": 7.115481595949067,
+        "probability_measure": 3.3411855842059053,
+        "moyal_product_norm": 7.342060860389588
+      },
+      {
+        "iteration": 3,
+        "commutator_norm": 3.71814652839974,
+        "probability_measure": 0.6481222762835709,
+        "moyal_product_norm": 4.538370314441843
+      },
+      {
+        "iteration": 4,
+        "commutator_norm": 2.101159910622701,
+        "probability_measure": 1.1412636718566682,
+        "moyal_product_norm": 4.999617915669568
+      },
+      {
+        "iteration": 5,
+        "commutator_norm": 6.117778767265748,
+        "probability_measure": -1.348220056370246,
+        "moyal_product_norm": 5.035544781355626
+      },
+      {
+        "iteration": 6,
+        "commutator_norm": 14.779667086589209,
+        "probability_measure": 0.22402280493523416,
+        "moyal_product_norm": 9.787327894083436
+      },
+      {
+        "iteration": 7,
+        "commutator_norm": 5.565152118361981,
+        "probability_measure": 2.041009999618168,
+        "moyal_product_norm": 3.419153718430936
+      },
+      {
+        "iteration": 8,
+        "commutator_norm": 11.335833629393269,
+        "probability_measure": -0.730034514203119,
+        "moyal_product_norm": 8.92645344425323
+      },
+      {
+        "iteration": 9,
+        "commutator_norm": 4.179612166674793,
+        "probability_measure": 2.3003877310947276,
+        "moyal_product_norm": 4.912164854157277
+      },
+      {
+        "iteration": 10,
+        "commutator_norm": 5.541471251834067,
+        "probability_measure": 1.493362456522039,
+        "moyal_product_norm": 2.4527438693769983
+      },
+      {
+        "iteration": 11,
+        "commutator_norm": 6.067424229378005,
+        "probability_measure": -2.5661371898997025,
+        "moyal_product_norm": 5.040784337357774
+      },
+      {
+        "iteration": 12,
+        "commutator_norm": 8.547552333171028,
+        "probability_measure": -0.12145565800480296,
+        "moyal_product_norm": 6.401069802542592
+      },
+      {
+        "iteration": 13,
+        "commutator_norm": 4.53772025636943,
+        "probability_measure": -1.8635381145558052,
+        "moyal_product_norm": 3.535321487818799
+      },
+      {
+        "iteration": 14,
+        "commutator_norm": 6.006359315097313,
+        "probability_measure": -0.5000751943498316,
+        "moyal_product_norm": 4.475987780934194
+      },
+      {
+        "iteration": 15,
+        "commutator_norm": 8.339345829220314,
+        "probability_measure": 0.027214406013292614,
+        "moyal_product_norm": 4.717186883450648
+      },
+      {
+        "iteration": 16,
+        "commutator_norm": 3.921613751236352,
+        "probability_measure": -1.5886066499734013,
+        "moyal_product_norm": 2.3177286262141683
+      },
+      {
+        "iteration": 17,
+        "commutator_norm": 6.920553302983851,
+        "probability_measure": 0.7114481113491734,
+        "moyal_product_norm": 6.115730048023992
+      },
+      {
+        "iteration": 18,
+        "commutator_norm": 7.660196612659394,
+        "probability_measure": 1.8698138681663026,
+        "moyal_product_norm": 4.207803217963822
+      },
+      {
+        "iteration": 19,
+        "commutator_norm": 6.644240052720027,
+        "probability_measure": 0.7030869992274837,
+        "moyal_product_norm": 4.732062381878077
+      },
+      {
+        "iteration": 20,
+        "commutator_norm": 2.734158893852853,
+        "probability_measure": -1.933371643726411,
+        "moyal_product_norm": 4.193077424176566
+      },
+      {
+        "iteration": 21,
+        "commutator_norm": 10.543504312281048,
+        "probability_measure": -1.202302993274341,
+        "moyal_product_norm": 8.845550463962287
+      },
+      {
+        "iteration": 22,
+        "commutator_norm": 0.9085279756986683,
+        "probability_measure": -0.9210370694453222,
+        "moyal_product_norm": 2.0691616592606303
+      },
+      {
+        "iteration": 23,
+        "commutator_norm": 4.193344227688665,
+        "probability_measure": 1.13242662216058,
+        "moyal_product_norm": 4.569767684802644
+      },
+      {
+        "iteration": 24,
+        "commutator_norm": 2.1497757114327234,
+        "probability_measure": 0.320668187594613,
+        "moyal_product_norm": 3.147784685041527
+      },
+      {
+        "iteration": 25,
+        "commutator_norm": 8.910815200564167,
+        "probability_measure": 0.16385652917518168,
+        "moyal_product_norm": 5.7524544903790265
+      },
+      {
+        "iteration": 26,
+        "commutator_norm": 3.218529117241534,
+        "probability_measure": -0.9781764101472962,
+        "moyal_product_norm": 5.3810389330302035
+      },
+      {
+        "iteration": 27,
+        "commutator_norm": 4.9355378302435335,
+        "probability_measure": 1.8811417446064747,
+        "moyal_product_norm": 3.7725525765310275
+      },
+      {
+        "iteration": 28,
+        "commutator_norm": 8.893881369326028,
+        "probability_measure": -0.23905579561899137,
+        "moyal_product_norm": 7.234605324118152
+      },
+      {
+        "iteration": 29,
+        "commutator_norm": 7.076816233543039,
+        "probability_measure": 1.6134240131816866,
+        "moyal_product_norm": 4.513486073888377
+      },
+      {
+        "iteration": 30,
+        "commutator_norm": 8.097095200478213,
+        "probability_measure": -0.09330347943109646,
+        "moyal_product_norm": 4.1526163779737075
+      },
+      {
+        "iteration": 31,
+        "commutator_norm": 6.498668212680777,
+        "probability_measure": 1.5363470107416148,
+        "moyal_product_norm": 5.0484339815498185
+      },
+      {
+        "iteration": 32,
+        "commutator_norm": 2.0006691424374297,
+        "probability_measure": -0.2518557304922257,
+        "moyal_product_norm": 3.8167310673758212
+      },
+      {
+        "iteration": 33,
+        "commutator_norm": 6.246850735668812,
+        "probability_measure": 0.9643508620287616,
+        "moyal_product_norm": 6.852132046688664
+      },
+      {
+        "iteration": 34,
+        "commutator_norm": 4.395456094047311,
+        "probability_measure": 1.3051548109342468,
+        "moyal_product_norm": 5.195908968609515
+      },
+      {
+        "iteration": 35,
+        "commutator_norm": 7.6751177591579856,
+        "probability_measure": 1.7246397399729005,
+        "moyal_product_norm": 5.725029871818347
+      },
+      {
+        "iteration": 36,
+        "commutator_norm": 7.156427050023672,
+        "probability_measure": 1.8313988239953667,
+        "moyal_product_norm": 4.293432805260466
+      },
+      {
+        "iteration": 37,
+        "commutator_norm": 8.457969371675585,
+        "probability_measure": -1.1939679193167185,
+        "moyal_product_norm": 6.355543012048911
+      },
+      {
+        "iteration": 38,
+        "commutator_norm": 7.37999750822827,
+        "probability_measure": 2.3827867365950075,
+        "moyal_product_norm": 5.377353966108705
+      },
+      {
+        "iteration": 39,
+        "commutator_norm": 10.482433229519122,
+        "probability_measure": 0.304921746641723,
+        "moyal_product_norm": 5.649810342268997
+      },
+      {
+        "iteration": 40,
+        "commutator_norm": 10.203954588997691,
+        "probability_measure": -2.777138612052806,
+        "moyal_product_norm": 6.5509282623974485
+      },
+      {
+        "iteration": 41,
+        "commutator_norm": 9.069407073423056,
+        "probability_measure": 1.0181512490780547,
+        "moyal_product_norm": 5.562928993006914
+      },
+      {
+        "iteration": 42,
+        "commutator_norm": 7.762116027665124,
+        "probability_measure": -0.03120494104580024,
+        "moyal_product_norm": 5.485063664371017
+      },
+      {
+        "iteration": 43,
+        "commutator_norm": 4.881376744605475,
+        "probability_measure": 0.41926028541425453,
+        "moyal_product_norm": 3.661848165198971
+      },
+      {
+        "iteration": 44,
+        "commutator_norm": 25.386863234385416,
+        "probability_measure": -0.6057096240629565,
+        "moyal_product_norm": 15.75278734850335
+      },
+      {
+        "iteration": 45,
+        "commutator_norm": 8.821445275231289,
+        "probability_measure": 0.4948309624551825,
+        "moyal_product_norm": 6.590661213504332
+      },
+      {
+        "iteration": 46,
+        "commutator_norm": 7.462932917888552,
+        "probability_measure": -1.193450909132618,
+        "moyal_product_norm": 2.6968916626481327
+      },
+      {
+        "iteration": 47,
+        "commutator_norm": 4.001570546362838,
+        "probability_measure": -1.2119804054179837,
+        "moyal_product_norm": 2.9083076674190957
+      },
+      {
+        "iteration": 48,
+        "commutator_norm": 10.09781249627736,
+        "probability_measure": 0.05871728422580014,
+        "moyal_product_norm": 8.13553143647352
+      },
+      {
+        "iteration": 49,
+        "commutator_norm": 3.0900061952351825,
+        "probability_measure": -0.41770898464026873,
+        "moyal_product_norm": 2.1029452899544103
+      },
+      {
+        "iteration": 50,
+        "commutator_norm": 4.370286993837753,
+        "probability_measure": 2.6865501694528944,
+        "moyal_product_norm": 3.648309359059006
+      },
+      {
+        "iteration": 51,
+        "commutator_norm": 6.439697332693523,
+        "probability_measure": -1.3059391136643255,
+        "moyal_product_norm": 4.701003300335153
+      },
+      {
+        "iteration": 52,
+        "commutator_norm": 7.528308265111168,
+        "probability_measure": -0.30185115731988843,
+        "moyal_product_norm": 4.353033668531724
+      },
+      {
+        "iteration": 53,
+        "commutator_norm": 7.509131455257092,
+        "probability_measure": -0.4005749834299369,
+        "moyal_product_norm": 6.1488812217777165
+      },
+      {
+        "iteration": 54,
+        "commutator_norm": 11.043704657510302,
+        "probability_measure": 3.668461832674912,
+        "moyal_product_norm": 9.789301638257022
+      },
+      {
+        "iteration": 55,
+        "commutator_norm": 2.078340269453516,
+        "probability_measure": -0.24716005634361227,
+        "moyal_product_norm": 2.0964497624217966
+      },
+      {
+        "iteration": 56,
+        "commutator_norm": 8.616158071900268,
+        "probability_measure": 0.23442067498269736,
+        "moyal_product_norm": 5.617489796054239
+      },
+      {
+        "iteration": 57,
+        "commutator_norm": 4.338637678341566,
+        "probability_measure": 2.5694365759780062,
+        "moyal_product_norm": 5.0959498236617415
+      },
+      {
+        "iteration": 58,
+        "commutator_norm": 1.562670890402266,
+        "probability_measure": -0.15092313363543708,
+        "moyal_product_norm": 3.974227141456588
+      },
+      {
+        "iteration": 59,
+        "commutator_norm": 7.5335139253198955,
+        "probability_measure": 3.0950118428323776,
+        "moyal_product_norm": 12.711251544199266
+      },
+      {
+        "iteration": 60,
+        "commutator_norm": 11.833567543803799,
+        "probability_measure": 0.981316256311383,
+        "moyal_product_norm": 8.378196841014978
+      },
+      {
+        "iteration": 61,
+        "commutator_norm": 4.893299249524354,
+        "probability_measure": 1.587885261559613,
+        "moyal_product_norm": 5.077202263075432
+      },
+      {
+        "iteration": 62,
+        "commutator_norm": 2.366241210977208,
+        "probability_measure": -0.3651046619099755,
+        "moyal_product_norm": 2.0044958082123303
+      },
+      {
+        "iteration": 63,
+        "commutator_norm": 8.093766643642965,
+        "probability_measure": 1.5967054244623569,
+        "moyal_product_norm": 7.298509068098714
+      },
+      {
+        "iteration": 64,
+        "commutator_norm": 6.541940734004614,
+        "probability_measure": 0.04453810955977186,
+        "moyal_product_norm": 5.214582646974579
+      },
+      {
+        "iteration": 65,
+        "commutator_norm": 8.839159416804335,
+        "probability_measure": 0.5883211844282974,
+        "moyal_product_norm": 7.47146122842325
+      },
+      {
+        "iteration": 66,
+        "commutator_norm": 7.713071761820089,
+        "probability_measure": 1.1284893307691897,
+        "moyal_product_norm": 5.231572838900144
+      },
+      {
+        "iteration": 67,
+        "commutator_norm": 2.378908585295703,
+        "probability_measure": -0.9251694972030076,
+        "moyal_product_norm": 1.4093549267265666
+      },
+      {
+        "iteration": 68,
+        "commutator_norm": 2.1199493192361927,
+        "probability_measure": -0.7843065016417958,
+        "moyal_product_norm": 2.5373794992835492
+      },
+      {
+        "iteration": 69,
+        "commutator_norm": 3.143973459233627,
+        "probability_measure": 0.5513982506808733,
+        "moyal_product_norm": 6.261958050851979
+      },
+      {
+        "iteration": 70,
+        "commutator_norm": 5.401955619021603,
+        "probability_measure": 0.1846779223439346,
+        "moyal_product_norm": 4.5394090667944145
+      },
+      {
+        "iteration": 71,
+        "commutator_norm": 9.687984020250878,
+        "probability_measure": -1.7913598866522469,
+        "moyal_product_norm": 7.1288335843318675
+      },
+      {
+        "iteration": 72,
+        "commutator_norm": 3.816835641265165,
+        "probability_measure": -2.3206738638547826,
+        "moyal_product_norm": 4.062142191927362
+      },
+      {
+        "iteration": 73,
+        "commutator_norm": 4.240686023990621,
+        "probability_measure": 1.0450879229606072,
+        "moyal_product_norm": 3.278103069200616
+      },
+      {
+        "iteration": 74,
+        "commutator_norm": 8.451831931423445,
+        "probability_measure": 0.05697300799031607,
+        "moyal_product_norm": 6.045368534135028
+      },
+      {
+        "iteration": 75,
+        "commutator_norm": 4.600857526989163,
+        "probability_measure": 1.4947382809045862,
+        "moyal_product_norm": 4.112169373926704
+      },
+      {
+        "iteration": 76,
+        "commutator_norm": 6.729932589303677,
+        "probability_measure": 0.7417296561579946,
+        "moyal_product_norm": 4.753465117364718
+      },
+      {
+        "iteration": 77,
+        "commutator_norm": 7.437376552550342,
+        "probability_measure": -0.11188770583079655,
+        "moyal_product_norm": 5.807521138883942
+      },
+      {
+        "iteration": 78,
+        "commutator_norm": 3.9464076355916817,
+        "probability_measure": -0.21219922987920126,
+        "moyal_product_norm": 2.8087536612747717
+      },
+      {
+        "iteration": 79,
+        "commutator_norm": 10.10917587630343,
+        "probability_measure": -0.06021286447870189,
+        "moyal_product_norm": 9.327022536125739
+      },
+      {
+        "iteration": 80,
+        "commutator_norm": 2.132755084101048,
+        "probability_measure": -0.2545274720618732,
+        "moyal_product_norm": 2.2735112948200276
+      },
+      {
+        "iteration": 81,
+        "commutator_norm": 5.139327950430449,
+        "probability_measure": -0.7706332431683576,
+        "moyal_product_norm": 6.243560615251835
+      },
+      {
+        "iteration": 82,
+        "commutator_norm": 4.1456685714318136,
+        "probability_measure": 0.8188230486697128,
+        "moyal_product_norm": 3.338794402985839
+      },
+      {
+        "iteration": 83,
+        "commutator_norm": 4.181015171255083,
+        "probability_measure": 0.12799081811949822,
+        "moyal_product_norm": 2.1408609685224294
+      },
+      {
+        "iteration": 84,
+        "commutator_norm": 9.739858812149064,
+        "probability_measure": 0.7100505689198908,
+        "moyal_product_norm": 7.685405663029571
+      },
+      {
+        "iteration": 85,
+        "commutator_norm": 3.755770106505439,
+        "probability_measure": -0.8437487414360318,
+        "moyal_product_norm": 3.5777754836640345
+      },
+      {
+        "iteration": 86,
+        "commutator_norm": 2.9109931336195087,
+        "probability_measure": -1.0952933680415837,
+        "moyal_product_norm": 3.046875920834157
+      },
+      {
+        "iteration": 87,
+        "commutator_norm": 5.78961479423587,
+        "probability_measure": 0.742446670345181,
+        "moyal_product_norm": 3.046750817091697
+      },
+      {
+        "iteration": 88,
+        "commutator_norm": 4.455010804245013,
+        "probability_measure": 0.8813188868702586,
+        "moyal_product_norm": 6.468074352735294
+      },
+      {
+        "iteration": 89,
+        "commutator_norm": 6.866666322605138,
+        "probability_measure": 0.445046430906937,
+        "moyal_product_norm": 4.156866296961908
+      },
+      {
+        "iteration": 90,
+        "commutator_norm": 1.8973740198393934,
+        "probability_measure": -2.010085383193018,
+        "moyal_product_norm": 1.2234421523822636
+      },
+      {
+        "iteration": 91,
+        "commutator_norm": 10.976978134600959,
+        "probability_measure": -0.025310239143356728,
+        "moyal_product_norm": 9.107888745917615
+      },
+      {
+        "iteration": 92,
+        "commutator_norm": 5.792944776062148,
+        "probability_measure": -0.4158199981926036,
+        "moyal_product_norm": 4.486230451722806
+      },
+      {
+        "iteration": 93,
+        "commutator_norm": 6.082704762680708,
+        "probability_measure": -0.9422552329880787,
+        "moyal_product_norm": 4.516592765181772
+      },
+      {
+        "iteration": 94,
+        "commutator_norm": 5.861624931348816,
+        "probability_measure": -0.5776373484810363,
+        "moyal_product_norm": 2.5101559409951846
+      },
+      {
+        "iteration": 95,
+        "commutator_norm": 2.4609979533329707,
+        "probability_measure": 0.25418417078693895,
+        "moyal_product_norm": 3.845386105128034
+      },
+      {
+        "iteration": 96,
+        "commutator_norm": 9.07157229531001,
+        "probability_measure": -1.0534261049879443,
+        "moyal_product_norm": 5.763854101914926
+      },
+      {
+        "iteration": 97,
+        "commutator_norm": 3.5538995769838313,
+        "probability_measure": -0.12784227695835976,
+        "moyal_product_norm": 3.485817229249952
+      },
+      {
+        "iteration": 98,
+        "commutator_norm": 6.014516300725003,
+        "probability_measure": 1.3695535194958373,
+        "moyal_product_norm": 4.565954131583937
+      },
+      {
+        "iteration": 99,
+        "commutator_norm": 8.92503342227769,
+        "probability_measure": 0.20494002596120897,
+        "moyal_product_norm": 6.573800612233011
+      }
+    ],
+    "statistics": {
+      "mean_commutator_norm": 6.340760916546985,
+      "std_commutator_norm": 3.3454853429931157,
+      "mean_probability_measure": 0.22927135677620425,
+      "std_probability_measure": 1.2835670141775295
+    }
+  },
+  "millennium_problem_experiments": {
+    "riemann_hypothesis": [
+      {
+        "zero": "(0.5+14.134725j)",
+        "zeta_matrix": [
+          [
+            "(-0.0024994944669258392-0.07065933385803666j)",
+            "0j"
+          ],
+          [
+            "0j",
+            "(-0.0024994944669258392-0.07065933385803666j)"
+          ]
+        ],
+        "determinant": "(-0.004986493988671294+0.00035322522802965655j)",
+        "trace": "(-0.0049989889338516785-0.14131866771607332j)"
+      },
+      {
+        "zero": "(0.5+21.02204j)",
+        "zeta_matrix": [
+          [
+            "(-0.0011307710336191568-0.04754222779916652j)",
+            "0j"
+          ],
+          [
+            "0j",
+            "(-0.0011307710336191568-0.04754222779916652j)"
+          ]
+        ],
+        "determinant": "(-0.002258984780977368+0.00010751874813804182j)",
+        "trace": "(-0.0022615420672383135-0.09508445559833303j)"
+      },
+      {
+        "zero": "(0.5+25.010856j)",
+        "zeta_matrix": [
+          [
+            "(-0.0007989863511329507-0.03996666514830334j)",
+            "0j"
+          ],
+          [
+            "0j",
+            "(-0.0007989863511329507-0.03996666514830334j)"
+          ]
+        ],
+        "determinant": "(-0.0015966959438873088+6.386563990759073e-05j)",
+        "trace": "(-0.0015979727022659015-0.07993333029660668j)"
+      }
+    ],
+    "yang_mills_mass_gap": 1.0,
+    "navier_stokes": [
+      {
+        "time": 0.0,
+        "solution_norm": 12.136146905646456,
+        "solution_trace": "(8.81385506741064-0.35055661370538416j)"
+      },
+      {
+        "time": 0.1111111111111111,
+        "solution_norm": 1.0161374499074296,
+        "solution_trace": "(-0.5833330034137452+0.5757902584534883j)"
+      },
+      {
+        "time": 0.2222222222222222,
+        "solution_norm": 7.321259731618805,
+        "solution_trace": "(7.58922486517281-2.983906585367466j)"
+      },
+      {
+        "time": 0.3333333333333333,
+        "solution_norm": 4.60740639436021,
+        "solution_trace": "(-3.328787048540746-1.0048960703554055j)"
+      },
+      {
+        "time": 0.4444444444444444,
+        "solution_norm": 5.990607913060053,
+        "solution_trace": "(5.062799864939117-1.1075759189276957j)"
+      },
+      {
+        "time": 0.5555555555555556,
+        "solution_norm": 2.558428066145164,
+        "solution_trace": "(0.5582982703617131+1.5485507755590804j)"
+      },
+      {
+        "time": 0.6666666666666666,
+        "solution_norm": 7.023441751251336,
+        "solution_trace": "(4.194908473784691-4.817585369449426j)"
+      },
+      {
+        "time": 0.7777777777777777,
+        "solution_norm": 3.5526053828450173,
+        "solution_trace": "(0.3810298095113864+2.1861483511794852j)"
+      },
+      {
+        "time": 0.8888888888888888,
+        "solution_norm": 2.244417943815233,
+        "solution_trace": "(0.9035312953615288+0.08159419847134708j)"
+      },
+      {
+        "time": 1.0,
+        "solution_norm": 5.06472151603994,
+        "solution_trace": "(1.9060950055808785+3.147259457374874j)"
+      }
+    ]
+  },
+  "model_parameters": {
+    "theta": 1e-25,
+    "kappa": 1e-35,
+    "cuda_available": true
+  },
+  "timestamp": "2025-07-22T01:52:35.182418"
+}
