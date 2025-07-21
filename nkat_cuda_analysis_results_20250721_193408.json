@@ -1,0 +1,24 @@
+{
+  "central_limit_theorem": {
+    "mean": -0.2079109102487564,
+    "std": 0.9322730302810669,
+    "samples": 100
+  },
+  "levy_process": {
+    "final_value": -0.49401426315307617,
+    "max_value": 0.1255359798669815,
+    "min_value": -0.50775146484375,
+    "volatility": 0.15222887694835663
+  },
+  "nkat_optimization": {
+    "final_loss": 6.1254395404830575e-06,
+    "initial_loss": 0.006260475143790245,
+    "convergence": 1022.0450471210656
+  },
+  "theory_of_everything": {
+    "field_max": 0.8098480701446533,
+    "field_min": -9978.271484375,
+    "field_mean": -24.537185668945312,
+    "unification_strength": 449.0499572753906
+  }
+}

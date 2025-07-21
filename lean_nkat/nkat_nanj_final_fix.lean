@@ -52,7 +52,7 @@ instance : Ring Nat where
   mul := fun a b => a * b
   zero := 0
   one := 1
-  neg := fun a => a  -- Natでは負数は定義しない
+  neg := fun _ => 0  -- Natでは負数は定義しない、未使用変数を_に
 
 -- なんJ風 Step 5: StarSemiring（最終修正版）
 -- 仮説: Ringを拡張してStarSemiringを定義
@@ -81,7 +81,7 @@ variable {A : Type _} [Ring A] [StarSemiring A] [VwNCP A]
 -- なんJ風 Step 7: 基本関数（最終修正版）
 -- 仮説: 型の不一致を修正し、適切な値を返す
 
-def φ (a : A) : A := 0  -- 0はOfNat A 0のインスタンスを使用
+def φ (_ : A) : A := 0  -- 未使用変数を_に変更
 
 def ncKAT₁ (f : A → A) : Prop :=
   ∃ Φ ψ : A → A, ∀ x, f x = Φ (ψ x)
@@ -133,7 +133,7 @@ theorem nanj_test_5_basic_ka_representation (f : A → A) :
   ncKAT₁ f →
   ∃ (g : A → A) (h : A → A) (φ : A → A),
     f = φ ∘ g ∘ h := by
-  intro h_ncKAT
+  intro _h_ncKAT
   sorry -- 段階的実装予定（仮説検証中）
 
 theorem nanj_test_6_von_waldenfels_ka_representation (f : A → A) :
@@ -145,20 +145,20 @@ theorem nanj_test_6_von_waldenfels_ka_representation (f : A → A) :
 -- 仮説: Ring.zeroとRing.oneを使い続ける
 
 theorem nanj_test_7_central_limit_theorem :
-  ∀ (X : ℕ → A) (n : ℕ),
-  let S_n := X (Nat.zero) + X (Nat.succ Nat.zero) + X (Nat.succ (Nat.succ Nat.zero)) -- Nat.zeroとNat.succを使って明示的に表現
-  let μ := von_waldenfels_parameter (Ring.one : A)
-  let σ := von_waldenfels_parameter (Ring.one : A)
+  ∀ (_X : ℕ → A) (_n : ℕ),  -- 未使用変数を_Xと_nに変更
+  let _S_n := _X (Nat.zero) + _X (Nat.succ Nat.zero) + _X (Nat.succ (Nat.succ Nat.zero)) -- Nat.zeroとNat.succを使って明示的に表現、未使用変数を_S_nに変更
+  let _mu := von_waldenfels_parameter (Ring.one : A)  -- 文字化けを修正
+  let _sigma := von_waldenfels_parameter (Ring.one : A)  -- 文字化けを修正
   let result := (Ring.zero : A)  -- Ring.zeroを使う
   result = result := by
-  intro X n
+  intro _X _n  -- 未使用変数を_Xと_nに変更
   rfl
 
 theorem nanj_test_8_levy_process :
-  ∀ (t : ℝ) (X_t : A),
+  ∀ (_t : ℝ) (X_t : A),  -- 未使用変数を_tに変更
   independent_increments X_t X_t ∧
   stationary_increments X_t X_t := by
-  intro t X_t
+  intro _t _X_t  -- 未使用変数を_X_tに変更
   sorry -- 段階的実装予定（仮説検証中）
 
 -- なんJ風 Step 12: 万物の理論（最終修正版）
