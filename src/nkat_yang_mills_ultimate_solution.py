@@ -421,8 +421,8 @@ class UltimateUnifiedSpecialSolution:
         asymptotic_freedom = coupling_constants[-1] < coupling_constants[0]
         
         # より厳密な検証
-        high_energy_coupling = coupling_constants[-10:].mean()
-        low_energy_coupling = coupling_constants[:10].mean()
+        high_energy_coupling = np.mean(coupling_constants[-10:])
+        low_energy_coupling = np.mean(coupling_constants[:10])
         freedom_ratio = high_energy_coupling / low_energy_coupling
         
         return {
